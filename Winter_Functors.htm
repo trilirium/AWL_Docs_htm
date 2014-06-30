@@ -1,0 +1,1162 @@
+<HTML>
+<HEAD>
+<TITLE>List of functors</TITLE>
+</HEAD>
+<BODY>
+<CENTER>Version: <B></B>.</CENTER>
+<CENTER>[ <A href=Winter_Functors.htm><B>Functors</B></A> | <A href=Winter_Categories.htm><B>Categories</B></A> | <A href=Winter_Types.htm><B>Metatypes</B></A> | <A href=AWL_Syntax.htm><B>Syntax</B></A> ]</CENTER>
+<H1>List of functors
+</H1>
+<P>[ <B><A href=#_65>A</A></B> | <B><A href=#_66>B</A></B> | <B><A href=#_67>C</A></B> | <B><A href=#_68>D</A></B> | <B><A href=#_69>E</A></B> | <B><A href=#_70>F</A></B> | <B><A href=#_71>G</A></B> | <B><A href=#_73>I</A></B> | <B><A href=#_76>L</A></B> | <B><A href=#_77>M</A></B> | <B><A href=#_79>O</A></B> | <B><A href=#_80>P</A></B> | <B><A href=#_81>Q</A></B> | <B><A href=#_82>R</A></B> | <B><A href=#_83>S</A></B> | <B><A href=#_84>T</A></B> | <B><A href=#_85>U</A></B> | <B><A href=#_86>V</A></B> | <B><A href=#_87>W</A></B> ]</P>
+<HR /><a name="_65"></a>
+<P><font size=+1>[<B>A</B>]</font></P>
+<HR />
+<a name="_alert_beep"></a>
+<P><font face=Arial size=+1 color=#808080><B>alert_beep</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Windows">Windows</a></b> | <b><a href="Winter_Categories.htm#_Internal">Internal</a></b> ]</P>
+<P><B>winternal</B> !! <B>alert_beep </B> (<i>Code</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>) &#8658; ().</P>
+<P><I>Alert sound.</I></P>
+<P>[Requires: active winsession.]<br>Emit alert sound (as defined by <i>Code</i>).</P>
+<P></P>
+<!-- ../src/winter/WinMsg.cpp:988 -->
+
+<HR />
+<a name="_alert_box"></a>
+<P><font face=Arial size=+1 color=#808080><B>alert_box</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Windows">Windows</a></b> | <b><a href="Winter_Categories.htm#_Internal">Internal</a></b> ]</P>
+<P><B>winternal</B> !! <B>alert_box </B> (<i>Win</i>: <b><a href="Winter_Types.htm#_Window">Window</a></b>, <i>Title</i>: <b><a href="Winter_Types.htm#_String">String</a></b>, <i>Message</i>: <b><a href="Winter_Types.htm#_String">String</a></b>, <i>Flags</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>) &#8658; ().</P>
+<P><I>Alert modal window.</I></P>
+<P>[Requires: active winsession.]<br>Open alert window (modal), with text <i>Message</i>, caption <i>Title</i> and options <i>Flags</i> (belonging to window <i>Win</i>).</P>
+<P></P>
+<!-- ../src/winter/WinMsg.cpp:982 -->
+
+<HR />
+<a name="_arc"></a>
+<P><font face=Arial size=+1 color=#808080><B>arc</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>arc</B> (<i>Left_Top</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Right_Bottom</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>StartRay</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>EndRay</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Plot elliptical arc.</I></P>
+<P>[Requires: active graphic context.]<br>[Affected by: plot mode.]<br>Draws arc of ellipse in area [<i>Left_Top</i> : <i>Right_Bottom</i>], from vector <i>StartRay</i> to vector <i>EndRay</i> clockwise (with current plot mode).<br>(Note: both <i>StartRay</i> and <i>EndRay</i> are defined relative to centre of ellipse.)<br>Returns <b>true</b> on success.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1840 -->
+
+<HR /><a name="_66"></a>
+<P><font size=+1>[<B>B</B>]</font></P>
+<HR />
+<a name="_Button"></a>
+<P><font face=Arial size=+1 color=#808080><B>Button</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Constructor">Constructor</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Button </B> (<i>Parent</i>: <b><a href="Winter_Types.htm#_Window">Window</a></b>, <i>Handler</i>: <b><a href="Winter_Types.htm#_Func">Func</a></b>, <i>Area</i>: <b><a href="Winter_Types.htm#_Rect">Rect</a></b>, <i>Label</i>: <b><a href="Winter_Types.htm#_String">String</a></b>) &#8658; <b><a href="Winter_Types.htm#_ButtonControl">ButtonControl</a></b>.</P>
+<P><I>Create simple button control.</I></P>
+<P>Create new button control in <i>Parent</i> window, with (optional) event <i>Handler</i>, area <i>Area</i>, and text <i>Label</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1289 -->
+
+<HR />
+<a name="_Button_GetCheck"></a>
+<P><font face=Arial size=+1 color=#808080><B>Button_GetCheck</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Button_GetCheck </B> (<i>Button</i>: <b><a href="Winter_Types.htm#_ButtonControl">ButtonControl</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Get button state.</I></P>
+<P>Get and return state of radio button or check button <i>Button</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1320 -->
+
+<HR />
+<a name="_Button_GetText"></a>
+<P><font face=Arial size=+1 color=#808080><B>Button_GetText</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Button_GetText </B> (<i>Button</i>: <b><a href="Winter_Types.htm#_ButtonControl">ButtonControl</a></b>) &#8658; <b><a href="Winter_Types.htm#_String">String</a></b>.</P>
+<P><I>Get button text content.</I></P>
+<P>Get and return text of button, radio button or check button <i>Button</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1334 -->
+
+<HR />
+<a name="_Button_SetCheck"></a>
+<P><font face=Arial size=+1 color=#808080><B>Button_SetCheck</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Button_SetCheck </B> (<i>Button</i>: <b><a href="Winter_Types.htm#_ButtonControl">ButtonControl</a></b>, <i>State</i>: <b><a href="Winter_Types.htm#_Bool">Bool</a></b>) &#8658; ().</P>
+<P><I>Set button state.</I></P>
+<P>Set state of radio button or check button <i>Button</i> to <i>State</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1313 -->
+
+<HR />
+<a name="_Button_SetText"></a>
+<P><font face=Arial size=+1 color=#808080><B>Button_SetText</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Button_SetText </B> (<i>Button</i>: <b><a href="Winter_Types.htm#_ButtonControl">ButtonControl</a></b>, <i>Text</i>: <b><a href="Winter_Types.htm#_String">String</a></b>) &#8658; ().</P>
+<P><I>Set button text content.</I></P>
+<P>Set text of button, radio button or check button <i>Button</i> to <i>Text</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1327 -->
+
+<HR /><a name="_67"></a>
+<P><font size=+1>[<B>C</B>]</font></P>
+<HR />
+<a name="_caret_loc"></a>
+<P><font face=Arial size=+1 color=#808080><B>caret_loc</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Windows">Windows</a></b> | <b><a href="Winter_Categories.htm#_Internal">Internal</a></b> ]</P>
+<P><B>winternal</B> !! <B>caret_loc </B> (<i>Win</i>: <b><a href="Winter_Types.htm#_Window">Window</a></b>, [<i>Location</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>]) &#8658; ().</P>
+<P><I>Place/remove window caret.</I></P>
+<P>[Requires: active winsession.]<br>Place caret of window <i>Win</i> to <i>Point</i> (or remove it, if no <i>Point</i> specified).</P>
+<P></P>
+<!-- ../src/winter/WinMsg.cpp:1003 -->
+
+<HR />
+<a name="_caret_shape"></a>
+<P><font face=Arial size=+1 color=#808080><B>caret_shape</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Windows">Windows</a></b> | <b><a href="Winter_Categories.htm#_Internal">Internal</a></b> ]</P>
+<P><B>winternal</B> !! <B>caret_shape </B> (<i>Win</i>: <b><a href="Winter_Types.htm#_Window">Window</a></b>, [<i>Shape</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>]) &#8658; ().</P>
+<P><I>Enable/disable window caret.</I></P>
+<P>[Requires: active winsession.]<br>Enable flashing rectangle caret with extent <i>Shape</i> (or disable it, if <i>Shape</i> is empty) in window <i>Win</i>.</P>
+<P></P>
+<!-- ../src/winter/WinMsg.cpp:997 -->
+
+<HR />
+<a name="_CheckButton"></a>
+<P><font face=Arial size=+1 color=#808080><B>CheckButton</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Constructor">Constructor</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>CheckButton </B> (<i>Parent</i>: <b><a href="Winter_Types.htm#_Window">Window</a></b>, <i>Handler</i>: <b><a href="Winter_Types.htm#_Func">Func</a></b>, <i>Area</i>: <b><a href="Winter_Types.htm#_Rect">Rect</a></b>, <i>Label</i>: <b><a href="Winter_Types.htm#_String">String</a></b>) &#8658; <b><a href="Winter_Types.htm#_ButtonControl">ButtonControl</a></b>.</P>
+<P><I>Create check button control.</I></P>
+<P>Create new check button control in <i>Parent</i> window, with (optional) event <i>Handler</i>, area <i>Area</i>, and text <i>Label</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1305 -->
+
+<HR />
+<a name="_chord"></a>
+<P><font face=Arial size=+1 color=#808080><B>chord</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>chord</B> (<i>Left_Top</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Right_Bottom</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>StartRay</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>EndRay</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Plot & fill elliptical chord.</I></P>
+<P>[Requires: active graphic context.]<br>[Affected by: plot & fill modes.]<br>Draws chord of ellipse in area [<i>Left_Top</i> : <i>Right_Bottom</i>], from vector <i>StartRay</i> to vector <i>EndRay</i> clockwise (with current plot & fill mode).<br>(Note: both <i>StartRay</i> and <i>EndRay</i> are defined relative to centre of ellipse.)<br>Returns <b>true</b> on success.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1849 -->
+
+<HR />
+<a name="_clip_area"></a>
+<P><font face=Arial size=+1 color=#808080><B>clip_area</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> ]</P>
+<P><B>graphics</B> !! <B>clip_area </B> ((<i>LeftTop</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>RightBottom</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>), @<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Rectangular clipping wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>Evaluate <i>Core</i> with rectangle clipping area [<i>LeftTop</i> : <i>RightBottom</i>].</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2106 -->
+
+<HR />
+<a name="_create_window"></a>
+<P><font face=Arial size=+1 color=#808080><B>create_window</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Windows">Windows</a></b> | <b><a href="Winter_Categories.htm#_Internal">Internal</a></b> | <b><a href="Winter_Categories.htm#_Constructor">Constructor</a></b> ]</P>
+<P><B>winternal</B> !! <B>create_window </B> (<i>Parent</i>: <b><a href="Winter_Types.htm#_Window">Window</a></b>, <i>Widget</i>: <b><a href="Winter_Types.htm#_Object">Object</a></b>, <i>Title</i>: <b><a href="Winter_Types.htm#_String">String</a></b>, <i>Left_Top</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Width_Height</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Flags</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>) &#8658; <b><a href="Winter_Types.htm#_Window">Window</a></b>.</P>
+<P><I>Create new window.</I></P>
+<P>[Requires: active winsession.]<br>Create and open new window, belonging to <i>Parent</i> window and containing <i>Widget</i> object (with caption <i>Title</i>, location <i>Left_Top</i>, extent <i>Width_Height</i>, and options <i>Flags</i>).</P>
+<P></P>
+<!-- ../src/winter/WinMsg.cpp:889 -->
+
+<HR /><a name="_68"></a>
+<P><font size=+1>[<B>D</B>]</font></P>
+<HR />
+<a name="_destroy_window"></a>
+<P><font face=Arial size=+1 color=#808080><B>destroy_window</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Windows">Windows</a></b> | <b><a href="Winter_Categories.htm#_Internal">Internal</a></b> | <b><a href="Winter_Categories.htm#_Destructor">Destructor</a></b> ]</P>
+<P><B>winternal</B> !! <B>destroy_window </B> (<i>Win</i>: <b><a href="Winter_Types.htm#_Window">Window</a></b>) &#8658; ().</P>
+<P><I>Destroy window.</I></P>
+<P>[Requires: active winsession.]<br>Close and destroy window <i>Win</i>.</P>
+<P></P>
+<!-- ../src/winter/WinMsg.cpp:898 -->
+
+<HR /><a name="_69"></a>
+<P><font size=+1>[<B>E</B>]</font></P>
+<HR />
+<a name="_Editor"></a>
+<P><font face=Arial size=+1 color=#808080><B>Editor</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Constructor">Constructor</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Editor </B> (<i>Parent</i>: <b><a href="Winter_Types.htm#_Window">Window</a></b>, <i>Handler</i>: <b><a href="Winter_Types.htm#_Func">Func</a></b>, <i>Area</i>: <b><a href="Winter_Types.htm#_Rect">Rect</a></b>, <i>Flags</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>) &#8658; <b><a href="Winter_Types.htm#_EditControl">EditControl</a></b>.</P>
+<P><I>Create editor control.</I></P>
+<P>Create editor control in <i>Parent</i> window, with (optional) event <i>Handler</i> and area <i>Area</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1466 -->
+
+<HR />
+<a name="_Editor_Copy"></a>
+<P><font face=Arial size=+1 color=#808080><B>Editor_Copy</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Editor_Copy </B> (<i>Editor</i>: <b><a href="Winter_Types.htm#_EditControl">EditControl</a></b>) &#8658; ().</P>
+<P><I>Editor "copy" operation.</I></P>
+<P>Copy <i>Editor</i> text selection to clipboard.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1494 -->
+
+<HR />
+<a name="_Editor_Cut"></a>
+<P><font face=Arial size=+1 color=#808080><B>Editor_Cut</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Editor_Cut </B> (<i>Editor</i>: <b><a href="Winter_Types.htm#_EditControl">EditControl</a></b>) &#8658; ().</P>
+<P><I>Editor "cut" operation.</I></P>
+<P>Cut <i>Editor</i> text selection to clipboard (selected text removed).</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1487 -->
+
+<HR />
+<a name="_Editor_GetContent"></a>
+<P><font face=Arial size=+1 color=#808080><B>Editor_GetContent</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Editor_GetContent </B> (<i>Editor</i>: <b><a href="Winter_Types.htm#_EditControl">EditControl</a></b>) &#8658; <b><a href="Winter_Types.htm#_String">String</a></b>.</P>
+<P><I>Get editor buffer content.</I></P>
+<P>Return current content of <i>Editor</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1473 -->
+
+<HR />
+<a name="_Editor_Paste"></a>
+<P><font face=Arial size=+1 color=#808080><B>Editor_Paste</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Editor_Paste </B> (<i>Editor</i>: <b><a href="Winter_Types.htm#_EditControl">EditControl</a></b>) &#8658; ().</P>
+<P><I>Editor "paste" operation.</I></P>
+<P>Paste text from clipboard to current position of <i>Editor</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1501 -->
+
+<HR />
+<a name="_Editor_SetContent"></a>
+<P><font face=Arial size=+1 color=#808080><B>Editor_SetContent</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Editor_SetContent </B> (<i>Editor</i>: <b><a href="Winter_Types.htm#_EditControl">EditControl</a></b>, <i>Content</i>: <b><a href="Winter_Types.htm#_String">String</a></b>) &#8658; ().</P>
+<P><I>Set editor buffer content.</I></P>
+<P>Set current content of <i>Editor</i> to <i>Content</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1480 -->
+
+<HR /><a name="_70"></a>
+<P><font size=+1>[<B>F</B>]</font></P>
+<HR />
+<a name="_fill"></a>
+<P><font face=Arial size=+1 color=#808080><B>fill</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>fill</B> (<i>Left_Top</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Right_Bottom</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Fill rectangle area.</I></P>
+<P>[Requires: active graphic context.]<br>[Affected by: fill mode.]<br>Fills rectangle area [<i>Left_Top</i> : <i>Right_Bottom</i>] (with current fill mode).<br>Returns <b>true</b> on success.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1780 -->
+
+<HR />
+<a name="_Fill"></a>
+<P><font face=Arial size=+1 color=#808080><B>Fill</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Constructor">Constructor</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Fill </B> (<i>Parent</i>: <b><a href="Winter_Types.htm#_Window">Window</a></b>, <i>Handler</i>: <b><a href="Winter_Types.htm#_Func">Func</a></b>, <i>Area</i>: <b><a href="Winter_Types.htm#_Rect">Rect</a></b>, <i>Shade</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>) &#8658; <b><a href="Winter_Types.htm#_FillControl">FillControl</a></b>.</P>
+<P><I>Create filled rectangle static.</I></P>
+<P>Creates new filled rectangle control in <i>Parent</i> window, with area <i>Area</i> and (optional) event <i>Handler</i>.<br>Fill color is defined with <i>Shade</i> (< 0: dark grey | 0: medium grey | > 0: light grey).</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1238 -->
+
+<HR />
+<a name="_fill_color"></a>
+<P><font face=Arial size=+1 color=#808080><B>fill_color</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> ]</P>
+<P><B>graphics</B> !! <B>fill_color</B> (<i>FillColor</i>: <b><a href="Winter_Types.htm#_Color">Color</a></b>, @<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Fill color setting wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>[Affects: fill mode.]<br>Evaluates <i>Core</i>, with active fill color set to <i>FillColor</i>.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1901 -->
+
+<HR />
+<a name="_fill_disable"></a>
+<P><font face=Arial size=+1 color=#808080><B>fill_disable</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> ]</P>
+<P><B>graphics</B> !! <B>fill_disable</B> (<i>Flag</i>: <b><a href="Winter_Types.htm#_Bool">Bool</a></b>, @<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Fill disabling wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>[Affects: fill mode.]<br>Evaluates <i>Core</i>, with area filling disabled, if <i>Flag</i> is <b>true</b>.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1919 -->
+
+<HR />
+<a name="_font_bgcolor"></a>
+<P><font face=Arial size=+1 color=#808080><B>font_bgcolor</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> ]</P>
+<P><B>graphics</B> !! <B>font_bgcolor</B> (<i>TextBgColor</i>: <b><a href="Winter_Types.htm#_Color">Color</a></b>, @<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Text background color wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>[Affects: text mode.]<br>Evaluates <i>Core</i>, with text background color set to <i>TextBgColor</i>.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2055 -->
+
+<HR />
+<a name="_font_charset"></a>
+<P><font face=Arial size=+1 color=#808080><B>font_charset</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> ]</P>
+<P><B>graphics</B> !! <B>font_charset</B> (<i>CharSet</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>, @<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Font character set wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>[Affects: text mode.]<br>Evaluates <i>Core</i>, with current text characters set to <i>CharSet</i> codepage.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2074 -->
+
+<HR />
+<a name="_font_face"></a>
+<P><font face=Arial size=+1 color=#808080><B>font_face</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> ]</P>
+<P><B>graphics</B> !! <B>font_face</B> (<i>FontFace</i>: <b><a href="Winter_Types.htm#_String">String</a></b>, @<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Font face wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>[Affects: text mode.]<br>Evaluates <i>Core</i>, with current font face/family set to <i>FontFace</i>.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1987 -->
+
+<HR />
+<a name="_font_fgcolor"></a>
+<P><font face=Arial size=+1 color=#808080><B>font_fgcolor</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> ]</P>
+<P><B>graphics</B> !! <B>font_fgcolor</B> (<i>TextFgColor</i>: <b><a href="Winter_Types.htm#_Color">Color</a></b>, @<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Text foreground color wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>[Affects: text mode.]<br>Evaluates <i>Core</i>, with text foreground color set to <i>TextFgColor</i>.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2048 -->
+
+<HR />
+<a name="_font_inverse"></a>
+<P><font face=Arial size=+1 color=#808080><B>font_inverse</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> ]</P>
+<P><B>graphics</B> !! <B>font_inverse</B> (@<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Text foreground/background inversion wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>[Affects: text mode.]<br>Evaluates <i>Core</i>, with swapped foreground/background colors.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2065 -->
+
+<HR />
+<a name="_font_italic"></a>
+<P><font face=Arial size=+1 color=#808080><B>font_italic</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> ]</P>
+<P><B>graphics</B> !! <B>font_italic</B> (<i>FontItalic</i>: <b><a href="Winter_Types.htm#_Bool">Bool</a></b>, @<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Font italics mode wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>[Affects: text mode.]<br>Evaluates <i>Core</i>, with font italicizing set to <i>FontItalic</i> (0: plain; 1: italicized).</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2023 -->
+
+<HR />
+<a name="_font_overstrike"></a>
+<P><font face=Arial size=+1 color=#808080><B>font_overstrike</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> ]</P>
+<P><B>graphics</B> !! <B>font_overstrike</B> (<i>FontOverstrike</i>: <b><a href="Winter_Types.htm#_Bool">Bool</a></b>, @<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Font overstrike mode wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>[Affects: text mode.]<br>Evaluates <i>Core</i>, with text striking over mode set to <i>FontOverstrike</i> (0: plain; 1: overstriken).</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2037 -->
+
+<HR />
+<a name="_font_size"></a>
+<P><font face=Arial size=+1 color=#808080><B>font_size</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> ]</P>
+<P><B>graphics</B> !! <B>font_size</B> (<i>FontSize</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>, @<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Font size wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>[Affects: text mode.]<br>Evaluates <i>Core</i>, with font size (in pixels) set to <i>FontSize</i>.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1996 -->
+
+<HR />
+<a name="_font_underline"></a>
+<P><font face=Arial size=+1 color=#808080><B>font_underline</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> ]</P>
+<P><B>graphics</B> !! <B>font_underline</B> (<i>FontUnderline</i>: <b><a href="Winter_Types.htm#_Bool">Bool</a></b>, @<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Font underline mode wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>[Affects: text mode.]<br>Evaluates <i>Core</i>, with font underlining mode set to <i>FontUnderline</i> (0: plain; 1: underlined).</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2030 -->
+
+<HR />
+<a name="_font_weight"></a>
+<P><font face=Arial size=+1 color=#808080><B>font_weight</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> ]</P>
+<P><B>graphics</B> !! <B>font_weight</B> (<i>FontWeight</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>, @<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Font weight wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>[Affects: text mode.]<br>Evaluates <i>Core</i>, with font weight set to <i>FontWeight</i> (0: default; > 0: bolder; < 0: thinner).</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2014 -->
+
+<HR />
+<a name="_font_width"></a>
+<P><font face=Arial size=+1 color=#808080><B>font_width</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> ]</P>
+<P><B>graphics</B> !! <B>font_width</B> (<i>FontWidth</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>, @<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Font width wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>[Affects: text mode.]<br>Evaluates <i>Core</i>, with font width (in pixels) set to <i>FontWidth</i>.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2005 -->
+
+<HR />
+<a name="_Frame"></a>
+<P><font face=Arial size=+1 color=#808080><B>Frame</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Constructor">Constructor</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Frame </B> (<i>Parent</i>: <b><a href="Winter_Types.htm#_Window">Window</a></b>, <i>Handler</i>: <b><a href="Winter_Types.htm#_Func">Func</a></b>, <i>Area</i>: <b><a href="Winter_Types.htm#_Rect">Rect</a></b>, <i>Shade</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>) &#8658; <b><a href="Winter_Types.htm#_FrameControl">FrameControl</a></b>.</P>
+<P><I>Create rectangular frame static.</I></P>
+<P>Create new frame control in <i>Parent</i> window, with area <i>Area</i> and (optional) event <i>Handler</i>.<br>Fill color is defined with <i>Shade</i> (< 0: dark | 0: medium | > 0: light).</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1250 -->
+
+<HR />
+<a name="_frame3D"></a>
+<P><font face=Arial size=+1 color=#808080><B>frame3D</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>frame3D</B> (<i>Left_Top</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Right_Bottom</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Inset</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Normal</i>: <b><a href="Winter_Types.htm#_Color">Color</a></b>, <i>Lite</i>: <b><a href="Winter_Types.htm#_Color">Color</a></b>, <i>Dark</i>: <b><a href="Winter_Types.htm#_Color">Color</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Draw filled frame with pseudo-3D style.</I></P>
+<P>[Requires: active graphic context.]<br>Draws 3D frame in area [<i>Left_Top</i> : <i>Right_Bottom</i>] (with inner width/height <i>Inset</i>).<br>Frame interior is filled with colors: <i>Normal</i> (central area), <i>Lite</i> (left and top sides) and <i>Dark</i> (right and bottom sides).<br>Returns <b>true</b> on success.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1882 -->
+
+<HR /><a name="_71"></a>
+<P><font size=+1>[<B>G</B>]</font></P>
+<HR />
+<a name="_get_text_height"></a>
+<P><font face=Arial size=+1 color=#808080><B>get_text_height</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>get_text_height</B> () &#8658; (<b><a href="Winter_Types.htm#_Int">Int</a></b>, <b><a href="Winter_Types.htm#_Int">Int</a></b>, <b><a href="Winter_Types.htm#_Int">Int</a></b>).</P>
+<P><I>Get current text height metrics.</I></P>
+<P>[Requires: active graphic context.]<br>Get current text height metrics, as (<i>Ascent</i>, <i>Descent</i>, <i>Leading</i>).</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1970 -->
+
+<HR />
+<a name="_get_text_org"></a>
+<P><font face=Arial size=+1 color=#808080><B>get_text_org</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>get_text_org</B> () &#8658; <b><a href="Winter_Types.htm#_Point">Point</a></b>.</P>
+<P><I>Get current text origin.</I></P>
+<P>[Requires: active graphic context.]<br>Return current text origin point, as (<i>OrgX</i>, <i>OrgY</i>).</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1962 -->
+
+<HR />
+<a name="_grid_extent"></a>
+<P><font face=Arial size=+1 color=#808080><B>grid_extent</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>grid_extent </B> (<i>GridOrigin</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>GridStep</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>GridCounts</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>,  ) &#8658; <b><a href="Winter_Types.htm#_Point">Point</a></b>.</P>
+<P><I>Calculate rectangular grid extent.</I></P>
+<P>Returns extent of grid (defined by start offset <i>GridOrigin</i>, cell width/height <i>GridStep</i> and cell H/V counts <i>GridCounts</i>).</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2083 -->
+
+<HR /><a name="_73"></a>
+<P><font size=+1>[<B>I</B>]</font></P>
+<HR />
+<a name="_image_blit"></a>
+<P><font face=Arial size=+1 color=#808080><B>image_blit</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Image">Image</a></b> ]</P>
+<P><B>graphics</B> !! <B>image_blit </B> (<i>SrcImage</i>: <b><a href="Winter_Types.htm#_Image">Image</a></b>, <i>SrcOrigin</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>DstImage</i>: <b><a href="Winter_Types.htm#_Image">Image</a></b>, <i>DstOrigin</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Extent</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; ().</P>
+<P><I>Blit image region between image(s) and/or display area.</I></P>
+<P>[Requires: active graphic context.]<br>Copy rectangle (with dimensions <i>Extent</i>) from source image <i>SrcImage</i> (at <i>SrcOrigin</i>) to destination image <i>DstImage</i> (at <i>DstOrigin</i>).<br>(If <i>SrcImage</i> and/or <i>DstImage</i> is <b>undef</b>, current graphic context is used instead.)</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2153 -->
+
+<HR />
+<a name="_image_create"></a>
+<P><font face=Arial size=+1 color=#808080><B>image_create</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Constructor">Constructor</a></b> | <b><a href="Winter_Categories.htm#_Image">Image</a></b> ]</P>
+<P><B>graphics</B> !! <B>image_create </B> (<i>Extent</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Image">Image</a></b>.</P>
+<P><I>Create new image.</I></P>
+<P>[Requires: active graphic context.]<br>Creates new blank bitmap image (with dimensions <i>Extent</i>).</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2130 -->
+
+<HR />
+<a name="_image_data_load"></a>
+<P><font face=Arial size=+1 color=#808080><B>image_data_load</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Image">Image</a></b> ]</P>
+<P><B>graphics</B> !! <B>image_data_load </B> (<i>DstImage</i>: <b><a href="Winter_Types.htm#_Image">Image</a></b>, <i>X_Range</i>: <b><a href="Winter_Types.htm#_Range">Range</a></b>, <i>Y_Dir</i>: <b><a href="Winter_Types.htm#_Bool">Bool</a></b>, <i>Y_Range</i>: <b><a href="Winter_Types.htm#_Range">Range</a></b>, <i>SrcPalette</i>: <b><a href="Winter_Types.htm#_Palette">Palette</a></b>, <i>Source</i>: <b><a href="Winter_Types.htm#_String">String</a></b>) &#8658; ().</P>
+<P><I>Load pixel data from string to image.</I></P>
+<P>[Requires: active graphic context.]<br>Load pixel data to <i>DstImage</i> area [<i>X_Range</i> @ <i>Y_Range</i>], in vertical direction <i>Y_Dir</i>, from <i>Source</i> string (according to color model & palette <i>SrcPalette</i>).</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2201 -->
+
+<HR />
+<a name="_image_data_save"></a>
+<P><font face=Arial size=+1 color=#808080><B>image_data_save</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Image">Image</a></b> ]</P>
+<P><B>graphics</B> !! <B>image_data_save </B> (<i>SrcImage</i>: <b><a href="Winter_Types.htm#_Image">Image</a></b>, <i>X_Range</i>: <b><a href="Winter_Types.htm#_Range">Range</a></b>, <i>Y_Dir</i>: <b><a href="Winter_Types.htm#_Bool">Bool</a></b>, <i>Y_Range</i>: <b><a href="Winter_Types.htm#_Range">Range</a></b>, <i>DstPalette</i>: <b><a href="Winter_Types.htm#_Palette">Palette</a></b>) &#8658; <b><a href="Winter_Types.htm#_String">String</a></b>.</P>
+<P><I>Save pixel data from image to string.</I></P>
+<P>[Requires: active graphic context.]<br>Save pixel data from <i>SrcImage</i> area [<i>X_Range</i> @ <i>Y_Range</i>], in vertical direction <i>Y_Dir</i>, to string (according to color model & palette <i>DstPalette</i>).<br>Returns encoded image data.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2210 -->
+
+<HR />
+<a name="_image_data_size"></a>
+<P><font face=Arial size=+1 color=#808080><B>image_data_size</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Image">Image</a></b> ]</P>
+<P><B>graphics</B> !! <B>image_data_size </B> (<i>X_Range</i>: <b><a href="Winter_Types.htm#_Range">Range</a></b>, <i>Y_Range</i>: <b><a href="Winter_Types.htm#_Range">Range</a></b>, <i>ImagePalette</i>: <b><a href="Winter_Types.htm#_Palette">Palette</a></b>) &#8658; (\<b><a href="Winter_Types.htm#_Bytes">Bytes</a></b>, \<b><a href="Winter_Types.htm#_Entries">Entries</a></b>).</P>
+<P><I>Calculate image size.</I></P>
+<P>[Requires: active graphic context.]<br>Calculate size of pixel [<i>X_Range</i> @ <i>Y_Range</i>] (according to color model & palette <i>ImagePalette</i>).</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2193 -->
+
+<HR />
+<a name="_image_destroy"></a>
+<P><font face=Arial size=+1 color=#808080><B>image_destroy</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Destructor">Destructor</a></b> | <b><a href="Winter_Categories.htm#_Image">Image</a></b> ]</P>
+<P><B>graphics</B> !! <B>image_destroy </B> (<i>Image</i>: <b><a href="Winter_Types.htm#_Image">Image</a></b>) &#8658; ().</P>
+<P><I>Destroy image.</I></P>
+<P>[Requires: active graphic context.]<br>Destroys bitmap image <i>Image</i>.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2138 -->
+
+<HR />
+<a name="_image_extent"></a>
+<P><font face=Arial size=+1 color=#808080><B>image_extent</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Image">Image</a></b> ]</P>
+<P><B>graphics</B> !! <B>image_extent </B> (<i>Image</i>: <b><a href="Winter_Types.htm#_Image">Image</a></b>) &#8658; <b><a href="Winter_Types.htm#_Point">Point</a></b>.</P>
+<P><I>Get image extent.</I></P>
+<P>Returns extent of bitmap image <i>Image</i>.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2146 -->
+
+<HR />
+<a name="_image_linxform"></a>
+<P><font face=Arial size=+1 color=#808080><B>image_linxform</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Image">Image</a></b> ]</P>
+<P><B>graphics</B> !! <B>image_linxform </B> (<i>SrcImage</i>: <b><a href="Winter_Types.htm#_Image">Image</a></b>, <i>SrcOrigin</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>SrcExtent</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>DstImage</i>: <b><a href="Winter_Types.htm#_Image">Image</a></b>, <i>DstOrigin</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>DstVectorH</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>DstVectorV</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; ().</P>
+<P><I>Linear transformation of image region between image(s) and/or display.</I></P>
+<P>[Requires: active graphic context.]<br>Transform rectangle, from source image <i>SrcImage</i> (at [<i>SrcOrigin</i> : <i>SrcExtent</i>]) to destination parallelogram in <i>DstImage</i> (at [<i>DstOrigin</i> : <i>DstVectorH</i>], [<i>DstOrigin</i> : <i>DstVectorV</i>]).<br>(If <i>SrcImage</i> and/or <i>DstImage</i> is <b>undef</b>, current graphic context is used instead.)</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2173 -->
+
+<HR />
+<a name="_image_stretch"></a>
+<P><font face=Arial size=+1 color=#808080><B>image_stretch</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Image">Image</a></b> ]</P>
+<P><B>graphics</B> !! <B>image_stretch </B> (<i>SrcImage</i>: <b><a href="Winter_Types.htm#_Image">Image</a></b>, <i>SrcOrigin</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>SrcExtent</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>DstImage</i>: <b><a href="Winter_Types.htm#_Image">Image</a></b>, <i>DstOrigin</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>DstExtent</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; ().</P>
+<P><I>Stretch image region between image(s) and/or display.</I></P>
+<P>[Requires: active graphic context.]<br>Copy rectangle (expanding or shrinking it on need), from source image <i>SrcImage</i> (at [<i>SrcOrigin</i> : <i>SrcExtent</i>]) to destination image <i>DstImage</i> (at [<i>DstOrigin</i> : <i>DstExtent</i>]).<br>(If <i>SrcImage</i> and/or <i>DstImage</i> is <b>undef</b>, current graphic context is used instead.)</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2163 -->
+
+<HR />
+<a name="_is_active"></a>
+<P><font face=Arial size=+1 color=#808080><B>is_active</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Predicate">Predicate</a></b> ]</P>
+<P><B>graphics</B> !! <B>is_active</B> () &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Check for active graphic context.</I></P>
+<P>Returns <b>true</b>, if active graphic context is present.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1764 -->
+
+<HR /><a name="_76"></a>
+<P><font size=+1>[<B>L</B>]</font></P>
+<HR />
+<a name="_Label"></a>
+<P><font face=Arial size=+1 color=#808080><B>Label</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Constructor">Constructor</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Label </B> (<i>Parent</i>: <b><a href="Winter_Types.htm#_Window">Window</a></b>, <i>Handler</i>: <b><a href="Winter_Types.htm#_Func">Func</a></b>, <i>Area</i>: <b><a href="Winter_Types.htm#_Rect">Rect</a></b>, <i>Text</i>: <b><a href="Winter_Types.htm#_String">String</a></b>, <i>Align</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>) &#8658; <b><a href="Winter_Types.htm#_LabelControl">LabelControl</a></b>.</P>
+<P><I>Create text label static.</I></P>
+<P>Create text label control in <i>Parent</i> window, with (optional) event <i>Handler</i> and area <i>Area</i>.<br><i>Text</i> defines label text.<br><i>Align</i> defines label horizontal alignment (< 0: left | 0: center | > 0: right).</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1262 -->
+
+<HR />
+<a name="_Label_GetText"></a>
+<P><font face=Arial size=+1 color=#808080><B>Label_GetText</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Label_GetText </B> (<i>Label</i>: <b><a href="Winter_Types.htm#_LabelControl">LabelControl</a></b>) &#8658; <b><a href="Winter_Types.htm#_String">String</a></b>.</P>
+<P><I>Get label text content.</I></P>
+<P>Get (and return) label text of <i>Label</i> control.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1271 -->
+
+<HR />
+<a name="_Label_SetText"></a>
+<P><font face=Arial size=+1 color=#808080><B>Label_SetText</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Label_SetText </B> (<i>Label</i>: <b><a href="Winter_Types.htm#_LabelControl">LabelControl</a></b>, <i>Text</i>: <b><a href="Winter_Types.htm#_String">String</a></b>) &#8658; ().</P>
+<P><I>Set label text content.</I></P>
+<P>Set text of <i>Label</i> control to <i>Text</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1278 -->
+
+<HR />
+<a name="_line"></a>
+<P><font face=Arial size=+1 color=#808080><B>line</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>line</B> (<i>From</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>To</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Plot single line.</I></P>
+<P>[Requires: active graphic context.]<br>[Affected by: plot mode.]<br>Draws line, from location <i>From</i> (inclusive) to location <i>To</i> (exclusive) (with current plot mode).<br>Returns <b>true</b> on success.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1800 -->
+
+<HR />
+<a name="_Lister"></a>
+<P><font face=Arial size=+1 color=#808080><B>Lister</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Constructor">Constructor</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Lister </B> (<i>Parent</i>: <b><a href="Winter_Types.htm#_Window">Window</a></b>, <i>Handler</i>: <b><a href="Winter_Types.htm#_Func">Func</a></b>, <i>Area</i>: <b><a href="Winter_Types.htm#_Rect">Rect</a></b>, <i>Flags</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>) &#8658; <b><a href="Winter_Types.htm#_ListControl">ListControl</a></b>.</P>
+<P><I>Create lister control.</I></P>
+<P>Create (empty) lister control in <i>Parent</i> window, with (optional) event <i>Handler</i> and area <i>Area</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1385 -->
+
+<HR />
+<a name="_Lister_AddItem"></a>
+<P><font face=Arial size=+1 color=#808080><B>Lister_AddItem</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Lister_AddItem </B> (<i>Lister</i>: <b><a href="Winter_Types.htm#_ListControl">ListControl</a></b>, <i>Item</i>: <b><a href="Winter_Types.htm#_String">String</a></b>) &#8658; ().</P>
+<P><I>Lister item add.</I></P>
+<P>Add item <i>Item</i> to end of <i>Lister</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1427 -->
+
+<HR />
+<a name="_Lister_Clear"></a>
+<P><font face=Arial size=+1 color=#808080><B>Lister_Clear</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Lister_Clear </B> (<i>Lister</i>: <b><a href="Winter_Types.htm#_ListControl">ListControl</a></b>) &#8658; ().</P>
+<P><I>Clear lister.</I></P>
+<P>Remove all list elements from <i>Lister</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1392 -->
+
+<HR />
+<a name="_Lister_DeleteItem"></a>
+<P><font face=Arial size=+1 color=#808080><B>Lister_DeleteItem</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Lister_DeleteItem </B> (<i>Lister</i>: <b><a href="Winter_Types.htm#_ListControl">ListControl</a></b>, <i>Index</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>) &#8658; <b><a href="Winter_Types.htm#_Int">Int</a></b>.</P>
+<P><I>Lister item delete.</I></P>
+<P>Delete item at <i>Index</i> in <i>Lister</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1448 -->
+
+<HR />
+<a name="_Lister_GetCurrent"></a>
+<P><font face=Arial size=+1 color=#808080><B>Lister_GetCurrent</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Lister_GetCurrent </B> (<i>Lister</i>: <b><a href="Winter_Types.htm#_ListControl">ListControl</a></b>) &#8658; <b><a href="Winter_Types.htm#_Int">Int</a></b>.</P>
+<P><I>Lister current element index.</I></P>
+<P>Returns index of current element in <i>Lister</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1406 -->
+
+<HR />
+<a name="_Lister_GetItem"></a>
+<P><font face=Arial size=+1 color=#808080><B>Lister_GetItem</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Lister_GetItem </B> (<i>Lister</i>: <b><a href="Winter_Types.htm#_ListControl">ListControl</a></b>, <i>Index</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>) &#8658; <b><a href="Winter_Types.htm#_String">String</a></b>.</P>
+<P><I>Lister get item by index.</I></P>
+<P>Return element of <i>Lister</i> at <i>Index</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1420 -->
+
+<HR />
+<a name="_Lister_GetTotal"></a>
+<P><font face=Arial size=+1 color=#808080><B>Lister_GetTotal</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Lister_GetTotal </B> (<i>Lister</i>: <b><a href="Winter_Types.htm#_ListControl">ListControl</a></b>) &#8658; <b><a href="Winter_Types.htm#_Int">Int</a></b>.</P>
+<P><I>Lister elements count.</I></P>
+<P>Return total number of elements in <i>Lister</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1399 -->
+
+<HR />
+<a name="_Lister_InsertItem"></a>
+<P><font face=Arial size=+1 color=#808080><B>Lister_InsertItem</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Lister_InsertItem </B> (<i>Lister</i>: <b><a href="Winter_Types.htm#_ListControl">ListControl</a></b>, <i>Text</i>: <b><a href="Winter_Types.htm#_String">String</a></b>, <i>Index</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>) &#8658; <b><a href="Winter_Types.htm#_Int">Int</a></b>.</P>
+<P><I>Lister item insert.</I></P>
+<P>Insert item <i>Text</i> before <i>Index</i> in <i>Lister</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1441 -->
+
+<HR />
+<a name="_Lister_LookupItem"></a>
+<P><font face=Arial size=+1 color=#808080><B>Lister_LookupItem</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Lister_LookupItem </B> (<i>Lister</i>: <b><a href="Winter_Types.htm#_ListControl">ListControl</a></b>, <i>Text</i>: <b><a href="Winter_Types.htm#_String">String</a></b>, <i>Index</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>) &#8658; <b><a href="Winter_Types.htm#_Int">Int</a></b>.</P>
+<P><I>Lister item lookup.</I></P>
+<P>Look for item starting with <i>Text</i> after <i>Index</i> in <i>Lister</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1434 -->
+
+<HR />
+<a name="_Lister_SetCurrent"></a>
+<P><font face=Arial size=+1 color=#808080><B>Lister_SetCurrent</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Lister_SetCurrent </B> (<i>Lister</i>: <b><a href="Winter_Types.htm#_ListControl">ListControl</a></b>, <i>Index</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>) &#8658; ().</P>
+<P><I>Lister set current element.</I></P>
+<P>Sets index of current element in <i>Lister</i> to <i>Index</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1413 -->
+
+<HR /><a name="_77"></a>
+<P><font size=+1>[<B>M</B>]</font></P>
+<HR />
+<a name="_map_grid_point"></a>
+<P><font face=Arial size=+1 color=#808080><B>map_grid_point</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>map_grid_point </B> (<i>GridOrigin</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>GridStep</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>GridCounts</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Location</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Point">Point</a></b>.</P>
+<P><I>Map point to rectangular grid.</I></P>
+<P>Locate point <i>Location</i> in grid (defined by start offset <i>GridOrigin</i>, cell width/height <i>GridStep</i> and cell H/V counts <i>GridCounts</i>).<br>Returns grid cell location (<i>CellCol</i>, <i>CellRow</i>) (or <b>undef</b>, if point is outside grid).</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2090 -->
+
+<HR />
+<a name="_map_grid_rect"></a>
+<P><font face=Arial size=+1 color=#808080><B>map_grid_rect</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>map_grid_rect </B> (<i>GridOrigin</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>GridStep</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>GridCounts</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Left_Top</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Right_Bottom</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Rect">Rect</a></b>.</P>
+<P><I>Map rectangle to rectangular grid.</I></P>
+<P>Locate rectangle [<i>Left_Top</i> : <i>Right_Bottom</i>] in grid (defined by start offset <i>GridOrigin</i>, cell width/height <i>GridStep</i> and cell H/V counts <i>GridCounts</i>).<br>Returns grid cells rectangle (<i>CellLeft</i>, <i>CellTop</i>)::(<i>CellRight</i>, <i>CellBottom</i>) (or <b>undef</b>, if no intersection between rectangle and grid).</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2098 -->
+
+<HR />
+<a name="_Menu"></a>
+<P><font face=Arial size=+1 color=#808080><B>Menu</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Constructor">Constructor</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Menu </B> (<i>Parent</i>: <b><a href="Winter_Types.htm#_Window">Window</a></b>, <i>Handler</i>: <b><a href="Winter_Types.htm#_Func">Func</a></b>, <i>Area</i>: <b><a href="Winter_Types.htm#_Rect">Rect</a></b>, <i>Flags</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>) &#8658; <b><a href="Winter_Types.htm#_MenuControl">MenuControl</a></b>.</P>
+<P><I>Create window menu.</I></P>
+<P>Create (empty) menu in <i>Parent</i> window, with (optional) event <i>Handler</i>.<br>(Argument <i>Area</i> is unused, menu bar is always at top.)</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1512 -->
+
+<HR />
+<a name="_Menu_AddDiv"></a>
+<P><font face=Arial size=+1 color=#808080><B>Menu_AddDiv</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Menu_AddDiv </B> (<i>Menu</i>: <b><a href="Winter_Types.htm#_MenuControl">MenuControl</a></b>) &#8658; ().</P>
+<P><I>Add separator to menu.</I></P>
+<P>Add new separator to the end of <i>Menu</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1534 -->
+
+<HR />
+<a name="_Menu_AddItem"></a>
+<P><font face=Arial size=+1 color=#808080><B>Menu_AddItem</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Menu_AddItem </B> (<i>Menu</i>: <b><a href="Winter_Types.htm#_MenuControl">MenuControl</a></b>, <i>MenuOption</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>, <i>MenuItem</i>: <b><a href="Winter_Types.htm#_String">String</a></b>) &#8658; ().</P>
+<P><I>Add item to menu.</I></P>
+<P>Add new selectable <i>MenuItem</i> with code <i>MenuOption</i> to the end of <i>Menu</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1520 -->
+
+<HR />
+<a name="_Menu_AddPopup"></a>
+<P><font face=Arial size=+1 color=#808080><B>Menu_AddPopup</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Menu_AddPopup </B> (<i>Menu</i>: <b><a href="Winter_Types.htm#_MenuControl">MenuControl</a></b>, <i>MenuItem</i>: <b><a href="Winter_Types.htm#_String">String</a></b>, <i>MenuPopup</i>: <b><a href="Winter_Types.htm#_MenuControl">MenuControl</a></b>) &#8658; ().</P>
+<P><I>Add submenu to menu.</I></P>
+<P>Add new popup menu <i>MenuPopup</i> to the end of <i>Menu</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1527 -->
+
+<HR />
+<a name="_message_loop"></a>
+<P><font face=Arial size=+1 color=#808080><B>message_loop</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Windows">Windows</a></b> | <b><a href="Winter_Categories.htm#_Internal">Internal</a></b> ]</P>
+<P><B>winternal</B> !! <B>message_loop </B> (<i>MessageHandler</i>: <b><a href="Winter_Types.htm#_Func">Func</a></b>, @<i>Initial</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Int">Int</a></b>.</P>
+<P><I>Window session message loop.</I></P>
+<P>[Requires: active winsession.]<br>Proceed with session message loop, passing messages to <i>MessageHandler</i>.<br>(<i>Initial</i> is evaluated before session.)<br>(Returns internal counter of messages processed.)</P>
+<P></P>
+<!-- ../src/winter/WinMsg.cpp:921 -->
+
+<HR /><a name="_79"></a>
+<P><font size=+1>[<B>O</B>]</font></P>
+<HR />
+<a name="_oval"></a>
+<P><font face=Arial size=+1 color=#808080><B>oval</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>oval</B> (<i>Left_Top</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Right_Bottom</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Plot & fill oval (ellipse).</I></P>
+<P>[Requires: active graphic context.]<br>[Affected by: plot & fill modes.]<br>Draws filled ellipse in area [<i>Left_Top</i> : <i>Right_Bottom</i>] (with current plot & fill mode).<br>Returns <b>true</b> on success.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1820 -->
+
+<HR /><a name="_80"></a>
+<P><font size=+1>[<B>P</B>]</font></P>
+<HR />
+<a name="_pixel"></a>
+<P><font face=Arial size=+1 color=#808080><B>pixel</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>pixel</B> (<i>At</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Color</i>: <b><a href="Winter_Types.htm#_Color">Color</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Put pixel.</I></P>
+<P>[Requires: active graphic context.]<br>Put single pixel in current graphic context, at location <i>At</i> with color <i>Color</i>.<br>Returns <b>true</b> on success.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1771 -->
+
+<HR />
+<a name="_pixel_fill"></a>
+<P><font face=Arial size=+1 color=#808080><B>pixel_fill</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>pixel_fill </B> (<i>Left_Top</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Right_Bottom</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>CalcPoint</i>: <b><a href="Winter_Types.htm#_Func">Func</a></b>) &#8658; ().</P>
+<P><I>Fill rectangle with calculated pixels.</I></P>
+<P>[Requires: active graphic context.]<br>Fill area [<i>Left_Top</i> : <i>Right_Bottom</i>] with pixel values (calculated for each point (x, y) by <i>CalcPoint</i> ! (x, y) ).</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2309 -->
+
+<HR />
+<a name="_plot"></a>
+<P><font face=Arial size=+1 color=#808080><B>plot</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>plot</B> (<i>At</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Plot single point.</I></P>
+<P>[Requires: active graphic context.]<br>[Affected by: plot mode.]<br>Draws point at location <i>At</i> (with current plot mode).<br>Returns <b>true</b> on success.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1790 -->
+
+<HR />
+<a name="_plot_color"></a>
+<P><font face=Arial size=+1 color=#808080><B>plot_color</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> ]</P>
+<P><B>graphics</B> !! <B>plot_color</B> (<i>PlotColor</i>: <b><a href="Winter_Types.htm#_Color">Color</a></b>, @<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Plot color setting wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>[Affects: plot mode.]<br>Evaluates <i>Core</i>, with active plot color set to <i>PlotColor</i>.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1892 -->
+
+<HR />
+<a name="_plot_disable"></a>
+<P><font face=Arial size=+1 color=#808080><B>plot_disable</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> ]</P>
+<P><B>graphics</B> !! <B>plot_disable</B> (<i>Flag</i>: <b><a href="Winter_Types.htm#_Bool">Bool</a></b>, @<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Plot disabling wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>[Affects: plot mode.]<br>Evaluates <i>Core</i>, with line plotting disabled, if <i>Flag</i> is <b>true</b>.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1910 -->
+
+<HR />
+<a name="_polygon"></a>
+<P><font face=Arial size=+1 color=#808080><B>polygon</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>polygon</B> (<i>Vertex0</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Vertex1</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>,  ..., <i>VertexN</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>,  ) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Plot & fill closed polygon.</I></P>
+<P>[Requires: active graphic context.]<br>[Affected by: plot/fill mode.]<br>Draws closed polygon, as defined by list of <i>N</i> vertices (<i>Vertex0</i>, .., <i>VertexN</i>) (with current plot & fill mode).<br>(Warning: open vertex list expected.)<br>Returns <b>true</b> on success.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1871 -->
+
+<HR /><a name="_81"></a>
+<P><font size=+1>[<B>Q</B>]</font></P>
+<HR />
+<a name="_query_border"></a>
+<P><font face=Arial size=+1 color=#808080><B>query_border</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Windows">Windows</a></b> | <b><a href="Winter_Categories.htm#_Internal">Internal</a></b> ]</P>
+<P><B>winternal</B> !! <B>query_border </B> () &#8658; <b><a href="Winter_Types.htm#_Rect">Rect</a></b>.</P>
+<P><I>Get system window border.</I></P>
+<P>[Requires: active winsession.]<br>Returns current window border (as [<i>LeftTopInset</i> : <i>RightBottomInset</i>]).</P>
+<P></P>
+<!-- ../src/winter/WinMsg.cpp:947 -->
+
+<HR /><a name="_82"></a>
+<P><font size=+1>[<B>R</B>]</font></P>
+<HR />
+<a name="_RadioButton"></a>
+<P><font face=Arial size=+1 color=#808080><B>RadioButton</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Constructor">Constructor</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>RadioButton </B> (<i>Parent</i>: <b><a href="Winter_Types.htm#_Window">Window</a></b>, <i>Handler</i>: <b><a href="Winter_Types.htm#_Func">Func</a></b>, <i>Area</i>: <b><a href="Winter_Types.htm#_Rect">Rect</a></b>, <i>Label</i>: <b><a href="Winter_Types.htm#_String">String</a></b>) &#8658; <b><a href="Winter_Types.htm#_ButtonControl">ButtonControl</a></b>.</P>
+<P><I>Create radio button control.</I></P>
+<P>Create new radio button control in <i>Parent</i> window, with (optional) event <i>Handler</i>, area <i>Area</i>, and text <i>Label</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1297 -->
+
+<HR />
+<a name="_rect"></a>
+<P><font face=Arial size=+1 color=#808080><B>rect</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>rect</B> (<i>Left_Top</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Right_Bottom</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Plot & fill rectangle.</I></P>
+<P>[Requires: active graphic context.]<br>[Affected by: plot & fill modes.]<br>Draws filled rectangle in area [<i>Left_Top</i> : <i>Right_Bottom</i>] (with current plot & fill mode).<br>Returns <b>true</b> on success.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1810 -->
+
+<HR />
+<a name="_reloc_window"></a>
+<P><font face=Arial size=+1 color=#808080><B>reloc_window</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Windows">Windows</a></b> | <b><a href="Winter_Categories.htm#_Internal">Internal</a></b> ]</P>
+<P><B>winternal</B> !! <B>reloc_window </B> (<i>Win</i>: <b><a href="Winter_Types.htm#_Window">Window</a></b>, <i>Left_Top</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Width_Height</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; ().</P>
+<P><I>Set window location & extent.</I></P>
+<P>[Requires: active winsession.]<br>Sets screen region of window <i>Win</i> to (<i>Left_Top</i> : <i>Right_Bottom</i>).</P>
+<P></P>
+<!-- ../src/winter/WinMsg.cpp:906 -->
+
+<HR />
+<a name="_rename_window"></a>
+<P><font face=Arial size=+1 color=#808080><B>rename_window</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Windows">Windows</a></b> | <b><a href="Winter_Categories.htm#_Internal">Internal</a></b> ]</P>
+<P><B>winternal</B> !! <B>rename_window </B> (<i>Win</i>: <b><a href="Winter_Types.htm#_Window">Window</a></b>, <i>Title</i>: <b><a href="Winter_Types.htm#_String">String</a></b>) &#8658; ().</P>
+<P><I>Set window caption.</I></P>
+<P>[Requires: active winsession.]<br>Sets caption of window <i>Win</i> to <i>Title</i>.</P>
+<P></P>
+<!-- ../src/winter/WinMsg.cpp:912 -->
+
+<HR />
+<a name="_round_rect"></a>
+<P><font face=Arial size=+1 color=#808080><B>round_rect</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>round_rect</B> (<i>Left_Top</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Right_Bottom</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>CornerOff</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Plot & fill rectangle with rounded corners.</I></P>
+<P>[Requires: active graphic context.]<br>[Affected by: plot & fill modes.]<br>Draws filled rectangle in area [<i>Left_Top</i> : <i>Right_Bottom</i>] with elliptical corners defined by <i>CornerOff</i> (with current plot & fill mode).<br>Returns <b>true</b> on success.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1830 -->
+
+<HR /><a name="_83"></a>
+<P><font size=+1>[<B>S</B>]</font></P>
+<HR />
+<a name="_Scroller"></a>
+<P><font face=Arial size=+1 color=#808080><B>Scroller</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Constructor">Constructor</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Scroller </B> (<i>Parent</i>: <b><a href="Winter_Types.htm#_Window">Window</a></b>, <i>Handler</i>: <b><a href="Winter_Types.htm#_Func">Func</a></b>, <i>Area</i>: <b><a href="Winter_Types.htm#_Rect">Rect</a></b>, <i>Vertical</i>: <b><a href="Winter_Types.htm#_Bool">Bool</a></b>) &#8658; <b><a href="Winter_Types.htm#_ScrollControl">ScrollControl</a></b>.</P>
+<P><I>Create scroller control.</I></P>
+<P>Create scroller control in <i>Parent</i> window, with (optional) event <i>Handler</i> and area <i>Area</i>.<br><i>Vertical</i> defines orientation (? vertical : horizontal).</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1345 -->
+
+<HR />
+<a name="_Scroller_GetPos"></a>
+<P><font face=Arial size=+1 color=#808080><B>Scroller_GetPos</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Scroller_GetPos </B> (<i>Scroller</i>: <b><a href="Winter_Types.htm#_ScrollControl">ScrollControl</a></b>) &#8658; <b><a href="Winter_Types.htm#_Int">Int</a></b>.</P>
+<P><I>Get scroller position.</I></P>
+<P>Get (and return) current position of scroller control <i>Scroller</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1367 -->
+
+<HR />
+<a name="_Scroller_GetRange"></a>
+<P><font face=Arial size=+1 color=#808080><B>Scroller_GetRange</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Scroller_GetRange </B> (<i>Scroller</i>: <b><a href="Winter_Types.htm#_ScrollControl">ScrollControl</a></b>) &#8658; (<b><a href="Winter_Types.htm#_Int">Int</a></b>, <b><a href="Winter_Types.htm#_Int">Int</a></b>).</P>
+<P><I>Get scroller range.</I></P>
+<P>Get (and return) scroll range (<i>Min</i>, <i>Max</i>+1) of scroller control <i>Scroller</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1374 -->
+
+<HR />
+<a name="_Scroller_SetPos"></a>
+<P><font face=Arial size=+1 color=#808080><B>Scroller_SetPos</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Scroller_SetPos </B> (<i>Scroller</i>: <b><a href="Winter_Types.htm#_ScrollControl">ScrollControl</a></b>, <i>Pos</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>) &#8658; ().</P>
+<P><I>Set scroller position.</I></P>
+<P>Set current position of scroller control <i>Scroller</i> to <i>Pos</i>.</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1353 -->
+
+<HR />
+<a name="_Scroller_SetRange"></a>
+<P><font face=Arial size=+1 color=#808080><B>Scroller_SetRange</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_WinControl">WinControl</a></b> | <b><a href="Winter_Categories.htm#_Controller">Controller</a></b> ]</P>
+<P><B>wincontrol</B> !! <B>Scroller_SetRange </B> (<i>Scroller</i>: <b><a href="Winter_Types.htm#_ScrollControl">ScrollControl</a></b>,  (Min, <i>Max</i>): <b><a href="Winter_Types.htm#_Range">Range</a></b>) &#8658; ().</P>
+<P><I>Set scroller range.</I></P>
+<P>Set scroll range of scroller control <i>Scroller</i> to (<i>Min</i>, <i>Max</i>-1).</P>
+<P></P>
+<!-- ../src/winter/WinCtl.cpp:1360 -->
+
+<HR />
+<a name="_sleep"></a>
+<P><font face=Arial size=+1 color=#808080><B>sleep</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Windows">Windows</a></b> | <b><a href="Winter_Categories.htm#_Internal">Internal</a></b> ]</P>
+<P><B>winternal</B> !! <B>sleep </B> (<i>Interval</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>) &#8658; <b><a href="Winter_Types.htm#_Int">Int</a></b>.</P>
+<P><I>Sleep for a while.</I></P>
+<P>[Requires: active winsession.]<br>Sleep for an <i>Interval</i> milliseconds (returning <i>Interval</i>).</P>
+<P></P>
+<!-- ../src/winter/WinMsg.cpp:955 -->
+
+<HR /><a name="_84"></a>
+<P><font size=+1>[<B>T</B>]</font></P>
+<HR />
+<a name="_text"></a>
+<P><font face=Arial size=+1 color=#808080><B>text</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>text</B> (<i>Text</i>: <b><a href="Winter_Types.htm#_String">String</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Output text string.</I></P>
+<P>[Requires: active graphic context.]<br>[Affected by: text mode/origin.]<br>[Changes: text origin.]<br>Outputs string <i>Text</i>, at current text origin, advancing it (with current text mode).<br>Returns <b>true</b> on success.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1940 -->
+
+<HR />
+<a name="_text_box"></a>
+<P><font face=Arial size=+1 color=#808080><B>text_box</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> ]</P>
+<P><B>graphics</B> !! <B>text_box </B> (<i>AlignFlags</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>, <i>LeftTop</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>RightBottom</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, @<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Text box wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>Output <i>Core</i>, with clipping and relative alignment (as by <i>AlignFlags</i>) to [<i>LeftTop</i> : <i>RightBottom</i>] rectangle.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2114 -->
+
+<HR />
+<a name="_text_metrics"></a>
+<P><font face=Arial size=+1 color=#808080><B>text_metrics</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> ]</P>
+<P><B>graphics</B> !! <B>text_metrics</B> (<i>MetricsList</i>: <b><a href="Winter_Types.htm#_Mutable">Mutable</a></b>, <i>OutFlag</i>: <b><a href="Winter_Types.htm#_Bool">Bool</a></b>, @<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Text metrics wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>Evaluates <i>Core</i>, assigning list (<i>TotalWidth</i>, <i>MaxAscent</i>, <i>MaxDescent</i>, <i>MaxLeading</i>) to <i>MetricsList</i>.<br>(If <i>OutFlag</i> is true, actual text output is completely suppressed in <i>Core</i>.)</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1978 -->
+
+<HR />
+<a name="_text_org"></a>
+<P><font face=Arial size=+1 color=#808080><B>text_org</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>text_org</B> (<i>Origin</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Set current text origin.</I></P>
+<P>[Requires: active graphic context.]<br>[Changes: text origin.]<br>Sets current text origin to <i>Origin</i>.<br>Returns <b>true</b> on success.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1952 -->
+
+<HR />
+<a name="_timer_control"></a>
+<P><font face=Arial size=+1 color=#808080><B>timer_control</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Windows">Windows</a></b> | <b><a href="Winter_Categories.htm#_Internal">Internal</a></b> ]</P>
+<P><B>winternal</B> !! <B>timer_control </B> (<i>Win</i>: <b><a href="Winter_Types.htm#_Window">Window</a></b>, <i>TimerID</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>, <i>Interval</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>) &#8658; <b><a href="Winter_Types.htm#_Int">Int</a></b>.</P>
+<P><I>Enable, disable or change window timer.</I></P>
+<P>[Requires: active winsession.]<br>Set timer <i>TimerID</i> for <i>Win</i> to interval <i>Interval</i> milliseconds (repeatedly).<br>(If <i>Interval</i> is 0, timer <i>TimerID</i> is stopped.)<br>(If <i>TimerID</i> is < 0, new timer is allocated.)<br>As result, new timer ID (wich may change) is returned.</P>
+<P></P>
+<!-- ../src/winter/WinMsg.cpp:963 -->
+
+<HR />
+<a name="_timer_info"></a>
+<P><font face=Arial size=+1 color=#808080><B>timer_info</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Windows">Windows</a></b> | <b><a href="Winter_Categories.htm#_Internal">Internal</a></b> ]</P>
+<P><B>winternal</B> !! <B>timer_info </B> ([<i>TimerID</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>]) &#8658; <b><a href="Winter_Types.htm#_Int">Int</a></b>.</P>
+<P><I>Get info about timer.</I></P>
+<P>[Requires: active winsession.]<br>If <i>TimerID</i> is specified, returns current delay for timer <i>TimerID</i>.<br>(Returns total number of active timers otherwise.)</P>
+<P></P>
+<!-- ../src/winter/WinMsg.cpp:972 -->
+
+<HR /><a name="_85"></a>
+<P><font size=+1>[<B>U</B>]</font></P>
+<HR />
+<a name="_unichar"></a>
+<P><font face=Arial size=+1 color=#808080><B>unichar</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>unichar</B> (<i>Code</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Output single character.</I></P>
+<P>[Requires: active graphic context.]<br>[Affected by: text mode/origin.]<br>[Changes: text origin.]<br>Outputs character with ASCII/Unicode <i>Code</i>, at current text origin, advancing it (with current text mode).<br>Returns <b>true</b> on success.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1928 -->
+
+<HR /><a name="_86"></a>
+<P><font size=+1>[<B>V</B>]</font></P>
+<HR />
+<a name="_vec_add"></a>
+<P><font face=Arial size=+1 color=#808080><B>vec_add</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Vector">Vector</a></b> ]</P>
+<P><B>graphics</B> !! <B>vec_add </B> (<i>VecA</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>VecB</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Point">Point</a></b>.</P>
+<P><I>Vector addition.</I></P>
+<P>Addition of integer vectors <i>VecA</i> and <i>VecB</i> (for <i>VecA</i> = (<i>Ax</i>, <i>Ay</i>) and <i>VecB</i> = (<i>Bx</i>, <i>By</i>): returns vector (<i>Ax</i> + <i>Bx</i>, <i>Ay</i> + <i>By</i>)).</P>
+<P><I>See also: </I>[ <B><a href="#_vec_sub">vec_sub</a></B> ]</P>
+<!-- ../src/winter/WinGfx.cpp:2252 -->
+
+<HR />
+<a name="_vec_eq"></a>
+<P><font face=Arial size=+1 color=#808080><B>vec_eq</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Vector">Vector</a></b> | <b><a href="Winter_Categories.htm#_Predicate">Predicate</a></b> ]</P>
+<P><B>graphics</B> !! <B>vec_eq </B> (<i>VecA</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>VecB</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Vector equality.</I></P>
+<P>Check integer vectors <i>VecA</i> and <i>VecB</i> for equality (for <i>VecA</i> = (<i>Ax</i>, <i>Ay</i>) and <i>VecB</i> = (<i>Bx</i>, <i>By</i>) returns (<i>Ax</i> == <i>Bx</i> && <i>Ay</i> == <i>By</i>)).</P>
+<P><I>See also: </I>[ <B><a href="#_vec_ne">vec_ne</a></B> ]</P>
+<!-- ../src/winter/WinGfx.cpp:2277 -->
+
+<HR />
+<a name="_vec_ne"></a>
+<P><font face=Arial size=+1 color=#808080><B>vec_ne</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Vector">Vector</a></b> | <b><a href="Winter_Categories.htm#_Predicate">Predicate</a></b> ]</P>
+<P><B>graphics</B> !! <B>vec_ne </B> (<i>VecA</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>VecB</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Vector inequality.</I></P>
+<P>Check integer vectors <i>VecA</i> and <i>VecB</i> for inequality (for <i>VecA</i> = (<i>Ax</i>, <i>Ay</i>) and <i>VecB</i> = (<i>Bx</i>, <i>By</i>) returns (<i>Ax</i> <> <i>Bx</i> || <i>Ay</i> <> <i>By</i>)).</P>
+<P><I>See also: </I>[ <B><a href="#_vec_eq">vec_eq</a></B> ]</P>
+<!-- ../src/winter/WinGfx.cpp:2283 -->
+
+<HR />
+<a name="_vec_neg"></a>
+<P><font face=Arial size=+1 color=#808080><B>vec_neg</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Vector">Vector</a></b> ]</P>
+<P><B>graphics</B> !! <B>vec_neg </B> (<i>VecA</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Point">Point</a></b>.</P>
+<P><I>Vector negation.</I></P>
+<P>Negation of integer vector <i>VecA</i> (for <i>VecA</i> = (<i>Ax</i>, <i>Ay</i>) returns vector (-<i>Ax</i>, -<i>Ay</i>)).</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2242 -->
+
+<HR />
+<a name="_vec_nz"></a>
+<P><font face=Arial size=+1 color=#808080><B>vec_nz</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Vector">Vector</a></b> | <b><a href="Winter_Categories.htm#_Predicate">Predicate</a></b> ]</P>
+<P><B>graphics</B> !! <B>vec_nz </B> (<i>Vec</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Vector check for non-zero.</I></P>
+<P>Check integer vector <i>Vec</i> for non-equality to zero (for <i>Vec</i> = (<i>X</i>, <i>Y</i>): returns (<i>X</i> <> 0 && <i>Y</i> <> 0)).</P>
+<P><I>See also: </I>[ <B><a href="#_vec_z">vec_z</a></B> ]</P>
+<!-- ../src/winter/WinGfx.cpp:2300 -->
+
+<HR />
+<a name="_vec_scale"></a>
+<P><font face=Arial size=+1 color=#808080><B>vec_scale</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Vector">Vector</a></b> ]</P>
+<P><B>graphics</B> !! <B>vec_scale </B> (<i>F</i>: <b><a href="Winter_Types.htm#_Float">Float</a></b>, <i>VecA</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Point">Point</a></b>.</P>
+<P><I>Vector scaling.</I></P>
+<P>Scale integer vector <i>VecA</i> by factor <i>F</i> (for <i>VecA</i> = (<i>Ax</i>, <i>Ay</i>): returns vector (<i>Ax</i>*<i>F</i>, <i>Ay</i>*<i>F</i>)).</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2267 -->
+
+<HR />
+<a name="_vec_sub"></a>
+<P><font face=Arial size=+1 color=#808080><B>vec_sub</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Vector">Vector</a></b> ]</P>
+<P><B>graphics</B> !! <B>vec_sub </B> (<i>VecA</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>VecB</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Point">Point</a></b>.</P>
+<P><I>Vector subtraction.</I></P>
+<P>Subtraction of integer vectors <i>VecA</i> and <i>VecB</i> (for <i>VecA</i> = (<i>Ax</i>, <i>Ay</i>) and <i>VecB</i> = (<i>Bx</i>, <i>By</i>): returns vector (<i>Ax</i> - <i>Bx</i>, <i>Ay</i> - <i>By</i>)).</P>
+<P><I>See also: </I>[ <B><a href="#_vec_add">vec_add</a></B> ]</P>
+<!-- ../src/winter/WinGfx.cpp:2258 -->
+
+<HR />
+<a name="_vec_z"></a>
+<P><font face=Arial size=+1 color=#808080><B>vec_z</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Vector">Vector</a></b> | <b><a href="Winter_Categories.htm#_Predicate">Predicate</a></b> ]</P>
+<P><B>graphics</B> !! <B>vec_z </B> (<i>Vec</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Vector check for zero.</I></P>
+<P>Check integer vector <i>Vec</i> for equality to zero (for <i>Vec</i> = (<i>X</i>, <i>Y</i>): returns (<i>X</i> == 0 && <i>Y</i> == 0)).</P>
+<P><I>See also: </I>[ <B><a href="#_vec_nz">vec_nz</a></B> ]</P>
+<!-- ../src/winter/WinGfx.cpp:2294 -->
+
+<HR /><a name="_87"></a>
+<P><font size=+1>[<B>W</B>]</font></P>
+<HR />
+<a name="_wedge"></a>
+<P><font face=Arial size=+1 color=#808080><B>wedge</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> ]</P>
+<P><B>graphics</B> !! <B>wedge</B> (<i>Left_Top</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>Right_Bottom</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>StartRay</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>, <i>EndRay</i>: <b><a href="Winter_Types.htm#_Point">Point</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</P>
+<P><I>Plot & fill elliptical wedge.</I></P>
+<P>[Requires: active graphic context.]<br>[Affected by: plot & fill modes.]<br>Draws wedge of ellipse in area [<i>Left_Top</i> : <i>Right_Bottom</i>], from vector <i>StartRay</i> to vector <i>EndRay</i> clockwise (with current plot & fill mode).<br>(Note: both <i>StartRay</i> and <i>EndRay</i> are defined relative to centre of ellipse.)<br>Returns <b>true</b> on success.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:1858 -->
+
+<HR />
+<a name="_windows_loop"></a>
+<P><font face=Arial size=+1 color=#808080><B>windows_loop</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Windows">Windows</a></b> | <b><a href="Winter_Categories.htm#_Internal">Internal</a></b> ]</P>
+<P><B>winternal</B> !! <B>windows_loop </B> (<i>WidgetRef</i>: <b><a href="Winter_Types.htm#_Mutable">Mutable</a></b>, @<i>Body</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Window iterator.</I></P>
+<P>[Requires: active winsession.]<br>Evaluate <i>Body</i> for all active session windows (as accessible through <i>WidgetRef</i>).</P>
+<P></P>
+<!-- ../src/winter/WinMsg.cpp:939 -->
+
+<HR />
+<a name="_with_debug"></a>
+<P><font face=Arial size=+1 color=#808080><B>with_debug</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> | <b><a href="Winter_Categories.htm#_Debug">Debug</a></b> ]</P>
+<P><B>graphics</B> !! <B>with_debug </B> (<i>Supress</i>: <b><a href="Winter_Types.htm#_Bool">Bool</a></b>, @<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Graphic debugging wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>Evaluates <i>Core</i> (with graphic operations logging).</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2318 -->
+
+<HR />
+<a name="_with_image"></a>
+<P><font face=Arial size=+1 color=#808080><B>with_image</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> | <b><a href="Winter_Categories.htm#_Image">Image</a></b> ]</P>
+<P><B>graphics</B> !! <B>with_image </B> (<i>Image</i>: <b><a href="Winter_Types.htm#_Image">Image</a></b>, @<i>Core</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Image output wrapper.</I></P>
+<P>[Requires: active graphic context.]<br>Evaluates <i>Core</i>, with <i>Image</i> as an active graphic output context.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2230 -->
+
+<HR />
+<a name="_with_window"></a>
+<P><font face=Arial size=+1 color=#808080><B>with_window</B></font></P>
+<P>[ <b><a href="Winter_Categories.htm#_Windows">Windows</a></b> | <b><a href="Winter_Categories.htm#_Internal">Internal</a></b> | <b><a href="Winter_Categories.htm#_Wrapper">Wrapper</a></b> ]</P>
+<P><B>winternal</B> !! <B>with_window </B> (<i>Win</i>: <b><a href="Winter_Types.htm#_Window">Window</a></b>, @<i>Body</i>: <b><a href="Winter_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Winter_Types.htm#_Any">Any</a></b>.</P>
+<P><I>Window output wrapper.</I></P>
+<P>[Requires: active winsession.]<br>Evaluates <i>Body</i> in display context of window <i>Win</i>.</P>
+<P></P>
+<!-- ../src/winter/WinMsg.cpp:931 -->
+
+<HR />
+<P>Total functors: <B>111</B>.</P>
+</BODY>
+</HTML>

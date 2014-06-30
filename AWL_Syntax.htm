@@ -1,0 +1,894 @@
+<HTML>
+<HEAD>
+<TITLE>Syntax chart</TITLE>
+</HEAD>
+<BODY>
+<CENTER>Version: <B>0.8.0</B>.</CENTER>
+<CENTER>[ <A href=AWL_Functors.htm><B>Functors</B></A> | <A href=AWL_Categories.htm><B>Categories</B></A> | <A href=AWL_Types.htm><B>Metatypes</B></A> | <A href=AWL_Syntax.htm><B>Syntax</B></A> ]</CENTER>
+<H1>AWL syntax chart</H1>
+<PRE>
+
+<B><font color=#FF3300>SYNTAX_ERR</font></B>:
+	<B><font color=#FF3300>error</font></B>  		 
+ ;
+
+<B><font color=#FF3300>RECOVER</font></B>:	 
+ ;
+
+ 
+ 
+<B><font color=#FF3300>PROG</font></B>:	<B><font color=#FF3300>ROOT_STMT_SEQ</font></B>
+ |		<B><font color=#FF3300>EVAL_CODE</font></B>
+ ;
+
+ 
+<B><font color=#FF3300>ROOT_STMT_SEQ</font></B>:
+ |	<B><font color=#FF3300>ROOT_STMT</font></B>
+
+ |	<B><font color=#FF3300>ROOT_STMT</font></B> ';' <B><font color=#FF3300>ROOT_STMT_SEQ</font></B>
+
+ |	<B><font color=#FF3300>SYNTAX_ERR</font></B> ';' <B><font color=#FF3300>RECOVER</font></B> <B><font color=#FF3300>ROOT_STMT_SEQ</font></B>
+ ;
+
+<B><font color=#FF3300>ROOT_STMT</font></B>:	<B><font color=#FF3300>STMT</font></B>					 
+	 
+ ;
+
+ 
+
+ 
+<B><font color=#FF3300>STMT</font></B>:
+	<B><font color=#FF3300>EXPR</font></B>			 
+
+ |	<B><font color=#FF3300>FC_DEF</font></B>			 
+ |	<B><font color=#FF3300>S_DEF</font></B>			 
+ 
+ |					 
+	<B><font color=#FF3300>LOCAL_DEF</font></B>
+	 
+ ;
+
+ 
+<B><font color=#FF3300>FC_DEF</font></B>:
+		<B><font color=#FF3300>F_DEF</font></B>		 
+	 
+
+ |		<B><font color=#FF3300>F_GROUP_DEF</font></B>
+
+ |		<B><font color=#FF3300>C_DEF</font></B>		 
+	 
+	
+		 
+
+ |		<B><font color=#FF3300>V_DEF</font></B>		 
+	 
+ |		<B><font color=#FF3300>F_REDEF</font></B>		 
+	 
+ ;
+
+ 
+<B><font color=#FF3300>O_STMT_ERR</font></B>:
+			 
+ |	<B><font color=#FF3300>error</font></B>	 
+ |	<B><font color=#FF3300>STMT</font></B>
+ ;
+
+ 
+
+ 
+<B><font color=#FF3300>LOCAL</font></B>:	<B><font color=#FF3300>L_IDENT</font></B>			 
+ ;
+
+ 
+<B><font color=#FF3300>PARAM_FLAG</font></B>:
+			 
+ | '@'		 
+ ;
+
+ 
+<B><font color=#FF3300>PARAM_INIT</font></B>:
+							 
+ |	'=' <B><font color=#FF3300>C_EXPR</font></B>				 
+ ;
+
+ 
+<B><font color=#FF3300>PARAM_LIST</font></B>:
+		 
+
+ |		<B><font color=#FF3300>PARAM_FLAG</font></B> <B><font color=#FF3300>LOCAL</font></B> <B><font color=#FF3300>PARAM_INIT</font></B> <B><font color=#FF3300>PARAM_LIST</font></B>
+		 
+ ;
+
+ 
+<B><font color=#FF3300>O_PARAM_LIST</font></B>:
+		 
+
+ |		'(' <B><font color=#FF3300>error</font></B> ')'			 
+ |		'(' <B><font color=#FF3300>PARAM_LIST</font></B> ')'		 
+ ;
+
+ 
+<B><font color=#FF3300>LOCAL_LIST</font></B>:
+ |		<B><font color=#FF3300>LOCAL</font></B> <B><font color=#FF3300>LOCAL_LIST</font></B>
+ ;
+
+<B><font color=#FF3300>LOCAL_DEF</font></B>:
+	':' '[' <B><font color=#FF3300>LOCAL_LIST</font></B> ']'
+ |	':' '[' <B><font color=#FF3300>error</font></B> ']' 			 
+ ;
+
+ 
+<B><font color=#FF3300>O_LOCAL_LIST</font></B>:
+ |		<B><font color=#FF3300>LOCAL_DEF</font></B>
+ ;
+
+ 
+<B><font color=#FF3300>F_DEF_HEAD</font></B>:
+	<B><font color=#FF3300>O_PARAM_LIST</font></B> <B><font color=#FF3300>O_LOCAL_LIST</font></B>			 
+ ;
+
+ 
+<B><font color=#FF3300>F_NAME</font></B>:	<B><font color=#FF3300>L_IDENT</font></B>
+		 
+ ;
+
+ 
+<B><font color=#FF3300>F_NAME_LIST</font></B>:
+		<B><font color=#FF3300>F_NAME</font></B>					 
+ |		<B><font color=#FF3300>F_NAME</font></B> <B><font color=#FF3300>F_NAME_LIST</font></B>		 
+ ;
+
+<B><font color=#FF3300>F_BODY</font></B>:
+	<B><font color=#FF3300>EXPR</font></B>
+
+ |	<B><font color=#FF3300>error</font></B>	 
+ ;
+
+<I><font color=#008000>/* Functor single definition */</font></I>
+<B><font color=#FF3300>F_DEF</font></B>:		'!' <B><font color=#FF3300>F_NAME</font></B>
+			 
+
+			 
+			<B><font color=#FF3300>F_DEF_HEAD</font></B> '=' <B><font color=#FF3300>F_BODY</font></B>
+			 
+ ;
+
+<I><font color=#008000>/* Functor group definition */</font></I>
+<B><font color=#FF3300>F_GROUP_DEF</font></B>:	'!'
+				' '
+				 
+				'='
+				' '
+				 
+ ;
+
+ 
+<B><font color=#FF3300>F_GROUP_NODE</font></B>:
+			 
+			<B><font color=#FF3300>F_DEF_HEAD</font></B> '=' <B><font color=#FF3300>EXPR</font></B>
+			 
+ ;
+
+ 
+<B><font color=#FF3300>F_GROUP_SEQ</font></B>:
+			<B><font color=#FF3300>F_GROUP_NODE</font></B>
+ |			<B><font color=#FF3300>F_GROUP_SEQ</font></B> ',' <B><font color=#FF3300>F_GROUP_NODE</font></B>
+ ;
+
+ 
+<B><font color=#FF3300>V_DEF</font></B>:		'!' '#' <B><font color=#FF3300>PREFIX</font></B>
+
+			 
+			<B><font color=#FF3300>F_DEF_HEAD</font></B> '=' <B><font color=#FF3300>EXPR</font></B>
+			 
+ ;
+
+<B><font color=#FF3300>O_FC_DEF</font></B>:
+
+ |	<B><font color=#FF3300>FC_DEF</font></B>  
+
+ |	<B><font color=#FF3300>error</font></B>
+
+ ;
+
+ 
+<B><font color=#FF3300>FC_LIST</font></B>:
+	<B><font color=#FF3300>O_FC_DEF</font></B>
+
+ |	<B><font color=#FF3300>FC_LIST</font></B> ',' <B><font color=#FF3300>O_FC_DEF</font></B>
+ ;
+
+ 
+<B><font color=#FF3300>O_FC_LIST</font></B>:
+
+ |	' '
+ ;
+
+ 
+<B><font color=#FF3300>O_SUPER</font></B>:				 
+
+ |	'[' <B><font color=#FF3300>PREFIX</font></B> ']'		 
+ ;
+
+ 
+<B><font color=#FF3300>O_CTOR</font></B>:					 
+
+ |	'=' <B><font color=#FF3300>C_EXPR</font></B>			 
+ ;
+
+ 
+<B><font color=#FF3300>O_DTOR</font></B>:					 
+
+ |	'~' <B><font color=#FF3300>C_EXPR</font></B>			 
+ ;
+
+ 
+<B><font color=#FF3300>O_VIRTUALS</font></B>:				 
+
+ |	'#'
+	' '	 
+ ;
+
+ 
+<B><font color=#FF3300>VIRT_LIST</font></B>:				 
+
+ |	<B><font color=#FF3300>VIRT_LIST</font></B> <B><font color=#FF3300>L_IDENT</font></B>
+	 
+ ;
+
+ 
+<B><font color=#FF3300>C_DEF</font></B>:	 
+		<font color=#606060>"!!"</font> <B><font color=#FF3300>O_SUPER</font></B> <B><font color=#FF3300>L_IDENT</font></B>
+		 
+
+			 
+		<B><font color=#FF3300>O_PARAM_LIST</font></B>
+			 
+		<B><font color=#FF3300>O_LOCAL_LIST</font></B>
+			 
+		<B><font color=#FF3300>O_CTOR</font></B>
+			 
+		<B><font color=#FF3300>O_DTOR</font></B>
+			 
+		<B><font color=#FF3300>O_VIRTUALS</font></B>
+
+			 
+		 
+
+			 
+		<B><font color=#FF3300>O_FC_LIST</font></B>
+
+		 
+ ;
+
+ 
+<B><font color=#FF3300>S_DEF</font></B>:	'!' '%' <B><font color=#FF3300>L_IDENT</font></B>
+		 
+		' '
+		 
+ ;
+
+ 
+<B><font color=#FF3300>F_REDEF</font></B>:	'!' <B><font color=#FF3300>PREFIX</font></B> <font color=#606060>":="</font>
+			  <B><font color=#FF3300>EXPR</font></B>  
+			 
+ ;
+
+ 
+
+<I><font color=#008000>/* Scalar literal */</font></I>
+<B><font color=#FF3300>L_LIT</font></B>:
+	<I><font color=#008000>/* fixed point literal */</font></I>
+	<B><font color=#FF3300>L_FIXED</font></B>		 
+
+	<I><font color=#008000>/* floating point literal */</font></I>
+ |	<B><font color=#FF3300>L_FLOAT</font></B>		 
+
+	<I><font color=#008000>/* string literal */</font></I>
+ |	<B><font color=#FF3300>L_STRING</font></B>	 
+ ;
+
+ 
+<B><font color=#FF3300>PREFIX</font></B>:	<B><font color=#FF3300>L_IDENT</font></B>			 
+ ;
+
+ 
+<B><font color=#FF3300>VARIABLE</font></B>:	<B><font color=#FF3300>L_IDENT</font></B>
+	 
+ ;
+
+ 
+
+ 
+<B><font color=#FF3300>XP_SEQ</font></B>:
+			 
+
+ |	<B><font color=#FF3300>EXPR</font></B>
+
+ |	<B><font color=#FF3300>error</font></B> ',' <B><font color=#FF3300>XP_SEQ</font></B>
+	 
+
+ |	<B><font color=#FF3300>EXPR</font></B> ',' <B><font color=#FF3300>XP_SEQ</font></B>
+	 
+ ;
+
+ 
+<B><font color=#FF3300>CXP_SEQP</font></B>:
+	<B><font color=#FF3300>C_EXPR</font></B>
+
+ |	<B><font color=#FF3300>C_EXPR</font></B> <B><font color=#FF3300>CXP_SEQP</font></B>
+			 
+ ;
+
+ 
+<B><font color=#FF3300>CXP_SEQT</font></B>:
+	':'		 
+
+ |	<B><font color=#FF3300>C_EXPR</font></B> <B><font color=#FF3300>CXP_SEQT</font></B>
+			 
+ ;
+
+<B><font color=#FF3300>CXP_SEQ</font></B>:
+				 
+ |	<B><font color=#FF3300>CXP_SEQP</font></B>
+
+ |	<B><font color=#FF3300>CXP_SEQT</font></B>
+
+ 
+ ;
+
+ 
+<B><font color=#FF3300>C_EXPR_PFX</font></B>:
+		<B><font color=#FF3300>L_LIT</font></B>					 
+
+ |		<B><font color=#FF3300>VARIABLE</font></B>				 
+
+ |		'(' <B><font color=#FF3300>XP_SEQ</font></B> ')'			 
+			 
+
+ |		'(' <B><font color=#FF3300>error</font></B> ')'
+			 
+ ;
+
+<B><font color=#FF3300>BLOCK</font></B>:	<B><font color=#FF3300>O_STMT_ERR</font></B>			 
+
+ |		<B><font color=#FF3300>STMT</font></B> ';' <B><font color=#FF3300>BLOCK</font></B>		 
+
+ |		<B><font color=#FF3300>SYNTAX_ERR</font></B> ';' <B><font color=#FF3300>RECOVER</font></B> <B><font color=#FF3300>BLOCK</font></B>		 
+ ;
+
+<I><font color=#008000>/* Closed expression */</font></I>
+<B><font color=#FF3300>C_EXPR</font></B>:
+		<B><font color=#FF3300>C_EXPR_PFX</font></B>
+
+ |		'[' <B><font color=#FF3300>CXP_SEQ</font></B> ']'				<I><font color=#008000>/* list of closed expressions */</font></I>
+			 
+
+ |		'[' <B><font color=#FF3300>error</font></B> ']'				<I><font color=#008000>/* list of closed expressions -- error handler! */</font></I>
+			 
+
+ |		' '				<I><font color=#008000>/* block expression */</font></I>
+			 
+
+ |		'!' '.'						<I><font color=#008000>/* current class reference */</font></I>
+			 
+ ;
+
+<B><font color=#FF3300>XP_ATERM</font></B>:	<B><font color=#FF3300>C_EXPR</font></B>					 
+
+		 
+ |		<B><font color=#FF3300>PREFIX</font></B> <B><font color=#FF3300>C_EXPR_PFX</font></B>					 &#8658;  <i>$1</i>:(<i>$2</i>) 
+ 			 
+
+		 
+ |		<B><font color=#FF3300>PREFIX</font></B> '^' <B><font color=#FF3300>XP_ATERM</font></B>					 &#8658;  <i>$1</i>:(<i>$3</i>) 
+			 
+
+		 
+ |		<B><font color=#FF3300>C_EXPR</font></B> <font color=#606060>"::"</font> <B><font color=#FF3300>XP_ATERM</font></B>				 &#8658;  (<i>$1</i>, <i>$3</i>) 
+			 
+
+		 
+ |		<B><font color=#FF3300>PREFIX</font></B> <B><font color=#FF3300>C_EXPR_PFX</font></B> <font color=#606060>"::"</font> <B><font color=#FF3300>XP_ATERM</font></B>		 &#8658;  <i>$1</i>:(<i>$2</i>, <i>$4</i>) 
+			 
+
+ ;
+
+<I><font color=#008000>/* Expression: terminal (postfix) */</font></I>
+<B><font color=#FF3300>XP_TERM</font></B>:
+		<B><font color=#FF3300>XP_ATERM</font></B>
+
+		<I><font color=#008000>/* item of list */</font></I>
+ |		<B><font color=#FF3300>XP_TERM</font></B> '[' <B><font color=#FF3300>EXPR</font></B> ']'	 &#8658;  <B><a href="AWL_Functors.htm#_l_item">l_item</a></B>(<i>$3</i>, <i>$1</i>) 
+			 
+
+		<I><font color=#008000>/* element of array */</font></I>
+ |		<B><font color=#FF3300>XP_TERM</font></B> ' '	 &#8658;  <B><a href="AWL_Functors.htm#_a_elem">a_elem</a></B>(<i>$1</i>, <i>$3</i>) 
+			 
+
+		<I><font color=#008000>/* tail of list */</font></I>
+ |		<B><font color=#FF3300>XP_TERM</font></B>	<font color=#606060>"[&gt;]"</font>			 &#8658;  <B><a href="AWL_Functors.htm#_l_tail">l_tail</a></B>(<i>$1</i>) 
+			 
+ ;
+
+<I><font color=#008000>/* Expression: N-terminal */</font></I>
+<B><font color=#FF3300>XP_NTERM</font></B>:	<B><font color=#FF3300>XP_TERM</font></B>
+
+	<I><font color=#008000>/* (WITH object wrapper) */</font></I>
+ |		<B><font color=#FF3300>XP_TERM</font></B> '.' <B><font color=#FF3300>XP_NTERM</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_with">with</a></B>(<i>$1</i>, <i>$3</i>) 
+			 
+
+	<I><font color=#008000>/* (apply functor ref to argument(s)) */</font></I>
+ |		<B><font color=#FF3300>XP_TERM</font></B> '!' <B><font color=#FF3300>XP_NTERM</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_apply">apply</a></B>(<i>$1</i>, <i>$3</i>) 
+			 
+
+	<I><font color=#008000>/* (hash element accessor) */</font></I>
+ |		<B><font color=#FF3300>XP_TERM</font></B> <font color=#606060>"-&gt;"</font> <B><font color=#FF3300>XP_NTERM</font></B>	 &#8658;  <B><a href="AWL_Functors.htm#_h_elem">h_elem</a></B>(<i>$1</i>, <i>$3</i>) 
+			 
+
+	<I><font color=#008000>/* (namespace qualification) */</font></I>
+ |		<B><font color=#FF3300>PREFIX</font></B> <font color=#606060>"!!"</font>				 &#8658;  <i>$1</i> . <i>$4</i> 
+			 
+		<B><font color=#FF3300>XP_NTERM</font></B>
+			 
+
+	<I><font color=#008000>/* (static devirtualisation) */</font></I>
+ |		<B><font color=#FF3300>PREFIX</font></B> '#' <B><font color=#FF3300>PREFIX</font></B>
+			 
+ ;
+
+<I><font color=#008000>/* Expression: terminal */</font></I>
+<B><font color=#FF3300>XP_PTERM</font></B>:		<B><font color=#FF3300>XP_NTERM</font></B>
+
+		<I><font color=#008000>/* head of list */</font></I>
+ |		<font color=#606060>"[&lt;]"</font> <B><font color=#FF3300>XP_PTERM</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_l_head">l_head</a></B>(<i>$2</i>) 
+			 
+ ;
+
+<I><font color=#008000>/* Expression: unary postfix */</font></I>
+<B><font color=#FF3300>XP_POST</font></B>:
+	<B><font color=#FF3300>XP_PTERM</font></B>
+
+	<I><font color=#008000>/* (post increment) */</font></I>
+ |	<B><font color=#FF3300>XP_POST</font></B> <font color=#606060>"++"</font>		 &#8658;  <B><a href="AWL_Functors.htm#_inc_p">inc_p</a></B>(<i>$1</i>) 
+		 
+	<I><font color=#008000>/* (post decrement) */</font></I>
+ |	<B><font color=#FF3300>XP_POST</font></B> <font color=#606060>"--"</font>		 &#8658;  <B><a href="AWL_Functors.htm#_dec_p">dec_p</a></B>(<i>$1</i>) 
+		 
+
+	<I><font color=#008000>/* (string slice) */</font></I>
+ |	<B><font color=#FF3300>XP_POST</font></B> '$' '[' <B><font color=#FF3300>EXPR</font></B> ']'	 &#8658;  <B><a href="AWL_Functors.htm#_s_slice">s_slice</a></B>(<i>$4</i>, <i>$1</i>) 
+		 
+ ;
+
+<I><font color=#008000>/* Expression: anonimous functor definition */</font></I>
+<B><font color=#FF3300>F_LAMBDA</font></B>:	'!'
+			 
+
+			 
+			<B><font color=#FF3300>F_DEF_HEAD</font></B> '=' <B><font color=#FF3300>C_EXPR</font></B>
+			 
+ ;
+
+<I><font color=#008000>/* Expression: unary prefix */</font></I>
+<B><font color=#FF3300>XP_PRE</font></B>:
+	<I><font color=#008000>/* (unary postfix) */</font></I>
+	<B><font color=#FF3300>XP_POST</font></B>
+
+	<I><font color=#008000>/* (pre increment) */</font></I>
+ |	<font color=#606060>"++"</font> <B><font color=#FF3300>XP_PRE</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_inc">inc</a></B>(<i>$2</i>) 
+		 
+	<I><font color=#008000>/* (pre decrement) */</font></I>
+ |	<font color=#606060>"--"</font> <B><font color=#FF3300>XP_PRE</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_dec">dec</a></B>(<i>$2</i>) 
+		 
+
+	<I><font color=#008000>/* (numeric absolute value) */</font></I>
+ |	'+' <B><font color=#FF3300>XP_PRE</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_abs">abs</a></B>(<i>$2</i>) 
+		 
+	<I><font color=#008000>/* (numeric negation) */</font></I>
+ |	'-' <B><font color=#FF3300>XP_PRE</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_neg">neg</a></B>(<i>$2</i>) 
+		 
+	<I><font color=#008000>/* (bitwise complement) */</font></I>
+ |	'~' <B><font color=#FF3300>XP_PRE</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_not">not</a></B>(<i>$2</i>) 
+		 
+	<I><font color=#008000>/* (logical NOT) */</font></I>
+ |	<font color=#606060>"~~"</font> <B><font color=#FF3300>XP_PRE</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_c_not">c_not</a></B>(<i>$2</i>) 
+		 
+	<I><font color=#008000>/* (numeric sign) */</font></I>
+ |	<font color=#606060>"&lt;?&gt;"</font> <B><font color=#FF3300>XP_PRE</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_sgn">sgn</a></B>(<i>$2</i>) 
+		 
+
+	<I><font color=#008000>/* (string length) */</font></I>
+ |	'#' '$' <B><font color=#FF3300>XP_PRE</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_s_len">s_len</a></B>(<i>$3</i>) 
+		 
+
+	<I><font color=#008000>/* (string type) */</font></I>
+ |	'+' '$' <B><font color=#FF3300>XP_PRE</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_s_type">s_type</a></B>(<i>$3</i>) 
+		 
+
+	<I><font color=#008000>/* (string reverse) */</font></I>
+ |	'~' '$' <B><font color=#FF3300>XP_PRE</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_s_rev">s_rev</a></B>(<i>$3</i>) 
+		 
+
+	<I><font color=#008000>/* (list length) */</font></I>
+ |	'#' <B><font color=#FF3300>XP_PRE</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_l_len">l_len</a></B>(<i>$2</i>) 
+		 
+
+	<I><font color=#008000>/* (list copy) */</font></I>
+ |	<font color=#606060>"[+]"</font> <B><font color=#FF3300>XP_PRE</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_l_copy">l_copy</a></B>(<i>$2</i>) 
+		 
+
+	<I><font color=#008000>/* (list reverse) */</font></I>
+ |	<font color=#606060>"[~]"</font> <B><font color=#FF3300>XP_PRE</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_l_rev">l_rev</a></B>(<i>$2</i>) 
+		 
+
+	<I><font color=#008000>/* (devaluation) */</font></I>
+ |	'@' <B><font color=#FF3300>XP_PRE</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_deval">deval</a></B>(<i>$2</i>) 
+		 
+
+	<I><font color=#008000>/* (revaluation) */</font></I>
+ |	'^' <B><font color=#FF3300>XP_PRE</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_reval">reval</a></B>(<i>$2</i>) 
+		 
+
+	<I><font color=#008000>/* (functor reference) */</font></I>
+ |	'!' <B><font color=#FF3300>PREFIX</font></B>
+		 
+
+	<I><font color=#008000>/* (anonimous functor definition) */</font></I>
+ |	<B><font color=#FF3300>F_LAMBDA</font></B>
+		 
+ ;
+
+<I><font color=#008000>/* Expression: multiplicative */</font></I>
+<B><font color=#FF3300>XP_MUL</font></B>:
+	<I><font color=#008000>/* (basic prefix) */</font></I>
+	<B><font color=#FF3300>XP_PRE</font></B>
+
+	<I><font color=#008000>/* (numeric multiplication) */</font></I>
+ |	<B><font color=#FF3300>XP_MUL</font></B> '*' <B><font color=#FF3300>XP_PRE</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_mul">mul</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+	<I><font color=#008000>/* (numeric division) */</font></I>
+ |	<B><font color=#FF3300>XP_MUL</font></B> '/' <B><font color=#FF3300>XP_PRE</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_div">div</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+	<I><font color=#008000>/* (integer division) */</font></I>
+ |	<B><font color=#FF3300>XP_MUL</font></B> '%' <B><font color=#FF3300>XP_PRE</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_idiv">idiv</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+	<I><font color=#008000>/* (integer remainder) */</font></I>
+ |	<B><font color=#FF3300>XP_MUL</font></B> <font color=#606060>"%%"</font> <B><font color=#FF3300>XP_PRE</font></B>	 &#8658;  <B><a href="AWL_Functors.htm#_irem">irem</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+
+	<I><font color=#008000>/* (bit shift left) */</font></I>
+ |	<B><font color=#FF3300>XP_MUL</font></B> <font color=#606060>"&lt;&lt;"</font> <B><font color=#FF3300>XP_PRE</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_shl">shl</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+	<I><font color=#008000>/* (bit shift right) */</font></I>
+ |	<B><font color=#FF3300>XP_MUL</font></B> <font color=#606060>"&gt;&gt;"</font> <B><font color=#FF3300>XP_PRE</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_shr">shr</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+
+	<I><font color=#008000>/* (string replication) */</font></I>
+ |	<B><font color=#FF3300>XP_MUL</font></B> '*' '$' <B><font color=#FF3300>XP_PRE</font></B>	 &#8658;  <B><a href="AWL_Functors.htm#_s_rep">s_rep</a></B>(<i>$1</i>, <i>$4</i>) 
+	 
+
+	<I><font color=#008000>/* (list replication) */</font></I>
+ |	<B><font color=#FF3300>XP_MUL</font></B> <font color=#606060>"[*]"</font> <B><font color=#FF3300>XP_PRE</font></B>	 &#8658;  <B><a href="AWL_Functors.htm#_l_rep">l_rep</a></B>(<i>$3</i>, <i>$1</i>) 
+	 
+
+	<I><font color=#008000>/* (string search backward) */</font></I>
+ |	<B><font color=#FF3300>XP_MUL</font></B> <font color=#606060>"&lt;&lt;"</font> '$' <B><font color=#FF3300>XP_PRE</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_s_findlast">s_findlast</a></B>(<i>$1</i>, <i>$4</i>) 
+	 
+	<I><font color=#008000>/* (string search forward) */</font></I>
+ |	<B><font color=#FF3300>XP_MUL</font></B> <font color=#606060>"&gt;&gt;"</font> '$' <B><font color=#FF3300>XP_PRE</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_s_findfirst">s_findfirst</a></B>(<i>$1</i>, <i>$4</i>) 
+	 
+ ;
+
+<I><font color=#008000>/* Expression: additive */</font></I>
+<B><font color=#FF3300>XP_ADD</font></B>:
+	<I><font color=#008000>/* (basic multiplicative) */</font></I>
+	<B><font color=#FF3300>XP_MUL</font></B>
+
+	<I><font color=#008000>/* (numeric addition) */</font></I>
+ |	<B><font color=#FF3300>XP_ADD</font></B> '+' <B><font color=#FF3300>XP_MUL</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_add">add</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+	<I><font color=#008000>/* (numeric subtraction) */</font></I>
+ |	<B><font color=#FF3300>XP_ADD</font></B> '-' <B><font color=#FF3300>XP_MUL</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_sub">sub</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+
+	<I><font color=#008000>/* (string concatenation) */</font></I>
+ |	<B><font color=#FF3300>XP_ADD</font></B> '+' '$' <B><font color=#FF3300>XP_MUL</font></B>	 &#8658;  <B><a href="AWL_Functors.htm#_s_cat">s_cat</a></B>(<i>$1</i>, <i>$4</i>) 
+	 
+
+	<I><font color=#008000>/* (list concatenation) */</font></I>
+ |	<B><font color=#FF3300>XP_ADD</font></B> <font color=#606060>"[+]"</font> <B><font color=#FF3300>XP_MUL</font></B>	 &#8658;  <B><a href="AWL_Functors.htm#_l_cat">l_cat</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+ ;
+
+<I><font color=#008000>/* Expression: maximum/minimum */</font></I>
+<B><font color=#FF3300>XP_MUM</font></B>:
+	<I><font color=#008000>/* (basic additive) */</font></I>
+	<B><font color=#FF3300>XP_ADD</font></B>
+
+	<I><font color=#008000>/* (numeric minimum) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> <font color=#606060>"?&lt;"</font> <B><font color=#FF3300>XP_ADD</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_min">min</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+	<I><font color=#008000>/* (numeric maximum) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> <font color=#606060>"?&gt;"</font> <B><font color=#FF3300>XP_ADD</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_max">max</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+
+	<I><font color=#008000>/* (string minimum) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> <font color=#606060>"?&lt;"</font> '$' <B><font color=#FF3300>XP_ADD</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_s_min">s_min</a></B>(<i>$1</i>, <i>$4</i>) 
+	 
+	<I><font color=#008000>/* (string maximum) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> <font color=#606060>"?&gt;"</font> '$' <B><font color=#FF3300>XP_ADD</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_s_max">s_max</a></B>(<i>$1</i>, <i>$4</i>) 
+	 
+ ;
+
+<I><font color=#008000>/* Expression: comparative */</font></I>
+<B><font color=#FF3300>XP_CMP</font></B>:
+	<I><font color=#008000>/* (basic maximum/minimum) */</font></I>
+	<B><font color=#FF3300>XP_MUM</font></B>
+
+	<I><font color=#008000>/* (numeric less than) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> '<'  <B><font color=#FF3300>XP_MUM</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_lt">lt</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+	<I><font color=#008000>/* (numeric less than or equal) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> <font color=#606060>"~&gt;"</font> <B><font color=#FF3300>XP_MUM</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_le">le</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+	<I><font color=#008000>/* (numeric greater than) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> '>'  <B><font color=#FF3300>XP_MUM</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_gt">gt</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+	<I><font color=#008000>/* (numeric greater than or equal) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> <font color=#606060>"~&lt;"</font> <B><font color=#FF3300>XP_MUM</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_ge">ge</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+
+	<I><font color=#008000>/* (numeric equality) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> <font color=#606060>"=="</font> <B><font color=#FF3300>XP_MUM</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_eq">eq</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+	<I><font color=#008000>/* (numeric inequality) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> <font color=#606060>"~="</font> <B><font color=#FF3300>XP_MUM</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_ne">ne</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+
+	<I><font color=#008000>/* (numeric compare) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> <font color=#606060>"&lt;?&gt;"</font> <B><font color=#FF3300>XP_MUM</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_cmp">cmp</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+
+	<I><font color=#008000>/* (string less than) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> '<' '$'  <B><font color=#FF3300>XP_MUM</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_s_lt">s_lt</a></B>(<i>$1</i>, <i>$4</i>) 
+	 
+	<I><font color=#008000>/* (string less than or equal) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> <font color=#606060>"~&gt;"</font>	'$' <B><font color=#FF3300>XP_MUM</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_s_le">s_le</a></B>(<i>$1</i>, <i>$4</i>) 
+	 
+	<I><font color=#008000>/* (string greater than) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> '>' '$'  <B><font color=#FF3300>XP_MUM</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_s_gt">s_gt</a></B>(<i>$1</i>, <i>$4</i>) 
+	 
+	<I><font color=#008000>/* (string greater than or equal) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> <font color=#606060>"~&lt;"</font> '$' <B><font color=#FF3300>XP_MUM</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_s_ge">s_ge</a></B>(<i>$1</i>, <i>$4</i>) 
+	 
+
+	<I><font color=#008000>/* (string equality) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> <font color=#606060>"=="</font> '$' <B><font color=#FF3300>XP_MUM</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_s_eq">s_eq</a></B>(<i>$1</i>, <i>$4</i>) 
+	 
+	<I><font color=#008000>/* (string inequality) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> <font color=#606060>"~="</font> '$' <B><font color=#FF3300>XP_MUM</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_s_ne">s_ne</a></B>(<i>$1</i>, <i>$4</i>) 
+	 
+
+	<I><font color=#008000>/* (string compare) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> <font color=#606060>"&lt;?&gt;"</font> '$' <B><font color=#FF3300>XP_MUM</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_s_cmp">s_cmp</a></B>(<i>$1</i>, <i>$4</i>) 
+	 
+
+	<I><font color=#008000>/* (identity: structural equality) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> <font color=#606060>"[==]"</font> <B><font color=#FF3300>XP_MUM</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_ident">ident</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+	<I><font color=#008000>/* (difference: structural inequality) */</font></I>
+ |	<B><font color=#FF3300>XP_MUM</font></B> <font color=#606060>"[&lt;&gt;]"</font> <B><font color=#FF3300>XP_MUM</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_differ">differ</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+
+ ;
+
+<I><font color=#008000>/* Expression: bitwise/logical */</font></I>
+<B><font color=#FF3300>XP_BIT</font></B>:
+	<I><font color=#008000>/* (basic comparative) */</font></I>
+	<B><font color=#FF3300>XP_CMP</font></B>
+
+	<I><font color=#008000>/* (bitwise/logical AND) */</font></I>
+ |	<B><font color=#FF3300>XP_BIT</font></B> '&' <B><font color=#FF3300>XP_CMP</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_and">and</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+	<I><font color=#008000>/* (bitwise/logical OR) */</font></I>
+ |	<B><font color=#FF3300>XP_BIT</font></B> '|' <B><font color=#FF3300>XP_CMP</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_or">or</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+	<I><font color=#008000>/* (bitwise/logical XOR) */</font></I>
+ |	<B><font color=#FF3300>XP_BIT</font></B> '~' <B><font color=#FF3300>XP_CMP</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_xor">xor</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+ ;
+
+<I><font color=#008000>/* optional bit expression */</font></I>
+<B><font color=#FF3300>O_XP_BIT</font></B>:		 
+ |	<B><font color=#FF3300>XP_BIT</font></B>
+ ;
+
+<I><font color=#008000>/* Expression: conditional/iterative */</font></I>
+<B><font color=#FF3300>XP_CND</font></B>:
+	<I><font color=#008000>/* (basic bitwise) */</font></I>
+	<B><font color=#FF3300>XP_BIT</font></B>
+
+	<I><font color=#008000>/* (values range) */</font></I>
+ |	<B><font color=#FF3300>O_XP_BIT</font></B> <font color=#606060>".."</font> <B><font color=#FF3300>O_XP_BIT</font></B>		 &#8658;  (<i>$1</i>, <i>$3</i>) 
+		 
+
+	<I><font color=#008000>/* (conditional AND clause) */</font></I>
+ |	<B><font color=#FF3300>XP_BIT</font></B> <font color=#606060>"&amp;&amp;"</font> <B><font color=#FF3300>XP_CND</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_c_and">c_and</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+	<I><font color=#008000>/* (conditional OR clause) */</font></I>
+ |	<B><font color=#FF3300>XP_BIT</font></B> <font color=#606060>"||"</font> <B><font color=#FF3300>XP_CND</font></B>				 &#8658;  <B><a href="AWL_Functors.htm#_c_or">c_or</a></B>(<i>$1</i>, <i>$3</i>) 
+	 
+
+	<I><font color=#008000>/* (binary conditional IF clause) */</font></I>
+ |	<B><font color=#FF3300>XP_BIT</font></B> '?' <B><font color=#FF3300>XP_CND</font></B> ':'				 &#8658;  <B><a href="AWL_Functors.htm#_if">if</a></B>(<i>$1</i>, <i>$3</i>, ) 
+		 
+	<I><font color=#008000>/* (binary conditional UNLESS clause) */</font></I>
+ |	<B><font color=#FF3300>XP_BIT</font></B> '~' '?' <B><font color=#FF3300>XP_CND</font></B> ':'			 &#8658;  <B><a href="AWL_Functors.htm#_unless">unless</a></B>(<i>$1</i>, <i>$4</i>, ) 
+		 
+
+	<I><font color=#008000>/* (ternary conditional IF clause) */</font></I>
+ |	<B><font color=#FF3300>XP_BIT</font></B> '?' <B><font color=#FF3300>XP_CND</font></B> ':' <B><font color=#FF3300>XP_CND</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_if">if</a></B>(<i>$1</i>, <i>$3</i>, <i>$5</i>) 
+		 
+	<I><font color=#008000>/* (ternary conditional UNLESS clause) */</font></I>
+ |	<B><font color=#FF3300>XP_BIT</font></B> '~' '?' <B><font color=#FF3300>XP_CND</font></B> ':' <B><font color=#FF3300>XP_CND</font></B>	 &#8658;  <B><a href="AWL_Functors.htm#_unless">unless</a></B>(<i>$1</i>, <i>$4</i>, <i>$6</i>) 
+		 
+
+	<I><font color=#008000>/* (precondition loop WHILE clause) */</font></I>
+ |	<B><font color=#FF3300>XP_BIT</font></B> <font color=#606060>"??"</font> <B><font color=#FF3300>XP_CND</font></B>				 &#8658;  <B><a href="AWL_Functors.htm#_while">while</a></B>(<i>$1</i>, <i>$3</i>) 
+		 
+	<I><font color=#008000>/* (postcondition loop WHILE clause) */</font></I>
+ |	<font color=#606060>"??"</font> <B><font color=#FF3300>C_EXPR</font></B> <B><font color=#FF3300>XP_BIT</font></B>				 &#8658;  <B><a href="AWL_Functors.htm#_do_while">do_while</a></B>(<i>$3</i>, <i>$2</i>) 
+		 
+
+	<I><font color=#008000>/* (precondition loop UNTIL clause) */</font></I>
+ |	<B><font color=#FF3300>XP_BIT</font></B> '~' <font color=#606060>"??"</font> <B><font color=#FF3300>XP_CND</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_until">until</a></B>(<i>$1</i>, <i>$4</i>) 
+		 
+	<I><font color=#008000>/* (postcondition loop UNTIL clause) */</font></I>
+ |	'~' <font color=#606060>"??"</font> <B><font color=#FF3300>C_EXPR</font></B> <B><font color=#FF3300>XP_BIT</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_do_until">do_until</a></B>(<i>$4</i>, <i>$3</i>) 
+		 
+
+	<I><font color=#008000>/* (incremental FOR loop clause) */</font></I>
+ |	<font color=#606060>"??"</font> <B><font color=#FF3300>C_EXPR</font></B> '=' <B><font color=#FF3300>C_EXPR</font></B> <font color=#606060>"++"</font> ':' <B><font color=#FF3300>XP_CND</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_for_inc">for_inc</a></B>(<i>$2</i>, <i>$4</i>, <i>$7</i>) 
+		 
+
+	<I><font color=#008000>/* (decremental FOR loop clause) */</font></I>
+ |	<font color=#606060>"??"</font> <B><font color=#FF3300>C_EXPR</font></B> '=' <B><font color=#FF3300>C_EXPR</font></B> <font color=#606060>"--"</font> ':' <B><font color=#FF3300>XP_CND</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_for_dec">for_dec</a></B>(<i>$2</i>, <i>$4</i>, <i>$7</i>) 
+		 
+
+	<I><font color=#008000>/* (TIMES loop clause) */</font></I>
+ |	<font color=#606060>"??"</font> <B><font color=#FF3300>C_EXPR</font></B> ':' <B><font color=#FF3300>XP_CND</font></B>							 &#8658;  <B><a href="AWL_Functors.htm#_times">times</a></B>(<i>$2</i>, <i>$4</i>) 
+		 
+ ;
+
+<I><font color=#008000>/* Unary operations (for combined assignment) */</font></I>
+<B><font color=#FF3300>OPC_UN</font></B>:
+	<I><font color=#008000>/* (combine assignment with absolute value) */</font></I>
+	'+'			 		 &#8658;  !<B><a href="AWL_Functors.htm#_abs">abs</a></B> 
+	<I><font color=#008000>/* (combine assignment with negation) */</font></I>
+ |	'-'			 		 &#8658;  !<B><a href="AWL_Functors.htm#_neg">neg</a></B> 
+	<I><font color=#008000>/* (combine assignment with bit inversion) */</font></I>
+ |	'~'			 		 &#8658;  !<B><a href="AWL_Functors.htm#_not">not</a></B> 
+	<I><font color=#008000>/* (combine assignment with string reverse) */</font></I>
+ |	'~' '$'		 		 &#8658;  !<B><a href="AWL_Functors.htm#_s_rev">s_rev</a></B> 
+ ;
+
+<I><font color=#008000>/* Binary operations (for combined assignment / reduction) */</font></I>
+<B><font color=#FF3300>OPC_BIN</font></B>:
+	<I><font color=#008000>/* (combine assignment with addition) */</font></I>
+	'+'			 		 &#8658;  !<B><a href="AWL_Functors.htm#_add">add</a></B> 
+	<I><font color=#008000>/* (combine assignment with subtraction) */</font></I>
+ |	'-'			 		 &#8658;  !<B><a href="AWL_Functors.htm#_sub">sub</a></B> 
+
+	<I><font color=#008000>/* (combine assignment with multiplication) */</font></I>
+ |	'*'			 		 &#8658;  !<B><a href="AWL_Functors.htm#_mul">mul</a></B> 
+	<I><font color=#008000>/* (combine assignment with division) */</font></I>
+ |	'/'			 		 &#8658;  !<B><a href="AWL_Functors.htm#_div">div</a></B> 
+	<I><font color=#008000>/* (combine assignment with integer division) */</font></I>
+ |	'%'			 		 &#8658;  !<B><a href="AWL_Functors.htm#_idiv">idiv</a></B> 
+	<I><font color=#008000>/* (combine assignment with integer remainder) */</font></I>
+ |	<font color=#606060>"%%"</font>		 		 &#8658;  !<B><a href="AWL_Functors.htm#_irem">irem</a></B> 
+
+	<I><font color=#008000>/* (combine assignment with numeric minimum) */</font></I>
+ |	<font color=#606060>"?&lt;"</font>		 		 &#8658;  !<B><a href="AWL_Functors.htm#_min">min</a></B> 
+	<I><font color=#008000>/* (combine assignment with numeric maximum) */</font></I>
+ |	<font color=#606060>"?&gt;"</font>		 		 &#8658;  !<B><a href="AWL_Functors.htm#_max">max</a></B> 
+
+	<I><font color=#008000>/* (combine assignment with bit shift left) */</font></I>
+ |	<font color=#606060>"&lt;&lt;"</font>		 		 &#8658;  !<B><a href="AWL_Functors.htm#_shl">shl</a></B> 
+	<I><font color=#008000>/* (combine assignment with bit shift right) */</font></I>
+ |	<font color=#606060>"&gt;&gt;"</font>		 		 &#8658;  !<B><a href="AWL_Functors.htm#_shr">shr</a></B> 
+
+	<I><font color=#008000>/* (combine assignment with bit AND) */</font></I>
+ |	'&'			 		 &#8658;  !<B><a href="AWL_Functors.htm#_and">and</a></B> 
+	<I><font color=#008000>/* (combine assignment with bit OR) */</font></I>
+ |	'|'			 		 &#8658;  !<B><a href="AWL_Functors.htm#_or">or</a></B> 
+	<I><font color=#008000>/* (combine assignment with bit XOR) */</font></I>
+ |	'~'			 		 &#8658;  !<B><a href="AWL_Functors.htm#_xor">xor</a></B> 
+
+	<I><font color=#008000>/* (combine assignment with string concatenation) */</font></I>
+ |	'+' '$'		 		 &#8658;  !<B><a href="AWL_Functors.htm#_s_cat">s_cat</a></B> 
+	<I><font color=#008000>/* (combine assignment with string replication) */</font></I>
+ |	'*' '$'		 		 &#8658;  !<B><a href="AWL_Functors.htm#_s_rep">s_rep</a></B> 
+
+ |	<font color=#606060>"?&lt;"</font> '$'	 		 &#8658;  !<B><a href="AWL_Functors.htm#_s_min">s_min</a></B> 
+ |	<font color=#606060>"?&gt;"</font> '$'	 		 &#8658;  !<B><a href="AWL_Functors.htm#_s_max">s_max</a></B> 
+
+ ;
+
+ 
+<B><font color=#FF3300>XP_EXX</font></B>:
+	<I><font color=#008000>/* (basic conditional) */</font></I>
+	<B><font color=#FF3300>XP_CND</font></B>
+
+	<I><font color=#008000>/* (standard assignment) */</font></I>
+ |	<B><font color=#FF3300>XP_PTERM</font></B> '=' <B><font color=#FF3300>XP_EXX</font></B>							 &#8658;  <B><a href="AWL_Functors.htm#_set">set</a></B>(<i>$1</i>, <i>$3</i>) 
+		 
+	<I><font color=#008000>/* (alternate assignment) */</font></I>
+ |	'=' <B><font color=#FF3300>XP_PTERM</font></B> ':' <B><font color=#FF3300>XP_EXX</font></B>						 &#8658;  <B><a href="AWL_Functors.htm#_set_a">set_a</a></B>(<i>$2</i>, <i>$4</i>) 
+		 
+
+	<I><font color=#008000>/* (list copy) */</font></I>
+ |	<B><font color=#FF3300>XP_PTERM</font></B> <font color=#606060>"[=]"</font> <B><font color=#FF3300>XP_EXX</font></B>					 &#8658;  <B><a href="AWL_Functors.htm#_l_copy">l_copy</a></B> (<i>$1</i>, <i>$3</i>) 
+		 
+
+	<I><font color=#008000>/* (assignment combined with unary) */</font></I>
+ |	<B><font color=#FF3300>XP_PTERM</font></B> '=' ':' <B><font color=#FF3300>OPC_UN</font></B>						 &#8658;  <B><a href="AWL_Functors.htm#_comb">comb</a></B> (<i>$4</i>:(<i>$1</i>)) 
+		 
+	<I><font color=#008000>/* (assignment combined with unary, alternate) */</font></I>
+ |	'=' <B><font color=#FF3300>XP_PTERM</font></B> ':' <B><font color=#FF3300>OPC_UN</font></B>						 &#8658;  <B><a href="AWL_Functors.htm#_comb_a">comb_a</a></B> (<i>$4</i>:(<i>$2</i>)) 
+		 
+
+	<I><font color=#008000>/* (list reduction with binary) */</font></I>
+ |	<font color=#606060>"[=]"</font> <B><font color=#FF3300>OPC_BIN</font></B> <B><font color=#FF3300>XP_PTERM</font></B>					 &#8658;  <B><a href="AWL_Functors.htm#_reduce">reduce</a></B> (<i>$2</i>:(<i>$3</i>)) 
+		 
+
+	<I><font color=#008000>/* (assignment combined with binary) */</font></I>
+ |	<B><font color=#FF3300>XP_PTERM</font></B> '=' <B><font color=#FF3300>OPC_BIN</font></B> ':' <B><font color=#FF3300>XP_EXX</font></B>				 &#8658;  <B><a href="AWL_Functors.htm#_comb">comb</a></B> (<i>$3</i>:(<i>$1</i>, <i>$5</i>) 
+		 
+	<I><font color=#008000>/* (assignment combined with binary, alternate) */</font></I>
+ |	'=' <B><font color=#FF3300>XP_PTERM</font></B> <B><font color=#FF3300>OPC_BIN</font></B> ':' <B><font color=#FF3300>XP_EXX</font></B>				 &#8658;  <B><a href="AWL_Functors.htm#_comb_a">comb_a</a></B> (<i>$3</i>:(<i>$2</i>, <i>$5</i>) 
+		 
+
+	<I><font color=#008000>/* (lazy assignment) */</font></I>
+ |	<B><font color=#FF3300>XP_PTERM</font></B> <font color=#606060>":="</font> <B><font color=#FF3300>XP_EXX</font></B>						 &#8658;  <B><a href="AWL_Functors.htm#_let">let</a></B>(<i>$1</i>, <i>$3</i>) 
+		 
+
+	<I><font color=#008000>/* (exchange) */</font></I>
+ |	<B><font color=#FF3300>XP_PTERM</font></B> <font color=#606060>":="</font> ':' <B><font color=#FF3300>XP_PTERM</font></B>					 &#8658;  <B><a href="AWL_Functors.htm#_swap">swap</a></B>(<i>$1</i>, <i>$4</i>) 
+		 
+
+	<I><font color=#008000>/* (get mutable arguments from input stream) */</font></I>
+ |	<B><font color=#FF3300>XP_PTERM</font></B> <font color=#606060>":&gt;"</font> <B><font color=#FF3300>XP_EXX</font></B>						 &#8658;  <B><a href="AWL_Functors.htm#_f_get">f_get</a></B>(<i>$1</i>, <i>$3</i>) 
+		 
+	<I><font color=#008000>/* (put arguments to output stream) */</font></I>
+ |	<B><font color=#FF3300>XP_PTERM</font></B> <font color=#606060>"&lt;:"</font> <B><font color=#FF3300>XP_EXX</font></B>						 &#8658;  <B><a href="AWL_Functors.htm#_f_put">f_put</a></B>(<i>$1</i>, <i>$3</i>) 
+		 
+
+	<I><font color=#008000>/* (get mutable arguments from standard input) */</font></I>
+ |	<font color=#606060>":&gt;"</font> <B><font color=#FF3300>XP_PRE</font></B>								 &#8658;  <B><a href="AWL_Functors.htm#_f_get">f_get</a></B>((), <i>$2</i>) 
+		 
+	<I><font color=#008000>/* (put arguments to standard output) */</font></I>
+ |	<font color=#606060>"&lt;:"</font> <B><font color=#FF3300>XP_PRE</font></B>								 &#8658;  <B><a href="AWL_Functors.htm#_f_put">f_put</a></B>((), <i>$2</i>) 
+		 
+
+	<I><font color=#008000>/* (push arguments to list) */</font></I>
+ |	<B><font color=#FF3300>XP_PTERM</font></B> <font color=#606060>"[&lt;-]"</font> <B><font color=#FF3300>XP_EXX</font></B>						 &#8658;  <B><a href="AWL_Functors.htm#_l_push">l_push</a></B>(<i>$1</i>, <i>$3</i>) 
+		 
+	<I><font color=#008000>/* (pop mutable arguments from list) */</font></I>
+ |	<B><font color=#FF3300>XP_PTERM</font></B> <font color=#606060>"[-&gt;]"</font> <B><font color=#FF3300>XP_EXX</font></B>						 &#8658;  <B><a href="AWL_Functors.htm#_l_pop">l_pop</a></B>(<i>$1</i>, <i>$3</i>) 
+		 
+
+ ;
+
+ 
+ <B><font color=#FF3300>EXPR</font></B>:	<B><font color=#FF3300>XP_EXX</font></B>
+ ;
+
+ 
+
+<B><font color=#FF3300>EVAL_CODE</font></B>:	<B><font color=#FF3300>L_EvalBeg</font></B> <B><font color=#FF3300>EXPR</font></B> <B><font color=#FF3300>L_EvalEnd</font></B>
+		 
+</PRE>
+</BODY>
+</HTML>
