@@ -97,7 +97,7 @@
 <P><font face=Arial size=+1 color=#808080><B>Graphic</B></font></P>
 <P><I>Graphic functors</I></P>
 <P>Functors, implementing standard graphic operations.</P>
-<P>[Total <B>51</B>]:</P>
+<P>[Total <B>54</B>]:</P>
 <UL>
 <LI><B><a href="Winter_Functors.htm#_arc">arc</a></B>: <I>Plot elliptical arc.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_chord">chord</a></B>: <I>Plot & fill elliptical chord.</I></LI>
@@ -123,6 +123,7 @@
 <LI><B><a href="Winter_Functors.htm#_image_blit">image_blit</a></B>: <I>Blit image region between image(s) and/or display area.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_image_create">image_create</a></B>: <I>Create new image.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_image_data_load">image_data_load</a></B>: <I>Load pixel data from string to image.</I></LI>
+<LI><B><a href="Winter_Functors.htm#_image_data_mask">image_data_mask</a></B>: <I>Overwrite pixel data from string to image.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_image_data_save">image_data_save</a></B>: <I>Save pixel data from image to string.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_image_data_size">image_data_size</a></B>: <I>Calculate image size.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_image_destroy">image_destroy</a></B>: <I>Destroy image.</I></LI>
@@ -142,6 +143,8 @@
 <LI><B><a href="Winter_Functors.htm#_polygon">polygon</a></B>: <I>Plot & fill closed polygon.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_rect">rect</a></B>: <I>Plot & fill rectangle.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_round_rect">round_rect</a></B>: <I>Plot & fill rectangle with rounded corners.</I></LI>
+<LI><B><a href="Winter_Functors.htm#_sprite_rect_collision">sprite_rect_collision</a></B>: <I>Check for collision of sprite data with rectangle area.</I></LI>
+<LI><B><a href="Winter_Functors.htm#_sprite_sprite_collision">sprite_sprite_collision</a></B>: <I>Check for sprite/sprite collision.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_text">text</a></B>: <I>Output text string.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_text_box">text_box</a></B>: <I>Text box wrapper.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_text_metrics">text_metrics</a></B>: <I>Text metrics wrapper.</I></LI>
@@ -158,17 +161,20 @@
 <P><font face=Arial size=+1 color=#808080><B>Image</B></font></P>
 <P><I>Image functors</I></P>
 <P>Bitmap image operations.</P>
-<P>[Total <B>10</B>]:</P>
+<P>[Total <B>13</B>]:</P>
 <UL>
 <LI><B><a href="Winter_Functors.htm#_image_blit">image_blit</a></B>: <I>Blit image region between image(s) and/or display area.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_image_create">image_create</a></B>: <I>Create new image.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_image_data_load">image_data_load</a></B>: <I>Load pixel data from string to image.</I></LI>
+<LI><B><a href="Winter_Functors.htm#_image_data_mask">image_data_mask</a></B>: <I>Overwrite pixel data from string to image.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_image_data_save">image_data_save</a></B>: <I>Save pixel data from image to string.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_image_data_size">image_data_size</a></B>: <I>Calculate image size.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_image_destroy">image_destroy</a></B>: <I>Destroy image.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_image_extent">image_extent</a></B>: <I>Get image extent.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_image_linxform">image_linxform</a></B>: <I>Linear transformation of image region between image(s) and/or display.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_image_stretch">image_stretch</a></B>: <I>Stretch image region between image(s) and/or display.</I></LI>
+<LI><B><a href="Winter_Functors.htm#_sprite_rect_collision">sprite_rect_collision</a></B>: <I>Check for collision of sprite data with rectangle area.</I></LI>
+<LI><B><a href="Winter_Functors.htm#_sprite_sprite_collision">sprite_sprite_collision</a></B>: <I>Check for sprite/sprite collision.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_with_image">with_image</a></B>: <I>Image output wrapper.</I></LI>
 </UL>
 <!-- ../src/winter/WinGfx.cpp:2122 -->
@@ -199,9 +205,11 @@
 <HR />
 <a name="_Predicate"></a>
 <P><font face=Arial size=+1 color=#808080><B>Predicate</B></font></P>Redirect category:Predicate
-<P>[Total <B>5</B>]:</P>
+<P>[Total <B>7</B>]:</P>
 <UL>
 <LI><B><a href="Winter_Functors.htm#_is_active">is_active</a></B>: <I>Check for active graphic context.</I></LI>
+<LI><B><a href="Winter_Functors.htm#_sprite_rect_collision">sprite_rect_collision</a></B>: <I>Check for collision of sprite data with rectangle area.</I></LI>
+<LI><B><a href="Winter_Functors.htm#_sprite_sprite_collision">sprite_sprite_collision</a></B>: <I>Check for sprite/sprite collision.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_vec_eq">vec_eq</a></B>: <I>Vector equality.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_vec_ne">vec_ne</a></B>: <I>Vector inequality.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_vec_nz">vec_nz</a></B>: <I>Vector check for non-zero.</I></LI>
@@ -225,7 +233,7 @@
 <LI><B><a href="Winter_Functors.htm#_vec_sub">vec_sub</a></B>: <I>Vector subtraction.</I></LI>
 <LI><B><a href="Winter_Functors.htm#_vec_z">vec_z</a></B>: <I>Vector check for zero.</I></LI>
 </UL>
-<!-- ../src/winter/WinGfx.cpp:2238 -->
+<!-- ../src/winter/WinGfx.cpp:2259 -->
 
 <HR />
 <a name="_WinControl"></a>

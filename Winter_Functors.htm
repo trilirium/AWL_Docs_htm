@@ -485,6 +485,16 @@
 <!-- ../src/winter/WinGfx.cpp:2201 -->
 
 <HR />
+<a name="_image_data_mask"></a>
+<P><font face=Arial size=+1 color=#808080><B>image_data_mask</B></font></P>
+<LI type=square>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Image">Image</a></b> ]</LI>
+<LI type=disc><B>graphics</B> !! <B>image_data_mask </B> (<i>DstImage</i>: <b><a href="Winter_Types.htm#_Image">Image</a></b>, <i>X_Range</i>: <b><a href="Winter_Types.htm#_Range">Range</a></b>, <i>Y_Dir</i>: <b><a href="Winter_Types.htm#_Bool">Bool</a></b>, <i>Y_Range</i>: <b><a href="Winter_Types.htm#_Range">Range</a></b>, <i>SrcPalette</i>: <b><a href="Winter_Types.htm#_Palette">Palette</a></b>, <i>SrcData</i>: <b><a href="Winter_Types.htm#_String">String</a></b>, <i>SrcMask</i>: <b><a href="Winter_Types.htm#_String">String</a></b>) &#8658; ().</LI>
+<P><I>Overwrite pixel data from string to image.</I></P>
+<P>[Requires: active graphic context.]<br>Overwrite pixel data in <i>DstImage</i> area [<i>X_Range</i> @ <i>Y_Range</i>], in vertical direction <i>Y_Dir</i>, from <i>SrcData</i> string (according to color model & palette <i>SrcPalette</i>), masking it with (1 bit per pixel) <i>SrcMask</i>.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2220 -->
+
+<HR />
 <a name="_image_data_save"></a>
 <P><font face=Arial size=+1 color=#808080><B>image_data_save</B></font></P>
 <LI type=square>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Image">Image</a></b> ]</LI>
@@ -800,7 +810,7 @@
 <P><I>Fill rectangle with calculated pixels.</I></P>
 <P>[Requires: active graphic context.]<br>Fill area [<i>Left_Top</i> : <i>Right_Bottom</i>] with pixel values (calculated for each point (x, y) by <i>CalcPoint</i> ! (x, y) ).</P>
 <P></P>
-<!-- ../src/winter/WinGfx.cpp:2309 -->
+<!-- ../src/winter/WinGfx.cpp:2330 -->
 
 <HR />
 <a name="_plot"></a>
@@ -968,6 +978,26 @@
 <P></P>
 <!-- ../src/winter/WinMsg.cpp:955 -->
 
+<HR />
+<a name="_sprite_rect_collision"></a>
+<P><font face=Arial size=+1 color=#808080><B>sprite_rect_collision</B></font></P>
+<LI type=square>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Image">Image</a></b> | <b><a href="Winter_Categories.htm#_Predicate">Predicate</a></b> ]</LI>
+<LI type=disc><B>graphics</B> !! <B>sprite_rect_collision </B> (<i>SrcMask</i>: <b><a href="Winter_Types.htm#_String">String</a></b>, <i>SrcHeight</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>, <i>SrcWidth</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>, (<i>RelLeft</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>, <i>RelTop</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>), (<i>RelRight</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>, <i>RelBottom</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>)) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</LI>
+<P><I>Check for collision of sprite data with rectangle area.</I></P>
+<P>Check for collision of rectangle (<i>RelLeft</i>, <i>RelTop</i>)::(<i>RelRight</i>, <i>RelBottom</i>) with sprite <i>SrcMask</i> [<i>SrcHeight</i> * <i>SrcWidth</i>].<br>Returns true, if at least one set pixel of sprite is in the rectangle.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2230 -->
+
+<HR />
+<a name="_sprite_sprite_collision"></a>
+<P><font face=Arial size=+1 color=#808080><B>sprite_sprite_collision</B></font></P>
+<LI type=square>[ <b><a href="Winter_Categories.htm#_Graphic">Graphic</a></b> | <b><a href="Winter_Categories.htm#_Image">Image</a></b> | <b><a href="Winter_Categories.htm#_Predicate">Predicate</a></b> ]</LI>
+<LI type=disc><B>graphics</B> !! <B>sprite_sprite_collision </B> (<i>SrcMask0</i>: <b><a href="Winter_Types.htm#_String">String</a></b>, <i>SrcMask1</i>: <b><a href="Winter_Types.htm#_String">String</a></b>, <i>Height0</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>, <i>Width0</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>, <i>Height1</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>, <i>Width1</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>, <i>DeltaX</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>, <i>DeltaY</i>: <b><a href="Winter_Types.htm#_Int">Int</a></b>) &#8658; <b><a href="Winter_Types.htm#_Bool">Bool</a></b>.</LI>
+<P><I>Check for sprite/sprite collision.</I></P>
+<P>Check for collision of sprite <i>SrcMask0</i> [<i>Height0</i> * <i>Width0</i>] with <i>SrcMask1</i> [<i>Height1</i> * <i>Width1</i>].<br>(Vector [<i>DeltaX</i>, <i>DeltaY</i>] defines relative offset of sprite masks.)<br>Returns true, if there is at least one pixel intersection.</P>
+<P></P>
+<!-- ../src/winter/WinGfx.cpp:2238 -->
+
 <HR /><a name="_84"></a>
 <P><font size=+1 color=red>= <B>T</B> =</font></P>
 <HR />
@@ -1052,7 +1082,7 @@
 <P><I>Vector addition.</I></P>
 <P>Addition of integer vectors <i>VecA</i> and <i>VecB</i> (for <i>VecA</i> = (<i>Ax</i>, <i>Ay</i>) and <i>VecB</i> = (<i>Bx</i>, <i>By</i>): returns vector (<i>Ax</i> + <i>Bx</i>, <i>Ay</i> + <i>By</i>)).</P>
 <P><I>See also: </I>[ <B><a href="#_vec_sub">vec_sub</a></B> ]</P>
-<!-- ../src/winter/WinGfx.cpp:2252 -->
+<!-- ../src/winter/WinGfx.cpp:2273 -->
 
 <HR />
 <a name="_vec_eq"></a>
@@ -1062,7 +1092,7 @@
 <P><I>Vector equality.</I></P>
 <P>Check integer vectors <i>VecA</i> and <i>VecB</i> for equality (for <i>VecA</i> = (<i>Ax</i>, <i>Ay</i>) and <i>VecB</i> = (<i>Bx</i>, <i>By</i>) returns (<i>Ax</i> == <i>Bx</i> && <i>Ay</i> == <i>By</i>)).</P>
 <P><I>See also: </I>[ <B><a href="#_vec_ne">vec_ne</a></B> ]</P>
-<!-- ../src/winter/WinGfx.cpp:2277 -->
+<!-- ../src/winter/WinGfx.cpp:2298 -->
 
 <HR />
 <a name="_vec_ne"></a>
@@ -1072,7 +1102,7 @@
 <P><I>Vector inequality.</I></P>
 <P>Check integer vectors <i>VecA</i> and <i>VecB</i> for inequality (for <i>VecA</i> = (<i>Ax</i>, <i>Ay</i>) and <i>VecB</i> = (<i>Bx</i>, <i>By</i>) returns (<i>Ax</i> <> <i>Bx</i> || <i>Ay</i> <> <i>By</i>)).</P>
 <P><I>See also: </I>[ <B><a href="#_vec_eq">vec_eq</a></B> ]</P>
-<!-- ../src/winter/WinGfx.cpp:2283 -->
+<!-- ../src/winter/WinGfx.cpp:2304 -->
 
 <HR />
 <a name="_vec_neg"></a>
@@ -1082,7 +1112,7 @@
 <P><I>Vector negation.</I></P>
 <P>Negation of integer vector <i>VecA</i> (for <i>VecA</i> = (<i>Ax</i>, <i>Ay</i>) returns vector (-<i>Ax</i>, -<i>Ay</i>)).</P>
 <P></P>
-<!-- ../src/winter/WinGfx.cpp:2242 -->
+<!-- ../src/winter/WinGfx.cpp:2263 -->
 
 <HR />
 <a name="_vec_nz"></a>
@@ -1092,7 +1122,7 @@
 <P><I>Vector check for non-zero.</I></P>
 <P>Check integer vector <i>Vec</i> for non-equality to zero (for <i>Vec</i> = (<i>X</i>, <i>Y</i>): returns (<i>X</i> <> 0 && <i>Y</i> <> 0)).</P>
 <P><I>See also: </I>[ <B><a href="#_vec_z">vec_z</a></B> ]</P>
-<!-- ../src/winter/WinGfx.cpp:2300 -->
+<!-- ../src/winter/WinGfx.cpp:2321 -->
 
 <HR />
 <a name="_vec_scale"></a>
@@ -1102,7 +1132,7 @@
 <P><I>Vector scaling.</I></P>
 <P>Scale integer vector <i>VecA</i> by factor <i>F</i> (for <i>VecA</i> = (<i>Ax</i>, <i>Ay</i>): returns vector (<i>Ax</i>*<i>F</i>, <i>Ay</i>*<i>F</i>)).</P>
 <P></P>
-<!-- ../src/winter/WinGfx.cpp:2267 -->
+<!-- ../src/winter/WinGfx.cpp:2288 -->
 
 <HR />
 <a name="_vec_sub"></a>
@@ -1112,7 +1142,7 @@
 <P><I>Vector subtraction.</I></P>
 <P>Subtraction of integer vectors <i>VecA</i> and <i>VecB</i> (for <i>VecA</i> = (<i>Ax</i>, <i>Ay</i>) and <i>VecB</i> = (<i>Bx</i>, <i>By</i>): returns vector (<i>Ax</i> - <i>Bx</i>, <i>Ay</i> - <i>By</i>)).</P>
 <P><I>See also: </I>[ <B><a href="#_vec_add">vec_add</a></B> ]</P>
-<!-- ../src/winter/WinGfx.cpp:2258 -->
+<!-- ../src/winter/WinGfx.cpp:2279 -->
 
 <HR />
 <a name="_vec_z"></a>
@@ -1122,7 +1152,7 @@
 <P><I>Vector check for zero.</I></P>
 <P>Check integer vector <i>Vec</i> for equality to zero (for <i>Vec</i> = (<i>X</i>, <i>Y</i>): returns (<i>X</i> == 0 && <i>Y</i> == 0)).</P>
 <P><I>See also: </I>[ <B><a href="#_vec_nz">vec_nz</a></B> ]</P>
-<!-- ../src/winter/WinGfx.cpp:2294 -->
+<!-- ../src/winter/WinGfx.cpp:2315 -->
 
 <HR /><a name="_87"></a>
 <P><font size=+1 color=red>= <B>W</B> =</font></P>
@@ -1154,7 +1184,7 @@
 <P><I>Graphic debugging wrapper.</I></P>
 <P>[Requires: active graphic context.]<br>Evaluates <i>Core</i> (with graphic operations logging).</P>
 <P></P>
-<!-- ../src/winter/WinGfx.cpp:2318 -->
+<!-- ../src/winter/WinGfx.cpp:2339 -->
 
 <HR />
 <a name="_with_image"></a>
@@ -1164,7 +1194,7 @@
 <P><I>Image output wrapper.</I></P>
 <P>[Requires: active graphic context.]<br>Evaluates <i>Core</i>, with <i>Image</i> as an active graphic output context.</P>
 <P></P>
-<!-- ../src/winter/WinGfx.cpp:2230 -->
+<!-- ../src/winter/WinGfx.cpp:2251 -->
 
 <HR />
 <a name="_with_window"></a>
@@ -1177,6 +1207,6 @@
 <!-- ../src/winter/WinMsg.cpp:931 -->
 
 <HR />
-<P>Total functors: <B>113</B>.</P>
+<P>Total functors: <B>116</B>.</P>
 </BODY>
 </HTML>

@@ -568,6 +568,13 @@
  |	<B><font color=#FF3300>XP_MUL</font></B> '*' '$' <B><font color=#FF3300>XP_PRE</font></B>	 &#8658;  <B><a href="AWL_Functors.htm#_s_rep">s_rep</a></B>(<i>$1</i>, <i>$4</i>) 
 	 
 
+	<I><font color=#008000>/* (incremental repetition pattern) */</font></I>
+ |	<B><font color=#FF3300>XP_MUL</font></B> '*' <font color=#606060>"++"</font> '$' <B><font color=#FF3300>C_EXPR</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_rx_rep_inc">rx_rep_inc</a></B>(<i>$5</i>, <i>$1</i>) 
+	 
+	<I><font color=#008000>/* (decremental repetition pattern) */</font></I>
+ |	<B><font color=#FF3300>XP_MUL</font></B> '*' <font color=#606060>"--"</font> '$' <B><font color=#FF3300>C_EXPR</font></B>		 &#8658;  <B><a href="AWL_Functors.htm#_rx_rep_dec">rx_rep_dec</a></B>(<i>$5</i>, <i>$1</i>) 
+	 
+
 	<I><font color=#008000>/* (list replication) */</font></I>
  |	<B><font color=#FF3300>XP_MUL</font></B> <font color=#606060>"[*]"</font> <B><font color=#FF3300>XP_PRE</font></B>	 &#8658;  <B><a href="AWL_Functors.htm#_l_rep">l_rep</a></B>(<i>$3</i>, <i>$1</i>) 
 	 
@@ -697,6 +704,14 @@
 	<I><font color=#008000>/* (bitwise/logical XOR) */</font></I>
  |	<B><font color=#FF3300>XP_BIT</font></B> '~' <B><font color=#FF3300>XP_CMP</font></B>			 &#8658;  <B><a href="AWL_Functors.htm#_xor">xor</a></B>(<i>$1</i>, <i>$3</i>) 
 	 
+
+	<I><font color=#008000>/* (patterns concatenation) */</font></I>
+ |	<B><font color=#FF3300>XP_BIT</font></B> '&' '$' <B><font color=#FF3300>XP_CMP</font></B>	 &#8658;  <B><a href="AWL_Functors.htm#_rx_cat">rx_cat</a></B>(<i>$1</i>, <i>$4</i>) 
+	 
+	<I><font color=#008000>/* (patterns alternation) */</font></I>
+ |	<B><font color=#FF3300>XP_BIT</font></B> '|' '$' <B><font color=#FF3300>XP_CMP</font></B>	 &#8658;  <B><a href="AWL_Functors.htm#_rx_alt">rx_alt</a></B>(<i>$1</i>, <i>$4</i>) 
+	 
+
  ;
 
 <I><font color=#008000>/* optional bit expression */</font></I>
@@ -811,7 +826,9 @@
 	<I><font color=#008000>/* (combine assignment with string replication) */</font></I>
  |	'*' '$'		 		 &#8658;  !<B><a href="AWL_Functors.htm#_s_rep">s_rep</a></B> 
 
+	<I><font color=#008000>/* (combine assignment with string minimum) */</font></I>
  |	<font color=#606060>"?&lt;"</font> '$'	 		 &#8658;  !<B><a href="AWL_Functors.htm#_s_min">s_min</a></B> 
+	<I><font color=#008000>/* (combine assignment with string maximum) */</font></I>
  |	<font color=#606060>"?&gt;"</font> '$'	 		 &#8658;  !<B><a href="AWL_Functors.htm#_s_max">s_max</a></B> 
 
  ;
@@ -835,7 +852,7 @@
 	<I><font color=#008000>/* (assignment combined with unary) */</font></I>
  |	<B><font color=#FF3300>XP_PTERM</font></B> '=' ':' <B><font color=#FF3300>OPC_UN</font></B>						 &#8658;  <B><a href="AWL_Functors.htm#_comb">comb</a></B> (<i>$4</i>:(<i>$1</i>)) 
 		 
-	<I><font color=#008000>/* (assignment combined with unary, alternate) */</font></I>
+	<I><font color=#008000>/* (assignment combined with unary - alternate) */</font></I>
  |	'=' <B><font color=#FF3300>XP_PTERM</font></B> ':' <B><font color=#FF3300>OPC_UN</font></B>						 &#8658;  <B><a href="AWL_Functors.htm#_comb_a">comb_a</a></B> (<i>$4</i>:(<i>$2</i>)) 
 		 
 
@@ -854,18 +871,18 @@
  |	<B><font color=#FF3300>XP_PTERM</font></B> <font color=#606060>":="</font> <B><font color=#FF3300>XP_EXX</font></B>						 &#8658;  <B><a href="AWL_Functors.htm#_let">let</a></B>(<i>$1</i>, <i>$3</i>) 
 		 
 
-	<I><font color=#008000>/* (exchange) */</font></I>
+	<I><font color=#008000>/* (exchange mutables) */</font></I>
  |	<B><font color=#FF3300>XP_PTERM</font></B> <font color=#606060>":="</font> ':' <B><font color=#FF3300>XP_PTERM</font></B>					 &#8658;  <B><a href="AWL_Functors.htm#_swap">swap</a></B>(<i>$1</i>, <i>$4</i>) 
 		 
 
-	<I><font color=#008000>/* (get mutable arguments from input stream) */</font></I>
+	<I><font color=#008000>/* (get (mutable) arguments from input stream) */</font></I>
  |	<B><font color=#FF3300>XP_PTERM</font></B> <font color=#606060>":&gt;"</font> <B><font color=#FF3300>XP_EXX</font></B>						 &#8658;  <B><a href="AWL_Functors.htm#_f_get">f_get</a></B>(<i>$1</i>, <i>$3</i>) 
 		 
 	<I><font color=#008000>/* (put arguments to output stream) */</font></I>
  |	<B><font color=#FF3300>XP_PTERM</font></B> <font color=#606060>"&lt;:"</font> <B><font color=#FF3300>XP_EXX</font></B>						 &#8658;  <B><a href="AWL_Functors.htm#_f_put">f_put</a></B>(<i>$1</i>, <i>$3</i>) 
 		 
 
-	<I><font color=#008000>/* (get mutable arguments from standard input) */</font></I>
+	<I><font color=#008000>/* (get (mutable) arguments from standard input) */</font></I>
  |	<font color=#606060>":&gt;"</font> <B><font color=#FF3300>XP_PRE</font></B>								 &#8658;  <B><a href="AWL_Functors.htm#_f_get">f_get</a></B>((), <i>$2</i>) 
 		 
 	<I><font color=#008000>/* (put arguments to standard output) */</font></I>
@@ -875,7 +892,7 @@
 	<I><font color=#008000>/* (push arguments to list) */</font></I>
  |	<B><font color=#FF3300>XP_PTERM</font></B> <font color=#606060>"[&lt;-]"</font> <B><font color=#FF3300>XP_EXX</font></B>						 &#8658;  <B><a href="AWL_Functors.htm#_l_push">l_push</a></B>(<i>$1</i>, <i>$3</i>) 
 		 
-	<I><font color=#008000>/* (pop mutable arguments from list) */</font></I>
+	<I><font color=#008000>/* (pop (mutable) arguments from list) */</font></I>
  |	<B><font color=#FF3300>XP_PTERM</font></B> <font color=#606060>"[-&gt;]"</font> <B><font color=#FF3300>XP_EXX</font></B>						 &#8658;  <B><a href="AWL_Functors.htm#_l_pop">l_pop</a></B>(<i>$1</i>, <i>$3</i>) 
 		 
 

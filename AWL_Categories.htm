@@ -30,7 +30,7 @@
 <LI><B><a href="AWL_Functors.htm#_expect_array">expect_array</a></B>: <I>Expect array value.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_is_array">is_array</a></B>: <I>Check for array value.</I></LI>
 </UL>
-<!-- ../src/E_Array.cpp:1308 -->
+<!-- ../src/E_Array.cpp:1315 -->
 
 <HR />
 <a name="_Binary"></a>
@@ -86,7 +86,7 @@
 <LI><B><a href="AWL_Functors.htm#_while">while</a></B>: <I>Iterator with positive precondition.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_xor">xor</a></B>: <I>Bitwise exclusion.</I></LI>
 </UL>
-<!-- ../src/Eval.cpp:1701 -->
+<!-- ../src/Eval.cpp:1707 -->
 
 <HR />
 <a name="_Block"></a>
@@ -98,7 +98,7 @@
 <LI><B><a href="AWL_Functors.htm#_deblock">deblock</a></B>: <I>Deconstruct block to item list.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_enblock">enblock</a></B>: <I>Construct block from item list.</I></LI>
 </UL>
-<!-- ../src/E_Func.cpp:612 -->
+<!-- ../src/E_Func.cpp:621 -->
 
 <HR />
 <a name="_Character"></a>
@@ -133,7 +133,7 @@
 <LI><B><a href="AWL_Functors.htm#_s_decode">s_decode</a></B>: <I>Decode cooked string with codec.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_s_encode">s_encode</a></B>: <I>Encode raw string with codec.</I></LI>
 </UL>
-<!-- ../src/E_Stream.cpp:1656 -->
+<!-- ../src/E_Stream.cpp:1663 -->
 
 <HR />
 <a name="_Coercion"></a>
@@ -147,7 +147,7 @@
 <LI><B><a href="AWL_Functors.htm#_num">num</a></B>: <I>Coerce scalar to number.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_string">string</a></B>: <I>Coerce scalar to string.</I></LI>
 </UL>
-<!-- ../src/Eval.cpp:1709 -->
+<!-- ../src/Eval.cpp:1715 -->
 
 <HR />
 <a name="_Compare"></a>
@@ -160,24 +160,25 @@
 <LI><B><a href="AWL_Functors.htm#_s_cmp">s_cmp</a></B>: <I>String signed comparison.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_u_cmp">u_cmp</a></B>: <I>Numeric unsigned comparison.</I></LI>
 </UL>
-<!-- ../src/Eval.cpp:1713 -->
+<!-- ../src/Eval.cpp:1719 -->
 
 <HR />
 <a name="_Composer"></a>
 <P><font face=Arial size=+1 color=#808080><B>Composer</B></font></P>
 <P><I>Functional composers</I></P>
 <P>Functors, constructing and returning functors.</P>
-<P>[Total <B>7</B>]:</P>
+<P>[Total <B>8</B>]:</P>
 <UL>
 <LI><B><a href="AWL_Functors.htm#_cc_excl">cc_excl</a></B>: <I>Charset predicate exclusive composer.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_cc_incl">cc_incl</a></B>: <I>Charset predicate inclusive composer.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_closure">closure</a></B>: <I>Closure constructor.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_f_and">f_and</a></B>: <I>Functional "AND" predicates composition.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_f_compose">f_compose</a></B>: <I>Functional composition.</I></LI>
+<LI><B><a href="AWL_Functors.htm#_f_curry">f_curry</a></B>: <I>Functor currying.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_f_not">f_not</a></B>: <I>Functional "NOT" predicate composition.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_f_or">f_or</a></B>: <I>Functional "OR" predicates composition.</I></LI>
 </UL>
-<!-- ../src/E_Func.cpp:620 -->
+<!-- ../src/E_Func.cpp:629 -->
 
 <HR />
 <a name="_Conditional"></a>
@@ -212,7 +213,7 @@
 <P><font face=Arial size=+1 color=#808080><B>Constructor</B></font></P>
 <P><I>Constructor functors</I></P>
 <P>Functors, creating instances of complex types.</P>
-<P>[Total <B>38</B>]:</P>
+<P>[Total <B>40</B>]:</P>
 <UL>
 <LI><B><a href="AWL_Functors.htm#_a_copy">a_copy</a></B>: <I>Copy array.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_array">array</a></B>: <I>Array constructor.</I></LI>
@@ -248,12 +249,14 @@
 <LI><B><a href="AWL_Functors.htm#_rx_null">rx_null</a></B>: <I>Null pattern.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_rx_recall">rx_recall</a></B>: <I>Register recall pattern.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_rx_rep">rx_rep</a></B>: <I>Repetition of pattern.</I></LI>
+<LI><B><a href="AWL_Functors.htm#_rx_rep_dec">rx_rep_dec</a></B>: <I>Repetition of pattern (decremental).</I></LI>
+<LI><B><a href="AWL_Functors.htm#_rx_rep_inc">rx_rep_inc</a></B>: <I>Repetition of pattern (incremental).</I></LI>
 <LI><B><a href="AWL_Functors.htm#_rx_store">rx_store</a></B>: <I>Register store pattern.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_rx_store_to">rx_store_to</a></B>: <I>Register store pattern (with storage mutable).</I></LI>
 <LI><B><a href="AWL_Functors.htm#_rx_string">rx_string</a></B>: <I>Literal string pattern.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_s_create">s_create</a></B>: <I>String constructor.</I></LI>
 </UL>
-<!-- ../src/Eval.cpp:1717 -->
+<!-- ../src/Eval.cpp:1723 -->
 
 <HR />
 <a name="_Debug"></a>
@@ -269,7 +272,7 @@
 <LI><B><a href="AWL_Functors.htm#_x_trace">x_trace</a></B>: <I>Debug local/global trace mode.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_x_vars">x_vars</a></B>: <I>Show scope variables.</I></LI>
 </UL>
-<!-- ../src/Kernel.cpp:1700 -->
+<!-- ../src/Kernel.cpp:1708 -->
 
 <HR />
 <a name="_Decoder"></a>
@@ -295,7 +298,7 @@
 <UL>
 <LI><B><a href="AWL_Functors.htm#_f_close">f_close</a></B>: <I>Close opened stream.</I></LI>
 </UL>
-<!-- ../src/Eval.cpp:1721 -->
+<!-- ../src/Eval.cpp:1727 -->
 
 <HR />
 <a name="_Encoder"></a>
@@ -338,14 +341,14 @@
 <LI><B><a href="AWL_Functors.htm#_try">try</a></B>: <I>Exception frame wrapper.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_try_catch">try_catch</a></B>: <I>Exception frame wrapper.</I></LI>
 </UL>
-<!-- ../src/E_Xcpt.cpp:178 -->
+<!-- ../src/E_Xcpt.cpp:184 -->
 
 <HR />
 <a name="_Func"></a>
 <P><font face=Arial size=+1 color=#808080><B>Func</B></font></P>
 <P><I>Functional operations</I></P>
 <P>Functors, expecting functors as operand(s).</P>
-<P>[Total <B>20</B>]:</P>
+<P>[Total <B>21</B>]:</P>
 <UL>
 <LI><B><a href="AWL_Functors.htm#_apply">apply</a></B>: <I>Apply functor to argument(s).</I></LI>
 <LI><B><a href="AWL_Functors.htm#_cc_excl">cc_excl</a></B>: <I>Charset predicate exclusive composer.</I></LI>
@@ -353,6 +356,7 @@
 <LI><B><a href="AWL_Functors.htm#_closure">closure</a></B>: <I>Closure constructor.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_f_and">f_and</a></B>: <I>Functional "AND" predicates composition.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_f_compose">f_compose</a></B>: <I>Functional composition.</I></LI>
+<LI><B><a href="AWL_Functors.htm#_f_curry">f_curry</a></B>: <I>Functor currying.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_f_ident">f_ident</a></B>: <I>Identity.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_f_not">f_not</a></B>: <I>Functional "NOT" predicate composition.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_f_or">f_or</a></B>: <I>Functional "OR" predicates composition.</I></LI>
@@ -368,7 +372,7 @@
 <LI><B><a href="AWL_Functors.htm#_l_while">l_while</a></B>: <I>Search list forward, positively testing predicate.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_l_while_r">l_while_r</a></B>: <I>Search list backward, positively testing predicate.</I></LI>
 </UL>
-<!-- ../src/E_Func.cpp:616 -->
+<!-- ../src/E_Func.cpp:625 -->
 
 <HR />
 <a name="_Hash"></a>
@@ -394,7 +398,7 @@
 <LI><B><a href="AWL_Functors.htm#_hash">hash</a></B>: <I>Hash constructor.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_is_hash">is_hash</a></B>: <I>Check for hash value.</I></LI>
 </UL>
-<!-- ../src/E_Hash.cpp:745 -->
+<!-- ../src/E_Hash.cpp:746 -->
 
 <HR />
 <a name="_Iterator"></a>
@@ -487,7 +491,7 @@
 <LI><B><a href="AWL_Functors.htm#_comb">comb</a></B>: <I>Implements combined assignment.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_reduce">reduce</a></B>: <I>Implements list reduction.</I></LI>
 </UL>
-<!-- ../src/Eval.cpp:1729 -->
+<!-- ../src/Eval.cpp:1735 -->
 
 <HR />
 <a name="_Mutable"></a>
@@ -564,7 +568,7 @@
 <LI><B><a href="AWL_Functors.htm#_s_empty">s_empty</a></B>: <I>Empty string literal.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_true">true</a></B>: <I>Literal true value.</I></LI>
 </UL>
-<!-- ../src/Eval.cpp:1693 -->
+<!-- ../src/Eval.cpp:1699 -->
 
 <HR />
 <a name="_Numeric"></a>
@@ -676,7 +680,7 @@
 <LI><B><a href="AWL_Functors.htm#_time">time</a></B>: <I>Get system time.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_utc_time">utc_time</a></B>: <I>Split time to UTC time.</I></LI>
 </UL>
-<!-- ../src/E_System.cpp:629 -->
+<!-- ../src/E_System.cpp:637 -->
 
 <HR />
 <a name="_Object"></a>
@@ -697,14 +701,14 @@
 <LI><B><a href="AWL_Functors.htm#_with">with</a></B>: <I>Class current instance wrapper.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_without">without</a></B>: <I>Class deinstantiation wrapper.</I></LI>
 </UL>
-<!-- ../src/E_Object.cpp:323 -->
+<!-- ../src/E_Object.cpp:330 -->
 
 <HR />
 <a name="_Pattern"></a>
 <P><font face=Arial size=+1 color=#808080><B>Pattern</B></font></P>
 <P><I>Pattern functors</I></P>
 <P>Functors, operating on patterns.</P>
-<P>[Total <B>32</B>]:</P>
+<P>[Total <B>34</B>]:</P>
 <UL>
 <LI><B><a href="AWL_Functors.htm#_expect_pattern">expect_pattern</a></B>: <I>Expect pattern value.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_is_pattern">is_pattern</a></B>: <I>Check for pattern value.</I></LI>
@@ -733,13 +737,15 @@
 <LI><B><a href="AWL_Functors.htm#_rx_null">rx_null</a></B>: <I>Null pattern.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_rx_recall">rx_recall</a></B>: <I>Register recall pattern.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_rx_rep">rx_rep</a></B>: <I>Repetition of pattern.</I></LI>
+<LI><B><a href="AWL_Functors.htm#_rx_rep_dec">rx_rep_dec</a></B>: <I>Repetition of pattern (decremental).</I></LI>
+<LI><B><a href="AWL_Functors.htm#_rx_rep_inc">rx_rep_inc</a></B>: <I>Repetition of pattern (incremental).</I></LI>
 <LI><B><a href="AWL_Functors.htm#_rx_replace">rx_replace</a></B>: <I>Replace set of patterns in string.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_rx_split">rx_split</a></B>: <I>Split string by pattern.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_rx_store">rx_store</a></B>: <I>Register store pattern.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_rx_store_to">rx_store_to</a></B>: <I>Register store pattern (with storage mutable).</I></LI>
 <LI><B><a href="AWL_Functors.htm#_rx_string">rx_string</a></B>: <I>Literal string pattern.</I></LI>
 </UL>
-<!-- ../src/E_Pattern.cpp:2302 -->
+<!-- ../src/E_Pattern.cpp:2332 -->
 
 <HR />
 <a name="_Predicate"></a>
@@ -816,7 +822,7 @@
 <LI><B><a href="AWL_Functors.htm#_r_seek_r">r_seek_r</a></B>: <I>Seek ring cyclically backward.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_ring">ring</a></B>: <I>Create ring.</I></LI>
 </UL>
-<!-- ../src/E_Ring.cpp:595 -->
+<!-- ../src/E_Ring.cpp:602 -->
 
 <HR />
 <a name="_Scalar"></a>
@@ -907,7 +913,7 @@
 <LI><B><a href="AWL_Functors.htm#_u_cmp">u_cmp</a></B>: <I>Numeric unsigned comparison.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_xor">xor</a></B>: <I>Bitwise exclusion.</I></LI>
 </UL>
-<!-- ../src/Eval.cpp:1689 -->
+<!-- ../src/Eval.cpp:1695 -->
 
 <HR />
 <a name="_Stream"></a>
@@ -943,7 +949,7 @@
 <LI><B><a href="AWL_Functors.htm#_with_input">with_input</a></B>: <I>Default input stream wrapper.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_with_output">with_output</a></B>: <I>Default output stream wrapper.</I></LI>
 </UL>
-<!-- ../src/E_Stream.cpp:1652 -->
+<!-- ../src/E_Stream.cpp:1659 -->
 
 <HR />
 <a name="_String"></a>
@@ -1004,8 +1010,8 @@
 <LI><B><a href="AWL_Functors.htm#_s_icase">s_icase</a></B>: <I>Invert string case.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_s_icfirst">s_icfirst</a></B>: <I>Invert string case first character.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_s_join">s_join</a></B>: <I>Join string list to string.</I></LI>
-<LI><B><a href="AWL_Functors.htm#_s_lcase">s_lcase</a></B>: <I>Lowercase string.</I></LI>
-<LI><B><a href="AWL_Functors.htm#_s_lcfirst">s_lcfirst</a></B>: <I>Lowercase string first character.</I></LI>
+<LI><B><a href="AWL_Functors.htm#_s_lcase">s_lcase</a></B>: <I>Lower case string.</I></LI>
+<LI><B><a href="AWL_Functors.htm#_s_lcfirst">s_lcfirst</a></B>: <I>Lower case string first character.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_s_le">s_le</a></B>: <I>String "less than or equal" compare.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_s_len">s_len</a></B>: <I>Get string length.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_s_loop">s_loop</a></B>: <I>String direct iterator.</I></LI>
@@ -1029,8 +1035,8 @@
 <LI><B><a href="AWL_Functors.htm#_s_span_ex">s_span_ex</a></B>: <I>String span forward (exclusive).</I></LI>
 <LI><B><a href="AWL_Functors.htm#_s_span_in">s_span_in</a></B>: <I>String span forward (inclusive).</I></LI>
 <LI><B><a href="AWL_Functors.htm#_s_type">s_type</a></B>: <I>Query string type.</I></LI>
-<LI><B><a href="AWL_Functors.htm#_s_ucase">s_ucase</a></B>: <I>Uppercase string.</I></LI>
-<LI><B><a href="AWL_Functors.htm#_s_ucfirst">s_ucfirst</a></B>: <I>Uppercase string first character.</I></LI>
+<LI><B><a href="AWL_Functors.htm#_s_ucase">s_ucase</a></B>: <I>Upper case string.</I></LI>
+<LI><B><a href="AWL_Functors.htm#_s_ucfirst">s_ucfirst</a></B>: <I>Upper case string first character.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_string">string</a></B>: <I>Coerce scalar to string.</I></LI>
 </UL>
 <!-- ../src/E_String.cpp:2243 -->
@@ -1047,7 +1053,7 @@
 <LI><B><a href="AWL_Functors.htm#__version">_version</a></B>: <I>Interpreter version.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_include">include</a></B>: <I>Include module.</I></LI>
 </UL>
-<!-- ../src/Kernel.cpp:1704 -->
+<!-- ../src/Kernel.cpp:1712 -->
 
 <HR />
 <a name="_Term"></a>
@@ -1059,7 +1065,7 @@
 <LI><B><a href="AWL_Functors.htm#_determ">determ</a></B>: <I>Deconstruct term to functor and argument(s).</I></LI>
 <LI><B><a href="AWL_Functors.htm#_enterm">enterm</a></B>: <I>Construct term from functor and argument(s).</I></LI>
 </UL>
-<!-- ../src/E_Func.cpp:608 -->
+<!-- ../src/E_Func.cpp:617 -->
 
 <HR />
 <a name="_Ternary"></a>
@@ -1073,7 +1079,7 @@
 <LI><B><a href="AWL_Functors.htm#_if">if</a></B>: <I>Conditional positive test.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_unless">unless</a></B>: <I>Conditional negative test.</I></LI>
 </UL>
-<!-- ../src/Eval.cpp:1705 -->
+<!-- ../src/Eval.cpp:1711 -->
 
 <HR />
 <a name="_Unary"></a>
@@ -1137,15 +1143,15 @@
 <LI><B><a href="AWL_Functors.htm#_s_hex">s_hex</a></B>: <I>Convert signed integer to hexadecimal string.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_s_icase">s_icase</a></B>: <I>Invert string case.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_s_icfirst">s_icfirst</a></B>: <I>Invert string case first character.</I></LI>
-<LI><B><a href="AWL_Functors.htm#_s_lcase">s_lcase</a></B>: <I>Lowercase string.</I></LI>
-<LI><B><a href="AWL_Functors.htm#_s_lcfirst">s_lcfirst</a></B>: <I>Lowercase string first character.</I></LI>
+<LI><B><a href="AWL_Functors.htm#_s_lcase">s_lcase</a></B>: <I>Lower case string.</I></LI>
+<LI><B><a href="AWL_Functors.htm#_s_lcfirst">s_lcfirst</a></B>: <I>Lower case string first character.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_s_len">s_len</a></B>: <I>Get string length.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_s_map">s_map</a></B>: <I>String character translation.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_s_oct">s_oct</a></B>: <I>Convert signed integer to octal string.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_s_rev">s_rev</a></B>: <I>String reverse.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_s_type">s_type</a></B>: <I>Query string type.</I></LI>
-<LI><B><a href="AWL_Functors.htm#_s_ucase">s_ucase</a></B>: <I>Uppercase string.</I></LI>
-<LI><B><a href="AWL_Functors.htm#_s_ucfirst">s_ucfirst</a></B>: <I>Uppercase string first character.</I></LI>
+<LI><B><a href="AWL_Functors.htm#_s_ucase">s_ucase</a></B>: <I>Upper case string.</I></LI>
+<LI><B><a href="AWL_Functors.htm#_s_ucfirst">s_ucfirst</a></B>: <I>Upper case string first character.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_sgn">sgn</a></B>: <I>Numeric sign.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_sin">sin</a></B>: <I>Trigonometric sine.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_sinh">sinh</a></B>: <I>Numeric hyperbolic sine.</I></LI>
@@ -1154,7 +1160,7 @@
 <LI><B><a href="AWL_Functors.htm#_tanh">tanh</a></B>: <I>Numeric hyperbolic tangent.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_void">void</a></B>: <I>Evaluate as void.</I></LI>
 </UL>
-<!-- ../src/Eval.cpp:1697 -->
+<!-- ../src/Eval.cpp:1703 -->
 
 <HR />
 <a name="_Wrapper"></a>
@@ -1178,7 +1184,7 @@
 <LI><B><a href="AWL_Functors.htm#_with_output">with_output</a></B>: <I>Default output stream wrapper.</I></LI>
 <LI><B><a href="AWL_Functors.htm#_without">without</a></B>: <I>Class deinstantiation wrapper.</I></LI>
 </UL>
-<!-- ../src/Eval.cpp:1725 -->
+<!-- ../src/Eval.cpp:1731 -->
 
 <HR />
 <P>Total categories: <B>38</B>.</P>

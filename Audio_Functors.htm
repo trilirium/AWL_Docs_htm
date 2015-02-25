@@ -7,7 +7,19 @@
 <CENTER>[ <A href=Audio_Functors.htm><B>Functors</B></A> | <A href=Audio_Categories.htm><B>Categories</B></A> | <A href=Audio_Types.htm><B>Metatypes</B></A> | <A href=AWL_Syntax.htm><B>Syntax</B></A> ]</CENTER>
 <H1>List of functors
 </H1>
-<P>[ <B><A href=#_77>M</A></B> ]</P>
+<P>[ <B><A href=#_73>I</A></B> | <B><A href=#_77>M</A></B> | <B><A href=#_87>W</A></B> ]</P>
+<HR /><a name="_73"></a>
+<P><font size=+1 color=red>= <B>I</B> =</font></P>
+<HR />
+<a name="_instrument_name"></a>
+<P><font face=Arial size=+1 color=#808080><B>instrument_name</B></font></P>
+<LI type=square>[ <b><a href="Audio_Categories.htm#_Audio">Audio</a></b> | <b><a href="Audio_Categories.htm#_MIDI">MIDI</a></b> ]</LI>
+<LI type=disc><B>MIDI</B> !! <B>instrument_name </B> (<i>No</i>: <b><a href="Audio_Types.htm#_Int">Int</a></b>) &#8658; <b><a href="Audio_Types.htm#_String">String</a></b>.</LI>
+<P><I>MIDI instrument name.</I></P>
+<P>Return symbolic name for MIDI instrument <i>No</i>.</P>
+<P></P>
+<!-- ../src/audio/AudioCore.cpp:1203 -->
+
 <HR /><a name="_77"></a>
 <P><font size=+1 color=red>= <B>M</B> =</font></P>
 <HR />
@@ -18,7 +30,7 @@
 <P><I>MIDI set control event.</I></P>
 <P>Send MIDI Control event to active MIDI device.<br><i>Channel</i>: MIDI channel (0..15), <i>Control</i>: controller to modify, <i>Value</i>: value to set.</P>
 <P></P>
-<!-- ../src/audio/AudioCore.cpp:1145 -->
+<!-- ../src/audio/AudioCore.cpp:1161 -->
 
 <HR />
 <a name="_midi_event"></a>
@@ -28,7 +40,7 @@
 <P><I>Send MIDI event.</I></P>
 <P>Send arbitrary MIDI event (<i>Arg0</i>, <i>Arg1</i>, <i>Arg2</i>) to active MIDI device.</P>
 <P></P>
-<!-- ../src/audio/AudioCore.cpp:1114 -->
+<!-- ../src/audio/AudioCore.cpp:1130 -->
 
 <HR />
 <a name="_midi_instrument"></a>
@@ -38,7 +50,7 @@
 <P><I>MIDI set instrument event.</I></P>
 <P>Send MIDI Instrument Select event to active MIDI device.<br><i>Channel</i>: MIDI channel (0..15), <i>Instrument</i>: instrument to use (0..127).</P>
 <P></P>
-<!-- ../src/audio/AudioCore.cpp:1153 -->
+<!-- ../src/audio/AudioCore.cpp:1169 -->
 
 <HR />
 <a name="_midi_mono_after_touch"></a>
@@ -48,7 +60,7 @@
 <P><I>MIDI monophonic after touch event.</I></P>
 <P>Send MIDI Monophonic After Touch event to active MIDI device.<br><i>Channel</i>: MIDI channel (0..15), <i>Pressure</i>: pressure value (1..127).</P>
 <P></P>
-<!-- ../src/audio/AudioCore.cpp:1161 -->
+<!-- ../src/audio/AudioCore.cpp:1177 -->
 
 <HR />
 <a name="_midi_note_off"></a>
@@ -58,7 +70,7 @@
 <P><I>MIDI note disable event.</I></P>
 <P>Send MIDI Note Off event to active MIDI device.<br><i>Channel</i>: MIDI channel (0..15), <i>Key</i>: note to disable, <i>VelOff</i>: disable speed (1..127).</P>
 <P></P>
-<!-- ../src/audio/AudioCore.cpp:1121 -->
+<!-- ../src/audio/AudioCore.cpp:1137 -->
 
 <HR />
 <a name="_midi_note_on"></a>
@@ -68,7 +80,7 @@
 <P><I>MIDI note enable event.</I></P>
 <P>Send MIDI Note On event to active MIDI device.<br><i>Channel</i>: MIDI channel (0..15), <i>Key</i>: note to enable, <i>VelOn</i>: enable speed (1..127).</P>
 <P></P>
-<!-- ../src/audio/AudioCore.cpp:1129 -->
+<!-- ../src/audio/AudioCore.cpp:1145 -->
 
 <HR />
 <a name="_midi_pitch_bend"></a>
@@ -78,7 +90,7 @@
 <P><I>MIDI pitch bend event.</I></P>
 <P>Send MIDI Pitch Bend event to active MIDI device.<br><i>Channel</i>: MIDI channel (0..15), <i>Range</i>: pitch bend value (1..127).</P>
 <P></P>
-<!-- ../src/audio/AudioCore.cpp:1169 -->
+<!-- ../src/audio/AudioCore.cpp:1185 -->
 
 <HR />
 <a name="_midi_poly_after_touch"></a>
@@ -88,9 +100,31 @@
 <P><I>MIDI polyphonic after touch event.</I></P>
 <P>Send MIDI Polyphonic After Touch event to active MIDI device.<br><i>Channel</i>: MIDI channel (0..15), <i>Key</i>: note to modify, <i>Pressure</i>: pressure value (1..127).</P>
 <P></P>
-<!-- ../src/audio/AudioCore.cpp:1137 -->
+<!-- ../src/audio/AudioCore.cpp:1153 -->
 
 <HR />
-<P>Total functors: <B>8</B>.</P>
+<a name="_midi_wait"></a>
+<P><font face=Arial size=+1 color=#808080><B>midi_wait</B></font></P>
+<LI type=square>[ <b><a href="Audio_Categories.htm#_Audio">Audio</a></b> | <b><a href="Audio_Categories.htm#_MIDI">MIDI</a></b> ]</LI>
+<LI type=disc><B>MIDI</B> !! <B>midi_wait </B> (<i>Delay</i>: <b><a href="Audio_Types.htm#_Int">Int</a></b>) &#8658; <b><a href="Audio_Types.htm#_Int">Int</a></b>.</LI>
+<P><I>MIDI delay.</I></P>
+<P>Wait for <i>Delay</i> ms, if MIDI output active.</P>
+<P></P>
+<!-- ../src/audio/AudioCore.cpp:1193 -->
+
+<HR /><a name="_87"></a>
+<P><font size=+1 color=red>= <B>W</B> =</font></P>
+<HR />
+<a name="_with_midi"></a>
+<P><font face=Arial size=+1 color=#808080><B>with_midi</B></font></P>
+<LI type=square>[ <b><a href="Audio_Categories.htm#_Audio">Audio</a></b> | <b><a href="Audio_Categories.htm#_MIDI">MIDI</a></b> | <b><a href="Audio_Categories.htm#_Wrapper">Wrapper</a></b> ]</LI>
+<LI type=disc><B>MIDI</B> !! <B>with_midi </B> (<i>DevNo</i>: <b><a href="Audio_Types.htm#_Int">Int</a></b>, @<i>Body</i>: <b><a href="Audio_Types.htm#_Any">Any</a></b>) &#8658; <b><a href="Audio_Types.htm#_Any">Any</a></b>.</LI>
+<P><I>MIDI output wrapper.</I></P>
+<P>Evaluate <i>Body</i> with open MIDI device <i>DevNo</i>.</P>
+<P></P>
+<!-- ../src/audio/AudioCore.cpp:1123 -->
+
+<HR />
+<P>Total functors: <B>11</B>.</P>
 </BODY>
 </HTML>

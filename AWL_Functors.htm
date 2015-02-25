@@ -18,7 +18,7 @@
 <P><I>Module arguments.</I></P>
 <P>Returns current module arguments (as list of string values, or <b>undef</b>, when empty).</P>
 <P></P>
-<!-- ../src/Kernel.cpp:1742 -->
+<!-- ../src/Kernel.cpp:1750 -->
 
 <HR />
 <a name="__environ"></a>
@@ -28,7 +28,7 @@
 <P><I>System environment.</I></P>
 <P>Returns system environment (as hash of key/value pairs).</P>
 <P></P>
-<!-- ../src/Kernel.cpp:1749 -->
+<!-- ../src/Kernel.cpp:1757 -->
 
 <HR />
 <a name="__version"></a>
@@ -38,7 +38,7 @@
 <P><I>Interpreter version.</I></P>
 <P>Returns interpreter version (as <i>Major</i>, <i>Minor</i>, <i>Patchlevel</i>).</P>
 <P></P>
-<!-- ../src/Kernel.cpp:1756 -->
+<!-- ../src/Kernel.cpp:1764 -->
 
 <HR /><a name="_65"></a>
 <P><font size=+1 color=red>= <B>A</B> =</font></P>
@@ -50,7 +50,7 @@
 <P><I>Copy array.</I></P>
 <P>Makes and returns copy of array <i>Array</i> (both copies of array are sharing same elements).</P>
 <P></P>
-<!-- ../src/E_Array.cpp:1423 -->
+<!-- ../src/E_Array.cpp:1430 -->
 
 <HR />
 <a name="_a_delete"></a>
@@ -60,7 +60,7 @@
 <P><I>Delete elements block from array.</I></P>
 <P>Shrink array <i>Array</i> at dimension <i>DimIndex</i> by deleting elements block at <i>DeleteRange</i>.<br>Returns <i>Array</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_a_insert">a_insert</a></B> | <B><a href="#_a_reshape">a_reshape</a></B> ]</P>
-<!-- ../src/E_Array.cpp:1451 -->
+<!-- ../src/E_Array.cpp:1458 -->
 
 <HR />
 <a name="_a_dims"></a>
@@ -70,7 +70,7 @@
 <P><I>Array dimensions.</I></P>
 <P>Returns list of dimensions of array <i>Array</i> (in order from outer to inner).</P>
 <P><I>See also: </I>[ <B><a href="#_a_rank">a_rank</a></B> | <B><a href="#_a_total">a_total</a></B> ]</P>
-<!-- ../src/E_Array.cpp:1362 -->
+<!-- ../src/E_Array.cpp:1369 -->
 
 <HR />
 <a name="_a_elem"></a>
@@ -80,7 +80,7 @@
 <P><I>Array element accessor.</I></P>
 <P>Returns mutable reference to element of array <i>Array</i> with index list <i>Index</i> (from outer indexes to inner).<br>Syntax: <i>Array</i> {<i>Index</i>}.</P>
 <P></P>
-<!-- ../src/E_Array.cpp:1378 -->
+<!-- ../src/E_Array.cpp:1385 -->
 
 <HR />
 <a name="_a_fill"></a>
@@ -90,7 +90,7 @@
 <P><I>Fill array with value.</I></P>
 <P>Fills entire array <i>Array</i> with value of <i>Elem</i>.<br>Returns <i>Array</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_a_load">a_load</a></B> | <B><a href="#_a_save">a_save</a></B> ]</P>
-<!-- ../src/E_Array.cpp:1388 -->
+<!-- ../src/E_Array.cpp:1395 -->
 
 <HR />
 <a name="_a_init_all"></a>
@@ -100,7 +100,7 @@
 <P><I>Array functional initializer.</I></P>
 <P>Initializes all elements of array <i>Array</i> by using functor reference <i>FnVal</i>.<br>(Each element is initialized by <i>FnVal</i> ! <i>Index</i>, where <i>Index</i> is list of element indexes, from outer to inner.)</P>
 <P></P>
-<!-- ../src/E_Array.cpp:1413 -->
+<!-- ../src/E_Array.cpp:1420 -->
 
 <HR />
 <a name="_a_insert"></a>
@@ -110,7 +110,7 @@
 <P><I>Insert elements block into array.</I></P>
 <P>Expand array <i>Array</i> by dimension <i>DimIndex</i> by inserting elements block at <i>InsertRange</i>.<br>(Inserted block is initialized with <i>Init</i>.)<br>Returns <i>Array</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_a_delete">a_delete</a></B> | <B><a href="#_a_reshape">a_reshape</a></B> ]</P>
-<!-- ../src/E_Array.cpp:1443 -->
+<!-- ../src/E_Array.cpp:1450 -->
 
 <HR />
 <a name="_a_load"></a>
@@ -120,7 +120,7 @@
 <P><I>Load array elements from list of values.</I></P>
 <P>Loads array <i>Array</i> with list of <i>Elems</i> (according to internal elements ordering).<br>(Extra elements are ignored).<br>Returns <i>Array</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_a_fill">a_fill</a></B> | <B><a href="#_a_save">a_save</a></B> ]</P>
-<!-- ../src/E_Array.cpp:1396 -->
+<!-- ../src/E_Array.cpp:1403 -->
 
 <HR />
 <a name="_a_loop"></a>
@@ -130,7 +130,7 @@
 <P><I>Array iterator.</I></P>
 <P>Evaluates <i>Body</i> for all elements of the <i>Array</i> (in internal order), assigning current element to <i>Var</i> before each iteration.</P>
 <P></P>
-<!-- ../src/E_Array.cpp:1433 -->
+<!-- ../src/E_Array.cpp:1440 -->
 
 <HR />
 <a name="_a_rank"></a>
@@ -140,7 +140,7 @@
 <P><I>Array rank.</I></P>
 <P>Returns rank (total number of dimensions) of array <i>Array</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_a_dims">a_dims</a></B> | <B><a href="#_a_total">a_total</a></B> ]</P>
-<!-- ../src/E_Array.cpp:1355 -->
+<!-- ../src/E_Array.cpp:1362 -->
 
 <HR />
 <a name="_a_reshape"></a>
@@ -150,7 +150,7 @@
 <P><I>Reshape array.</I></P>
 <P>Reshape array <i>Array</i>, changing dimension ranges to <i>DimRange0</i> .. <i>DimRangeN</i>.<br>Returns <i>Array</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_a_insert">a_insert</a></B> | <B><a href="#_a_delete">a_delete</a></B> ]</P>
-<!-- ../src/E_Array.cpp:1461 -->
+<!-- ../src/E_Array.cpp:1468 -->
 
 <HR />
 <a name="_a_save"></a>
@@ -160,7 +160,7 @@
 <P><I>Save array elements to list of values.</I></P>
 <P>Returns contents of array <i>Array</i> as list (according to internal elements ordering).<br>(Final undefined elements are NOT included.)</P>
 <P><I>See also: </I>[ <B><a href="#_a_fill">a_fill</a></B> | <B><a href="#_a_load">a_load</a></B> ]</P>
-<!-- ../src/E_Array.cpp:1405 -->
+<!-- ../src/E_Array.cpp:1412 -->
 
 <HR />
 <a name="_a_total"></a>
@@ -170,7 +170,7 @@
 <P><I>Total elements in array.</I></P>
 <P>Returns total number of elements in array <i>Array</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_a_rank">a_rank</a></B> | <B><a href="#_a_dims">a_dims</a></B> ]</P>
-<!-- ../src/E_Array.cpp:1369 -->
+<!-- ../src/E_Array.cpp:1376 -->
 
 <HR />
 <a name="_abs"></a>
@@ -230,7 +230,7 @@
 <P><I>Apply functor to argument(s).</I></P>
 <P>Invokes functor reference <i>F</i> with argument(s) <i>Args</i>, returning result of invocation.</P>
 <P></P>
-<!-- ../src/E_Func.cpp:671 -->
+<!-- ../src/E_Func.cpp:680 -->
 
 <HR />
 <a name="_array"></a>
@@ -240,7 +240,7 @@
 <P><I>Array constructor.</I></P>
 <P>Creates new array (list <i>Dims</i> contains dimensions, from outer to inner).<br>(Elements of created array are initialised to <b>undef</b>.)</P>
 <P></P>
-<!-- ../src/E_Array.cpp:1344 -->
+<!-- ../src/E_Array.cpp:1351 -->
 
 <HR />
 <a name="_asin"></a>
@@ -484,7 +484,7 @@
 <P><I>Retrieve class of object.</I></P>
 <P>Evaluates object <i>Object</i>, and returns class, to which <i>Object</i> belongs.<br>(Returns <b>undef</b>, if <i>Object</i> is not a class instance.)</P>
 <P><I>See also: </I>[ <B><a href="#_self">self</a></B> | <B><a href="#_super_of">super_of</a></B> ]</P>
-<!-- ../src/E_Object.cpp:377 -->
+<!-- ../src/E_Object.cpp:384 -->
 
 <HR />
 <a name="_closure"></a>
@@ -494,7 +494,7 @@
 <P><I>Closure constructor.</I></P>
 <P>Create and return closure: <i>Callee</i> with bound context of <i>Context</i>.</P>
 <P></P>
-<!-- ../src/E_Func.cpp:752 -->
+<!-- ../src/E_Func.cpp:761 -->
 
 <HR />
 <a name="_clr"></a>
@@ -524,7 +524,7 @@
 <P><I>Code page codec.</I></P>
 <P>Creates codec for data encoding/decoding with codepage defined with <i>Codepage</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_codec_UTF8">codec_UTF8</a></B> | <B><a href="#_codec_UTF16">codec_UTF16</a></B> | <B><a href="#_codec_UTF32">codec_UTF32</a></B> | <B><a href="#_codec_SMBC">codec_SMBC</a></B> | <B><a href="#_codec_hexdump">codec_hexdump</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1909 -->
+<!-- ../src/E_Stream.cpp:1916 -->
 
 <HR />
 <a name="_codec_hexdump"></a>
@@ -534,7 +534,7 @@
 <P><I>Hexdump codec.</I></P>
 <P>Creates codec for data encoding/decoding as plain hexdigits sequences.</P>
 <P><I>See also: </I>[ <B><a href="#_codec_UTF8">codec_UTF8</a></B> | <B><a href="#_codec_UTF16">codec_UTF16</a></B> | <B><a href="#_codec_UTF32">codec_UTF32</a></B> | <B><a href="#_codec_SMBC">codec_SMBC</a></B> | <B><a href="#_codec_codepage">codec_codepage</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1914 -->
+<!-- ../src/E_Stream.cpp:1921 -->
 
 <HR />
 <a name="_codec_SMBC"></a>
@@ -544,7 +544,7 @@
 <P><I>SMBC codec.</I></P>
 <P>Creates codec for SMBC data encoding/decoding.</P>
 <P><I>See also: </I>[ <B><a href="#_codec_UTF8">codec_UTF8</a></B> | <B><a href="#_codec_UTF16">codec_UTF16</a></B> | <B><a href="#_codec_UTF32">codec_UTF32</a></B> | <B><a href="#_codec_codepage">codec_codepage</a></B> | <B><a href="#_codec_hexdump">codec_hexdump</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1904 -->
+<!-- ../src/E_Stream.cpp:1911 -->
 
 <HR />
 <a name="_codec_UTF16"></a>
@@ -554,7 +554,7 @@
 <P><I>UTF-16 codec.</I></P>
 <P>Creates codec for UTF-16 data encoding/decoding (<i>Endianness</i> ? Big Endian : Little Endian).</P>
 <P><I>See also: </I>[ <B><a href="#_codec_UTF8">codec_UTF8</a></B> | <B><a href="#_codec_UTF32">codec_UTF32</a></B> | <B><a href="#_codec_SMBC">codec_SMBC</a></B> | <B><a href="#_codec_codepage">codec_codepage</a></B> | <B><a href="#_codec_hexdump">codec_hexdump</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1894 -->
+<!-- ../src/E_Stream.cpp:1901 -->
 
 <HR />
 <a name="_codec_UTF32"></a>
@@ -564,7 +564,7 @@
 <P><I>UTF-32 codec.</I></P>
 <P>Creates codec for UTF-32 data encoding/decoding (<i>Endianness</i> ? Big Endian : Little Endian).</P>
 <P><I>See also: </I>[ <B><a href="#_codec_UTF8">codec_UTF8</a></B> | <B><a href="#_codec_UTF16">codec_UTF16</a></B> | <B><a href="#_codec_SMBC">codec_SMBC</a></B> | <B><a href="#_codec_codepage">codec_codepage</a></B> | <B><a href="#_codec_hexdump">codec_hexdump</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1899 -->
+<!-- ../src/E_Stream.cpp:1906 -->
 
 <HR />
 <a name="_codec_UTF8"></a>
@@ -574,7 +574,7 @@
 <P><I>UTF-8 codec.</I></P>
 <P>Creates codec for UTF-8 data encoding/decoding.</P>
 <P><I>See also: </I>[ <B><a href="#_codec_UTF16">codec_UTF16</a></B> | <B><a href="#_codec_UTF32">codec_UTF32</a></B> | <B><a href="#_codec_SMBC">codec_SMBC</a></B> | <B><a href="#_codec_codepage">codec_codepage</a></B> | <B><a href="#_codec_hexdump">codec_hexdump</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1889 -->
+<!-- ../src/E_Stream.cpp:1896 -->
 
 <HR />
 <a name="_comb"></a>
@@ -594,7 +594,7 @@
 <P><I>Construct time from list.</I></P>
 <P>Convert time in (Year:Month:Day), (Hour.Min.Sec) format to Epoch seconds.</P>
 <P></P>
-<!-- ../src/E_System.cpp:740 -->
+<!-- ../src/E_System.cpp:748 -->
 
 <HR />
 <a name="_cos"></a>
@@ -676,7 +676,7 @@
 <P><I>Deconstruct block to item list.</I></P>
 <P>Deconstruct block <i>B</i> to list of expressions.<br>(Reverse to <b>enblock</b>).</P>
 <P><I>See also: </I>[ <B><a href="#_enblock">enblock</a></B> ]</P>
-<!-- ../src/E_Func.cpp:703 -->
+<!-- ../src/E_Func.cpp:712 -->
 
 <HR />
 <a name="_dec"></a>
@@ -706,7 +706,7 @@
 <P><I>Deconstruct term to functor and argument(s).</I></P>
 <P>Deconstruct term <i>T</i> to list of functor reference and argument(s).<br>(Reverse to <b>enterm</b>).</P>
 <P><I>See also: </I>[ <B><a href="#_enterm">enterm</a></B> ]</P>
-<!-- ../src/E_Func.cpp:686 -->
+<!-- ../src/E_Func.cpp:695 -->
 
 <HR />
 <a name="_deval"></a>
@@ -726,7 +726,7 @@
 <P><I>Explicit devirtualization.</I></P>
 <P>Returns proper version of virtual method <i>Virtual</i>, implemented in class <i>Class</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_originator">originator</a></B> ]</P>
-<!-- ../src/E_Object.cpp:425 -->
+<!-- ../src/E_Object.cpp:432 -->
 
 <HR />
 <a name="_differ"></a>
@@ -736,7 +736,7 @@
 <P><I>Test for difference.</I></P>
 <P>Check results of <i>V</i> and <i>W</i> for structural difference: <b>false</b> (0), if both operands evaluate to same result; <b>true</b> (1) otherwise.<br>Syntax: <i>V</i> [<>] <i>W</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_hcode">hcode</a></B> | <B><a href="#_ident">ident</a></B> ]</P>
-<!-- ../src/E_Hash.cpp:780 -->
+<!-- ../src/E_Hash.cpp:781 -->
 
 <HR />
 <a name="_dir_loop"></a>
@@ -746,7 +746,7 @@
 <P><I>Directory iterator.</I></P>
 <P>Iterate through directory <i>DirName</i>, setting <i>FileName</i> to each file, and evaluating <i>Body</i>.<br>Returns final result of <i>Body</i>.</P>
 <P></P>
-<!-- ../src/E_System.cpp:700 -->
+<!-- ../src/E_System.cpp:708 -->
 
 <HR />
 <a name="_div"></a>
@@ -818,7 +818,7 @@
 <P><I>Construct block from item list.</I></P>
 <P>Construct block from list of expressions <i>L</i>.<br>(Reverse to <b>deblock</b>).</P>
 <P><I>See also: </I>[ <B><a href="#_deblock">deblock</a></B> ]</P>
-<!-- ../src/E_Func.cpp:697 -->
+<!-- ../src/E_Func.cpp:706 -->
 
 <HR />
 <a name="_enterm"></a>
@@ -828,7 +828,7 @@
 <P><I>Construct term from functor and argument(s).</I></P>
 <P>Construct term from functor reference <i>F</i> and argument(s) <i>A</i>.<br>(Reverse to <b>determ</b>).</P>
 <P><I>See also: </I>[ <B><a href="#_determ">determ</a></B> ]</P>
-<!-- ../src/E_Func.cpp:680 -->
+<!-- ../src/E_Func.cpp:689 -->
 
 <HR />
 <a name="_eq"></a>
@@ -908,7 +908,7 @@
 <P><I>Expect array value.</I></P>
 <P>If argument <i>V</i> evaluates to array, evaluates and returns <i>Body</i>.<br>(Reports type error otherwise.)</P>
 <P></P>
-<!-- ../src/E_Array.cpp:1334 -->
+<!-- ../src/E_Array.cpp:1341 -->
 
 <HR />
 <a name="_expect_float"></a>
@@ -928,7 +928,7 @@
 <P><I>Expect hash value.</I></P>
 <P>If argument <i>V</i> evaluates to hash, evaluates and returns <i>Body</i>.<br>(Reports type error otherwise.)</P>
 <P><I>See also: </I>[ <B><a href="#_is_hash">is_hash</a></B> ]</P>
-<!-- ../src/E_Hash.cpp:799 -->
+<!-- ../src/E_Hash.cpp:800 -->
 
 <HR />
 <a name="_expect_int"></a>
@@ -958,7 +958,7 @@
 <P><I>Expect object value.</I></P>
 <P>If argument <i>V</i> evaluates to any class instance, evaluates and returns <i>Body</i>.<br>(Reports type error otherwise.)</P>
 <P><I>See also: </I>[ <B><a href="#_is_object">is_object</a></B> | <B><a href="#_is_class">is_class</a></B> | <B><a href="#_is_virtual">is_virtual</a></B> ]</P>
-<!-- ../src/E_Object.cpp:353 -->
+<!-- ../src/E_Object.cpp:360 -->
 
 <HR />
 <a name="_expect_pattern"></a>
@@ -968,7 +968,7 @@
 <P><I>Expect pattern value.</I></P>
 <P>If argument <i>V</i> evaluates to pattern, evaluates and returns <i>Body</i>.<br>(Reports type error otherwise.)</P>
 <P></P>
-<!-- ../src/E_Pattern.cpp:2329 -->
+<!-- ../src/E_Pattern.cpp:2359 -->
 
 <HR />
 <a name="_expect_string"></a>
@@ -990,7 +990,7 @@
 <P><I>Verify access to file.</I></P>
 <P>Check, is file <i>FileName</i> accessible by <i>Mode</i>.<br>Returns system error status (ERRNO).</P>
 <P></P>
-<!-- ../src/E_System.cpp:637 -->
+<!-- ../src/E_System.cpp:645 -->
 
 <HR />
 <a name="_f_and"></a>
@@ -1000,7 +1000,7 @@
 <P><I>Functional "AND" predicates composition.</I></P>
 <P>For predicates <i>Pred1</i> and <i>Pred2</i>, results in predicate, evaluating to conditional AND of <i>Pred1</i> and <i>Pred2</i>.<br>( <b>f_and</b> (<i>Pred1</i>, <i>Pred2</i>) ! (<i>Arg</i>) == <b>c_and</b> (<i>Pred1</i> ! <i>Arg</i>, <i>Pred2</i> ! <i>Arg</i>) ).</P>
 <P><I>See also: </I>[ <B><a href="#_f_not">f_not</a></B> | <B><a href="#_f_or">f_or</a></B> ]</P>
-<!-- ../src/E_Func.cpp:737 -->
+<!-- ../src/E_Func.cpp:746 -->
 
 <HR />
 <a name="_f_at_end"></a>
@@ -1010,7 +1010,7 @@
 <P><I>Check for end of stream.</I></P>
 <P>Return true, if <i>Stream</i> has reached end.</P>
 <P></P>
-<!-- ../src/E_Stream.cpp:1833 -->
+<!-- ../src/E_Stream.cpp:1840 -->
 
 <HR />
 <a name="_f_attr"></a>
@@ -1020,7 +1020,7 @@
 <P><I>Get stream info.</I></P>
 <P>Return list of attributes and properties of <i>Stream</i>.</P>
 <P></P>
-<!-- ../src/E_Stream.cpp:1876 -->
+<!-- ../src/E_Stream.cpp:1883 -->
 
 <HR />
 <a name="_f_bufmode"></a>
@@ -1030,7 +1030,7 @@
 <P><I>Set stream buffer size.</I></P>
 <P>Set size of internal I/O buffer of stream <i>Stream</i> to <i>BufSize</i>.<br>(Disable buffering completely, if 0).</P>
 <P><I>See also: </I>[ <B><a href="#_f_sync">f_sync</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1825 -->
+<!-- ../src/E_Stream.cpp:1832 -->
 
 <HR />
 <a name="_f_chdir"></a>
@@ -1040,7 +1040,7 @@
 <P><I>Change current directory.</I></P>
 <P>Change current directory to <i>DirName</i>.<br>Returns system error status (ERRNO).</P>
 <P></P>
-<!-- ../src/E_System.cpp:661 -->
+<!-- ../src/E_System.cpp:669 -->
 
 <HR />
 <a name="_f_chmod"></a>
@@ -1050,7 +1050,7 @@
 <P><I>Change file access mode.</I></P>
 <P>Change access mode of file <i>FileName</i> to <i>FileMode</i>.<br>Returns system error status (ERRNO).</P>
 <P></P>
-<!-- ../src/E_System.cpp:685 -->
+<!-- ../src/E_System.cpp:693 -->
 
 <HR />
 <a name="_f_close"></a>
@@ -1060,7 +1060,7 @@
 <P><I>Close opened stream.</I></P>
 <P>Close previously opened <i>Stream</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_f_open">f_open</a></B> | <B><a href="#_f_create">f_create</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1746 -->
+<!-- ../src/E_Stream.cpp:1753 -->
 
 <HR />
 <a name="_f_compose"></a>
@@ -1070,7 +1070,7 @@
 <P><I>Functional composition.</I></P>
 <P>Returns functional composition of <i>F_f</i> and <i>F_g</i>.<br>(Result of (<b>f_compose</b> (<i>F_f</i>, <i>F_g</i>)) ! (<i>V</i>) is equal to <i>F_f</i> ! (<i>F_g</i> ! (<i>V</i>)) for any <i>V</i>.)</P>
 <P></P>
-<!-- ../src/E_Func.cpp:719 -->
+<!-- ../src/E_Func.cpp:728 -->
 
 <HR />
 <a name="_f_create"></a>
@@ -1080,7 +1080,17 @@
 <P><I>Open file as stream.</I></P>
 <P>Opens system file <i>FileName</i> with <i>AccessMode</i> (as for C "open" library func).<br>Defaults <i>AccessMode</i> to O_WRONLY|O_CREAT|O_BINARY.<br>Returns new stream or <b>undef</b>, if open failed.</P>
 <P><I>See also: </I>[ <B><a href="#_f_open">f_open</a></B> | <B><a href="#_f_close">f_close</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1737 -->
+<!-- ../src/E_Stream.cpp:1744 -->
+
+<HR />
+<a name="_f_curry"></a>
+<P><font face=Arial size=+1 color=#808080><B>f_curry</B></font></P>
+<LI type=square>[ <b><a href="AWL_Categories.htm#_Func">Func</a></b> | <b><a href="AWL_Categories.htm#_Composer">Composer</a></b> ]</LI>
+<LI type=disc><B>f_curry </B> (<i>Functor</i>: <b><a href="AWL_Types.htm#_Func">Func</a></b>, <i>Arglist</i>: <b><a href="AWL_Types.htm#_List">List</a></b>) &#8658; <b><a href="AWL_Types.htm#_Func">Func</a></b>.</LI>
+<P><I>Functor currying.</I></P>
+<P>Curry functor: returns callable Functor ! (Arglist).</P>
+<P></P>
+<!-- ../src/E_Func.cpp:768 -->
 
 <HR />
 <a name="_f_err"></a>
@@ -1090,7 +1100,7 @@
 <P><I>Standard error output.</I></P>
 <P>Returns default error output stream.</P>
 <P><I>See also: </I>[ <B><a href="#_f_in">f_in</a></B> | <B><a href="#_f_out">f_out</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1696 -->
+<!-- ../src/E_Stream.cpp:1703 -->
 
 <HR />
 <a name="_f_get"></a>
@@ -1100,7 +1110,7 @@
 <P><I>Get line(s) from stream (as strings).</I></P>
 <P>Reads lines from the input stream <i>In</i> (or default input, if <i>In</i> is undefined).<br>Assigns all strings values read to mutables from list of <i>Line</i>.<br>(Final EOLs are removed.)<br>Returns: number of lines successfully read and stored.</P>
 <P><I>See also: </I>[ <B><a href="#_f_put">f_put</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1707 -->
+<!-- ../src/E_Stream.cpp:1714 -->
 
 <HR />
 <a name="_f_get_length"></a>
@@ -1110,7 +1120,7 @@
 <P><I>Get stream file length.</I></P>
 <P>Return current length of file for <i>Stream</i> (or -1, if <i>Stream</i> is not a file).</P>
 <P></P>
-<!-- ../src/E_Stream.cpp:1847 -->
+<!-- ../src/E_Stream.cpp:1854 -->
 
 <HR />
 <a name="_f_getc"></a>
@@ -1120,7 +1130,7 @@
 <P><I>Get character from stream.</I></P>
 <P>Returns code of next character read from input stream <i>Stream</i> (or <b>undef</b> on EOF).</P>
 <P><I>See also: </I>[ <B><a href="#_f_putc">f_putc</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1777 -->
+<!-- ../src/E_Stream.cpp:1784 -->
 
 <HR />
 <a name="_f_getline"></a>
@@ -1130,7 +1140,7 @@
 <P><I>Get line from stream.</I></P>
 <P>Read and return new line from input <i>Stream</i>.</P>
 <P></P>
-<!-- ../src/E_Stream.cpp:1753 -->
+<!-- ../src/E_Stream.cpp:1760 -->
 
 <HR />
 <a name="_f_ident"></a>
@@ -1140,7 +1150,7 @@
 <P><I>Identity.</I></P>
 <P>Identity functor (for any argument <i>V</i> returns <i>V</i> as is).</P>
 <P></P>
-<!-- ../src/E_Func.cpp:712 -->
+<!-- ../src/E_Func.cpp:721 -->
 
 <HR />
 <a name="_f_in"></a>
@@ -1150,7 +1160,7 @@
 <P><I>Standard input.</I></P>
 <P>Returns default input stream.</P>
 <P><I>See also: </I>[ <B><a href="#_f_out">f_out</a></B> | <B><a href="#_f_err">f_err</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1686 -->
+<!-- ../src/E_Stream.cpp:1693 -->
 
 <HR />
 <a name="_f_is_console"></a>
@@ -1160,7 +1170,7 @@
 <P><I>Check for console device.</I></P>
 <P>Return true, if <i>Stream</i> is console device.</P>
 <P></P>
-<!-- ../src/E_Stream.cpp:1840 -->
+<!-- ../src/E_Stream.cpp:1847 -->
 
 <HR />
 <a name="_f_mkdir"></a>
@@ -1170,7 +1180,7 @@
 <P><I>Create new directory.</I></P>
 <P>Create new directory <i>DirName</i>.<br>Returns system error status (ERRNO).</P>
 <P></P>
-<!-- ../src/E_System.cpp:669 -->
+<!-- ../src/E_System.cpp:677 -->
 
 <HR />
 <a name="_f_not"></a>
@@ -1180,7 +1190,7 @@
 <P><I>Functional "NOT" predicate composition.</I></P>
 <P>For predicates <i>Pred</i>, results in predicate, evaluating to conditional NOT of <i>Pred</i>.<br>( <b>f_not</b> (<i>Pred</i>) ! (<i>Arg</i>) == <b>c_not</b> (<i>Pred1</i> ! <i>Arg</i>) ).</P>
 <P><I>See also: </I>[ <B><a href="#_f_and">f_and</a></B> | <B><a href="#_f_or">f_or</a></B> ]</P>
-<!-- ../src/E_Func.cpp:729 -->
+<!-- ../src/E_Func.cpp:738 -->
 
 <HR />
 <a name="_f_open"></a>
@@ -1190,7 +1200,7 @@
 <P><I>Open file as stream.</I></P>
 <P>Opens system file <i>FileName</i> with <i>AccessMode</i> (as for C "open" library func).<br>Defaults <i>AccessMode</i> to O_RDONLY|O_BINARY.<br>Returns new stream or <b>undef</b>, if open failed.</P>
 <P><I>See also: </I>[ <B><a href="#_f_create">f_create</a></B> | <B><a href="#_f_close">f_close</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1728 -->
+<!-- ../src/E_Stream.cpp:1735 -->
 
 <HR />
 <a name="_f_or"></a>
@@ -1200,7 +1210,7 @@
 <P><I>Functional "OR" predicates composition.</I></P>
 <P>For predicates <i>Pred1</i> and <i>Pred2</i>, results in predicate, evaluating to conditional OR of <i>Pred1</i> and <i>Pred2</i>.<br>( <b>f_or</b> (<i>Pred1</i>, <i>Pred2</i>) ! (<i>Arg</i>) == <b>c_or</b> (<i>Pred1</i> ! <i>Arg</i>, <i>Pred2</i> ! <i>Arg</i>) ).</P>
 <P><I>See also: </I>[ <B><a href="#_f_not">f_not</a></B> | <B><a href="#_f_and">f_and</a></B> ]</P>
-<!-- ../src/E_Func.cpp:743 -->
+<!-- ../src/E_Func.cpp:752 -->
 
 <HR />
 <a name="_f_out"></a>
@@ -1210,7 +1220,7 @@
 <P><I>Standard output.</I></P>
 <P>Returns default output stream.</P>
 <P><I>See also: </I>[ <B><a href="#_f_in">f_in</a></B> | <B><a href="#_f_err">f_err</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1691 -->
+<!-- ../src/E_Stream.cpp:1698 -->
 
 <HR />
 <a name="_f_put"></a>
@@ -1220,7 +1230,7 @@
 <P><I>Put value(s) to stream (as strings).</I></P>
 <P>Evaluates and writes values from list of <i>Value</i><br>to the output stream <i>Out</i> (or default output, if <i>Out</i> is undefined).<br>Returns: number of values successfully written.</P>
 <P><I>See also: </I>[ <B><a href="#_f_get">f_get</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1717 -->
+<!-- ../src/E_Stream.cpp:1724 -->
 
 <HR />
 <a name="_f_putc"></a>
@@ -1230,7 +1240,7 @@
 <P><I>Put character to stream.</I></P>
 <P>Writes character with <i>Code</i> to output stream <i>Stream</i>.<br>Returns <i>Code</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_f_getc">f_getc</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1782 -->
+<!-- ../src/E_Stream.cpp:1789 -->
 
 <HR />
 <a name="_f_putline"></a>
@@ -1240,7 +1250,7 @@
 <P><I>Put string to stream.</I></P>
 <P>Output <i>String</i> to output <i>Stream</i>.<br>Returns <i>String</i>.</P>
 <P></P>
-<!-- ../src/E_Stream.cpp:1760 -->
+<!-- ../src/E_Stream.cpp:1767 -->
 
 <HR />
 <a name="_f_read"></a>
@@ -1250,7 +1260,7 @@
 <P><I>Read string from stream.</I></P>
 <P>Reads exactly <i>Count</i> characters (including EOLs) from input <i>Stream</i> (returning string result).</P>
 <P></P>
-<!-- ../src/E_Stream.cpp:1768 -->
+<!-- ../src/E_Stream.cpp:1775 -->
 
 <HR />
 <a name="_f_remove"></a>
@@ -1260,7 +1270,7 @@
 <P><I>Remove file permanently.</I></P>
 <P>Remove file <i>FileName</i> from file system.<br>Returns system error status (ERRNO).</P>
 <P></P>
-<!-- ../src/E_System.cpp:645 -->
+<!-- ../src/E_System.cpp:653 -->
 
 <HR />
 <a name="_f_rename"></a>
@@ -1270,7 +1280,7 @@
 <P><I>Rename or move file.</I></P>
 <P>Rename (or move) file <i>FileName</i> to <i>NewName</i>.<br>Returns system error status (ERRNO).</P>
 <P></P>
-<!-- ../src/E_System.cpp:653 -->
+<!-- ../src/E_System.cpp:661 -->
 
 <HR />
 <a name="_f_rmdir"></a>
@@ -1280,7 +1290,7 @@
 <P><I>Remove old directory.</I></P>
 <P>Remove existing directory <i>DirName</i>.<br>Returns system error status (ERRNO).</P>
 <P></P>
-<!-- ../src/E_System.cpp:677 -->
+<!-- ../src/E_System.cpp:685 -->
 
 <HR />
 <a name="_f_seek"></a>
@@ -1290,7 +1300,7 @@
 <P><I>Seek absolutely in stream.</I></P>
 <P>Seek in seekable stream <i>Stream</i> to <i>Position</i>, relative to start (if >=0) or to end (if < 0).<br>Returns new stream position.</P>
 <P><I>See also: </I>[ <B><a href="#_f_tell">f_tell</a></B> | <B><a href="#_f_skip">f_skip</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1800 -->
+<!-- ../src/E_Stream.cpp:1807 -->
 
 <HR />
 <a name="_f_set_length"></a>
@@ -1300,7 +1310,7 @@
 <P><I>Set stream file length.</I></P>
 <P>Set new length of file for <i>Stream</i> to <i>Length</i> (expanding or truncating file).</P>
 <P></P>
-<!-- ../src/E_Stream.cpp:1854 -->
+<!-- ../src/E_Stream.cpp:1861 -->
 
 <HR />
 <a name="_f_skip"></a>
@@ -1310,7 +1320,7 @@
 <P><I>Seek relatively in stream.</I></P>
 <P>Seek in seekable stream <i>Stream</i> relative by <i>Offset</i> (either positive or negative).<br>Returns new stream position.</P>
 <P><I>See also: </I>[ <B><a href="#_f_tell">f_tell</a></B> | <B><a href="#_f_seek">f_seek</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1808 -->
+<!-- ../src/E_Stream.cpp:1815 -->
 
 <HR />
 <a name="_f_stat"></a>
@@ -1320,7 +1330,7 @@
 <P><I>Get file information.</I></P>
 <P>Returns filesystem information about file <i>FileName</i>.<br>Result is: (Device: Int, Inode: Int, Mode: Int, Links: Int, UID: Int, GID: Int, Size: Int, ATime: Int, MTime: Int, CTime: Int)</P>
 <P></P>
-<!-- ../src/E_System.cpp:708 -->
+<!-- ../src/E_System.cpp:716 -->
 
 <HR />
 <a name="_f_sync"></a>
@@ -1330,7 +1340,7 @@
 <P><I>Sync stream.</I></P>
 <P>Sync stream <i>Stream</i>, flushing and/or discarding I/O buffers.</P>
 <P><I>See also: </I>[ <B><a href="#_f_bufmode">f_bufmode</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1818 -->
+<!-- ../src/E_Stream.cpp:1825 -->
 
 <HR />
 <a name="_f_tell"></a>
@@ -1340,7 +1350,7 @@
 <P><I>Tell current position in stream.</I></P>
 <P>Returns current pointer position in seekable stream <i>Stream</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_f_seek">f_seek</a></B> | <B><a href="#_f_skip">f_skip</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1793 -->
+<!-- ../src/E_Stream.cpp:1800 -->
 
 <HR />
 <a name="_false"></a>
@@ -1412,7 +1422,7 @@
 <P><I>Get current directory.</I></P>
 <P>Get and return current working directory.</P>
 <P></P>
-<!-- ../src/E_System.cpp:693 -->
+<!-- ../src/E_System.cpp:701 -->
 
 <HR />
 <a name="_gt"></a>
@@ -1434,7 +1444,7 @@
 <P><I>Clear hash.</I></P>
 <P>Clears hash <i>Hash</i>, removing all elements from it.<br>Returns number of elements, which were present in hash.</P>
 <P></P>
-<!-- ../src/E_Hash.cpp:851 -->
+<!-- ../src/E_Hash.cpp:852 -->
 
 <HR />
 <a name="_h_count"></a>
@@ -1444,7 +1454,7 @@
 <P><I>Hash counter.</I></P>
 <P>Returns total number of key/value pairs in hash <i>Hash</i>.</P>
 <P></P>
-<!-- ../src/E_Hash.cpp:844 -->
+<!-- ../src/E_Hash.cpp:845 -->
 
 <HR />
 <a name="_h_elem"></a>
@@ -1454,7 +1464,7 @@
 <P><I>Hash value accessor.</I></P>
 <P>Returns mutable reference to value associated with <i>Key</i> in hash <i>Hash</i>.<br>(If <i>Key</i> was not in <i>Hash</i>, it is created with undefined initial value.)<br>Syntax: <i>Hash</i>-><i>Key</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_h_lookup">h_lookup</a></B> | <B><a href="#_h_remove">h_remove</a></B> ]</P>
-<!-- ../src/E_Hash.cpp:819 -->
+<!-- ../src/E_Hash.cpp:820 -->
 
 <HR />
 <a name="_h_exists"></a>
@@ -1464,7 +1474,7 @@
 <P><I>Check key for presence in hash.</I></P>
 <P>Returns <b>true</b>, if <i>Key</i> present in hash <i>Hash</i>; <b>false</b> otherwise.</P>
 <P></P>
-<!-- ../src/E_Hash.cpp:915 -->
+<!-- ../src/E_Hash.cpp:916 -->
 
 <HR />
 <a name="_h_inspect"></a>
@@ -1474,7 +1484,7 @@
 <P><I>Inspect hash internal allocation.</I></P>
 <P>Returns list of internal bucket capacities in hash <i>Hash</i>.</P>
 <P></P>
-<!-- ../src/E_Hash.cpp:908 -->
+<!-- ../src/E_Hash.cpp:909 -->
 
 <HR />
 <a name="_h_keys"></a>
@@ -1484,7 +1494,7 @@
 <P><I>List of hash keys.</I></P>
 <P>Return open list of all keys in <i>Hash</i>, in no predictable (but same, as in <b>h_values</b>) order.</P>
 <P><I>See also: </I>[ <B><a href="#_h_values">h_values</a></B> | <B><a href="#_h_save">h_save</a></B> | <B><a href="#_h_load">h_load</a></B> ]</P>
-<!-- ../src/E_Hash.cpp:873 -->
+<!-- ../src/E_Hash.cpp:874 -->
 
 <HR />
 <a name="_h_load"></a>
@@ -1494,7 +1504,7 @@
 <P><I>Load hash with list of elements.</I></P>
 <P>Loads N pairs of (<i>Key</i>, <i>Value</i>) into hash <i>Hash</i>.<br>Returns <i>Hash</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_h_keys">h_keys</a></B> | <B><a href="#_h_values">h_values</a></B> | <B><a href="#_h_save">h_save</a></B> ]</P>
-<!-- ../src/E_Hash.cpp:892 -->
+<!-- ../src/E_Hash.cpp:893 -->
 
 <HR />
 <a name="_h_lookup"></a>
@@ -1504,7 +1514,7 @@
 <P><I>Hash value lookup.</I></P>
 <P>Returns value associated with <i>Key</i> in hash <i>Hash</i>.<br>(If <i>Key</i> is not in <i>Hash</i> returns <b>undef</b>; new key is NOT created).</P>
 <P><I>See also: </I>[ <B><a href="#_h_elem">h_elem</a></B> | <B><a href="#_h_remove">h_remove</a></B> ]</P>
-<!-- ../src/E_Hash.cpp:828 -->
+<!-- ../src/E_Hash.cpp:829 -->
 
 <HR />
 <a name="_h_loop"></a>
@@ -1514,7 +1524,7 @@
 <P><I>Hash iterator.</I></P>
 <P>Iterates through hash <i>Hash</i>.<br>For each element of hash, list of (key, value) is assigned to mutable <i>Var</i>, then <i>Body</i> is evaluated.<br>(Keys/values order is unpredictable.)<br>Returns result of final evaluation of <i>Body</i>.</P>
 <P></P>
-<!-- ../src/E_Hash.cpp:861 -->
+<!-- ../src/E_Hash.cpp:862 -->
 
 <HR />
 <a name="_h_rehash"></a>
@@ -1524,7 +1534,7 @@
 <P><I>Change hash capacity.</I></P>
 <P>Explicitly change capacity of hash <i>Hash</i> to <i>Capacity</i> (preserving current hash contents).<br>Returns: current number of hash entries.</P>
 <P><I>See also: </I>[ <B><a href="#_hash">hash</a></B> ]</P>
-<!-- ../src/E_Hash.cpp:900 -->
+<!-- ../src/E_Hash.cpp:901 -->
 
 <HR />
 <a name="_h_remove"></a>
@@ -1534,7 +1544,7 @@
 <P><I>Hash value remove.</I></P>
 <P>Removes value associated with <i>Key</i> from hash <i>Hash</i>.<br>(Returns removed value; or <b>undef</b>, if there was no value with <i>Key</i>.)</P>
 <P><I>See also: </I>[ <B><a href="#_h_elem">h_elem</a></B> | <B><a href="#_h_lookup">h_lookup</a></B> ]</P>
-<!-- ../src/E_Hash.cpp:836 -->
+<!-- ../src/E_Hash.cpp:837 -->
 
 <HR />
 <a name="_h_save"></a>
@@ -1544,7 +1554,7 @@
 <P><I>List of hash elements.</I></P>
 <P>Return open list of all (Key, Value) pairs in <i>Hash</i>, in no predictable (but same, as in <b>h_keys</b> and <b>h_values</b>) order.</P>
 <P><I>See also: </I>[ <B><a href="#_h_keys">h_keys</a></B> | <B><a href="#_h_values">h_values</a></B> | <B><a href="#_h_load">h_load</a></B> ]</P>
-<!-- ../src/E_Hash.cpp:883 -->
+<!-- ../src/E_Hash.cpp:884 -->
 
 <HR />
 <a name="_h_values"></a>
@@ -1554,7 +1564,7 @@
 <P><I>List of hash values.</I></P>
 <P>Return open list of all values in <i>Hash</i>, in no predictable (but same, as in <b>h_keys</b>) order.</P>
 <P><I>See also: </I>[ <B><a href="#_h_keys">h_keys</a></B> | <B><a href="#_h_save">h_save</a></B> | <B><a href="#_h_load">h_load</a></B> ]</P>
-<!-- ../src/E_Hash.cpp:878 -->
+<!-- ../src/E_Hash.cpp:879 -->
 
 <HR />
 <a name="_hash"></a>
@@ -1564,7 +1574,7 @@
 <P><I>Hash constructor.</I></P>
 <P>Creates and returns new (empty) hash (with optional initial <i>Capacity</i>).</P>
 <P><I>See also: </I>[ <B><a href="#_h_rehash">h_rehash</a></B> ]</P>
-<!-- ../src/E_Hash.cpp:809 -->
+<!-- ../src/E_Hash.cpp:810 -->
 
 <HR />
 <a name="_hcode"></a>
@@ -1574,7 +1584,7 @@
 <P><I>Hash code value.</I></P>
 <P>Calculate hash code of result of <i>V</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_ident">ident</a></B> | <B><a href="#_differ">differ</a></B> ]</P>
-<!-- ../src/E_Hash.cpp:766 -->
+<!-- ../src/E_Hash.cpp:767 -->
 
 <HR /><a name="_73"></a>
 <P><font size=+1 color=red>= <B>I</B> =</font></P>
@@ -1586,7 +1596,7 @@
 <P><I>Test for identity.</I></P>
 <P>Check results of <i>V</i> and <i>W</i> for structural identity: <b>true</b> (1), if both operands evaluate to same result; <b>false</b> (0) otherwise.<br>Syntax: <i>V</i> [==] <i>W</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_hcode">hcode</a></B> | <B><a href="#_differ">differ</a></B> ]</P>
-<!-- ../src/E_Hash.cpp:773 -->
+<!-- ../src/E_Hash.cpp:774 -->
 
 <HR />
 <a name="_idiv"></a>
@@ -1636,7 +1646,7 @@
 <P><I>Include module.</I></P>
 <P>Include source file <i>Filename</i> (evaluating all top-level expressions and module definitions).</P>
 <P></P>
-<!-- ../src/Kernel.cpp:1763 -->
+<!-- ../src/Kernel.cpp:1771 -->
 
 <HR />
 <a name="_inf_neg"></a>
@@ -1696,7 +1706,7 @@
 <P><I>Check for array value.</I></P>
 <P>Predicate: <b>true</b>, if argument <i>V</i> evaluates to array.</P>
 <P></P>
-<!-- ../src/E_Array.cpp:1327 -->
+<!-- ../src/E_Array.cpp:1334 -->
 
 <HR />
 <a name="_is_block"></a>
@@ -1706,7 +1716,7 @@
 <P><I>Check for block.</I></P>
 <P>Predicate: <b>true</b>, if argument <i>V</i> evaluates to block.</P>
 <P><I>See also: </I>[ <B><a href="#_is_var">is_var</a></B> | <B><a href="#_is_term">is_term</a></B> | <B><a href="#_is_func">is_func</a></B> ]</P>
-<!-- ../src/E_Func.cpp:654 -->
+<!-- ../src/E_Func.cpp:663 -->
 
 <HR />
 <a name="_is_class"></a>
@@ -1716,7 +1726,7 @@
 <P><I>Check for class reference.</I></P>
 <P>Predicate: <b>true</b>, if functor <i>F</i> is reference to any class.</P>
 <P><I>See also: </I>[ <B><a href="#_is_object">is_object</a></B> | <B><a href="#_expect_object">expect_object</a></B> | <B><a href="#_is_virtual">is_virtual</a></B> ]</P>
-<!-- ../src/E_Object.cpp:361 -->
+<!-- ../src/E_Object.cpp:368 -->
 
 <HR />
 <a name="_is_float"></a>
@@ -1736,7 +1746,7 @@
 <P><I>Check for functor.</I></P>
 <P>Predicate: <b>true</b>, if argument <i>V</i> evaluates to functor reference.</P>
 <P><I>See also: </I>[ <B><a href="#_is_var">is_var</a></B> | <B><a href="#_is_term">is_term</a></B> | <B><a href="#_is_block">is_block</a></B> ]</P>
-<!-- ../src/E_Func.cpp:659 -->
+<!-- ../src/E_Func.cpp:668 -->
 
 <HR />
 <a name="_is_hash"></a>
@@ -1746,7 +1756,7 @@
 <P><I>Check for hash value.</I></P>
 <P>Predicate: true, if argument <i>V</i> evaluates to hash.</P>
 <P><I>See also: </I>[ <B><a href="#_expect_hash">expect_hash</a></B> ]</P>
-<!-- ../src/E_Hash.cpp:792 -->
+<!-- ../src/E_Hash.cpp:793 -->
 
 <HR />
 <a name="_is_int"></a>
@@ -1796,7 +1806,7 @@
 <P><I>Check for object value.</I></P>
 <P>Predicate: <b>true</b>, if argument <i>V</i> evaluates to instance of any class.</P>
 <P><I>See also: </I>[ <B><a href="#_expect_object">expect_object</a></B> | <B><a href="#_is_class">is_class</a></B> | <B><a href="#_is_virtual">is_virtual</a></B> ]</P>
-<!-- ../src/E_Object.cpp:346 -->
+<!-- ../src/E_Object.cpp:353 -->
 
 <HR />
 <a name="_is_pattern"></a>
@@ -1806,7 +1816,7 @@
 <P><I>Check for pattern value.</I></P>
 <P>Predicate: <b>true</b>, if argument <i>V</i> evaluates to pattern.</P>
 <P></P>
-<!-- ../src/E_Pattern.cpp:2322 -->
+<!-- ../src/E_Pattern.cpp:2352 -->
 
 <HR />
 <a name="_is_stream"></a>
@@ -1816,7 +1826,7 @@
 <P><I>Check for stream.</I></P>
 <P>Predicate: <b>true</b>, if <i>V</i> evaluates to stream.</P>
 <P></P>
-<!-- ../src/E_Stream.cpp:1677 -->
+<!-- ../src/E_Stream.cpp:1684 -->
 
 <HR />
 <a name="_is_string"></a>
@@ -1836,7 +1846,7 @@
 <P><I>Check for term.</I></P>
 <P>Predicate: <b>true</b>, if argument <i>V</i> evaluates to term.</P>
 <P><I>See also: </I>[ <B><a href="#_is_var">is_var</a></B> | <B><a href="#_is_block">is_block</a></B> | <B><a href="#_is_func">is_func</a></B> ]</P>
-<!-- ../src/E_Func.cpp:649 -->
+<!-- ../src/E_Func.cpp:658 -->
 
 <HR />
 <a name="_is_undef"></a>
@@ -1856,7 +1866,7 @@
 <P><I>Check for variable.</I></P>
 <P>Predicate: <b>true</b>, if argument <i>V</i> evaluates to variable.</P>
 <P><I>See also: </I>[ <B><a href="#_is_term">is_term</a></B> | <B><a href="#_is_block">is_block</a></B> | <B><a href="#_is_func">is_func</a></B> ]</P>
-<!-- ../src/E_Func.cpp:644 -->
+<!-- ../src/E_Func.cpp:653 -->
 
 <HR />
 <a name="_is_virtual"></a>
@@ -1866,7 +1876,7 @@
 <P><I>Check for virtual reference.</I></P>
 <P>Predicate: <b>true</b>, if functor <i>F</i> is reference to virtual of any class.</P>
 <P><I>See also: </I>[ <B><a href="#_is_object">is_object</a></B> | <B><a href="#_expect_object">expect_object</a></B> | <B><a href="#_is_class">is_class</a></B> ]</P>
-<!-- ../src/E_Object.cpp:368 -->
+<!-- ../src/E_Object.cpp:375 -->
 
 <HR /><a name="_76"></a>
 <P><font size=+1 color=red>= <B>L</B> =</font></P>
@@ -2218,7 +2228,7 @@
 <P><I>Split time to local time.</I></P>
 <P>Convert <i>Time</i> in Epoch seconds (defaults to current time) to locat time components.<br>Result is: (<i>Year</i>, <i>Month</i>, <i>Day</i>, <i>Hour</i>, <i>Min</i>, <i>Sec</i>, <i>Weekday</i>, <i>Yearday</i>, <i>isDST</i>).</P>
 <P><I>See also: </I>[ <B><a href="#_time">time</a></B> | <B><a href="#_utc_time">utc_time</a></B> ]</P>
-<!-- ../src/E_System.cpp:725 -->
+<!-- ../src/E_System.cpp:733 -->
 
 <HR />
 <a name="_log"></a>
@@ -2434,7 +2444,7 @@
 <P><I>Originator of virtual method.</I></P>
 <P>Returns originator class of virtual functor <i>Virtual</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_devirt">devirt</a></B> ]</P>
-<!-- ../src/E_Object.cpp:418 -->
+<!-- ../src/E_Object.cpp:425 -->
 
 <HR />
 <a name="_outside"></a>
@@ -2468,7 +2478,7 @@
 <P><I>Count elements in ring.</I></P>
 <P>Count elements in <i>Ring</i>.</P>
 <P></P>
-<!-- ../src/E_Ring.cpp:671 -->
+<!-- ../src/E_Ring.cpp:678 -->
 
 <HR />
 <a name="_r_del"></a>
@@ -2478,7 +2488,7 @@
 <P><I>Remove ring start element.</I></P>
 <P>Remove start element of ring <i>Ring</i> (severing it from the rest of the ring).<br>Return element removed.</P>
 <P></P>
-<!-- ../src/E_Ring.cpp:639 -->
+<!-- ../src/E_Ring.cpp:646 -->
 
 <HR />
 <a name="_r_elem"></a>
@@ -2488,7 +2498,7 @@
 <P><I>Ring element accessor.</I></P>
 <P>Get access to element of <i>Ring</i> with relative <i>Offset</i>.</P>
 <P></P>
-<!-- ../src/E_Ring.cpp:647 -->
+<!-- ../src/E_Ring.cpp:654 -->
 
 <HR />
 <a name="_r_ins_after"></a>
@@ -2498,7 +2508,7 @@
 <P><I>Insert element after start of ring.</I></P>
 <P>Insert element <i>Val</i> after start of ring <i>Ring</i> (== at beginning).<br>Return ring.</P>
 <P><I>See also: </I>[ <B><a href="#_r_ins_before">r_ins_before</a></B> ]</P>
-<!-- ../src/E_Ring.cpp:630 -->
+<!-- ../src/E_Ring.cpp:637 -->
 
 <HR />
 <a name="_r_ins_before"></a>
@@ -2508,7 +2518,7 @@
 <P><I>Insert element before start of ring.</I></P>
 <P>Insert element <i>Val</i> before start of ring <i>Ring</i> (== at end).<br>Return ring.</P>
 <P><I>See also: </I>[ <B><a href="#_r_ins_after">r_ins_after</a></B> ]</P>
-<!-- ../src/E_Ring.cpp:624 -->
+<!-- ../src/E_Ring.cpp:631 -->
 
 <HR />
 <a name="_r_list"></a>
@@ -2518,7 +2528,7 @@
 <P><I>Convert ring to open list (in direct order).</I></P>
 <P>Return ring <i>Ring</i>, converted to list in direct order.</P>
 <P><I>See also: </I>[ <B><a href="#_r_list_r">r_list_r</a></B> ]</P>
-<!-- ../src/E_Ring.cpp:704 -->
+<!-- ../src/E_Ring.cpp:711 -->
 
 <HR />
 <a name="_r_list_r"></a>
@@ -2528,7 +2538,7 @@
 <P><I>Convert ring to list (in reverse order).</I></P>
 <P>Return ring <i>Ring</i>, converted to list in reverse order.</P>
 <P><I>See also: </I>[ <B><a href="#_r_list">r_list</a></B> ]</P>
-<!-- ../src/E_Ring.cpp:709 -->
+<!-- ../src/E_Ring.cpp:716 -->
 
 <HR />
 <a name="_r_loop"></a>
@@ -2538,7 +2548,7 @@
 <P><I>Iterate forward through ring.</I></P>
 <P>For each element of <i>Ring</i> (moving forward), set <i>Var</i> to element content, and evaluate <i>Body</i>.<br>Return result of final evaluation of <i>Body</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_r_loop_r">r_loop_r</a></B> ]</P>
-<!-- ../src/E_Ring.cpp:687 -->
+<!-- ../src/E_Ring.cpp:694 -->
 
 <HR />
 <a name="_r_loop_r"></a>
@@ -2548,7 +2558,7 @@
 <P><I>Iterate backward through ring.</I></P>
 <P>For each element of <i>Ring</i> (moving backward), set <i>Var</i> to element content, and evaluate <i>Body</i>.<br>Return result of final evaluation of <i>Body</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_r_loop">r_loop</a></B> ]</P>
-<!-- ../src/E_Ring.cpp:693 -->
+<!-- ../src/E_Ring.cpp:700 -->
 
 <HR />
 <a name="_r_reverse"></a>
@@ -2558,7 +2568,7 @@
 <P><I>Reverse ring order.</I></P>
 <P>Reverse elements order in <i>Ring</i>.</P>
 <P></P>
-<!-- ../src/E_Ring.cpp:678 -->
+<!-- ../src/E_Ring.cpp:685 -->
 
 <HR />
 <a name="_r_seek"></a>
@@ -2568,7 +2578,7 @@
 <P><I>Seek ring cyclically forward.</I></P>
 <P>Seek ring <i>Ring</i> forward (cyclically) by <i>Offset</i> elements.<br>Note: when <i>Offset</i> < 0, equivalent to <b>r_seek_r</b> (<i>Ring</i>, -<i>Offset</i>).</P>
 <P><I>See also: </I>[ <B><a href="#_r_seek_r">r_seek_r</a></B> ]</P>
-<!-- ../src/E_Ring.cpp:656 -->
+<!-- ../src/E_Ring.cpp:663 -->
 
 <HR />
 <a name="_r_seek_r"></a>
@@ -2578,7 +2588,7 @@
 <P><I>Seek ring cyclically backward.</I></P>
 <P>Seek ring <i>Ring</i> backward (cyclically) by <i>Offset</i> elements.<br>Note: when <i>Offset</i> < 0, equivalent to <b>r_seek</b> (<i>Ring</i>, -<i>Offset</i>).</P>
 <P><I>See also: </I>[ <B><a href="#_r_seek">r_seek</a></B> ]</P>
-<!-- ../src/E_Ring.cpp:662 -->
+<!-- ../src/E_Ring.cpp:669 -->
 
 <HR />
 <a name="_rad"></a>
@@ -2648,7 +2658,7 @@
 <P><I>Return from functor.</I></P>
 <P>Return from current functor (with return <i>Value</i>) to its caller.</P>
 <P></P>
-<!-- ../src/E_Xcpt.cpp:200 -->
+<!-- ../src/E_Xcpt.cpp:206 -->
 
 <HR />
 <a name="_reval"></a>
@@ -2668,7 +2678,7 @@
 <P><I>Create ring.</I></P>
 <P>Create and return new ring, containing single element <i>Val</i>.</P>
 <P></P>
-<!-- ../src/E_Ring.cpp:614 -->
+<!-- ../src/E_Ring.cpp:621 -->
 
 <HR />
 <a name="_rrem"></a>
@@ -2688,7 +2698,7 @@
 <P><I>Character predicate sequence end (exclusive).</I></P>
 <P>Construct pattern, matching end of characters sequence, for which application of <i>CPred</i> results in <b>false</b>.</P>
 <P><I>See also: </I>[ <B><a href="#_rx_before_in">rx_before_in</a></B> | <B><a href="#_rx_before_ex">rx_before_ex</a></B> | <B><a href="#_rx_after_in">rx_after_in</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2401 -->
+<!-- ../src/E_Pattern.cpp:2431 -->
 
 <HR />
 <a name="_rx_after_in"></a>
@@ -2698,7 +2708,7 @@
 <P><I>Character predicate sequence end (inclusive).</I></P>
 <P>Construct pattern, matching end of characters sequence, for which application of <i>CPred</i> results in <b>true</b>.</P>
 <P><I>See also: </I>[ <B><a href="#_rx_before_in">rx_before_in</a></B> | <B><a href="#_rx_before_ex">rx_before_ex</a></B> | <B><a href="#_rx_after_ex">rx_after_ex</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2396 -->
+<!-- ../src/E_Pattern.cpp:2426 -->
 
 <HR />
 <a name="_rx_alt"></a>
@@ -2708,7 +2718,7 @@
 <P><I>Alternation of patterns.</I></P>
 <P>Construct pattern, matching either <i>First</i> or <i>Second</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_rx_cat">rx_cat</a></B> | <B><a href="#_rx_rep">rx_rep</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2456 -->
+<!-- ../src/E_Pattern.cpp:2486 -->
 
 <HR />
 <a name="_rx_any"></a>
@@ -2718,7 +2728,7 @@
 <P><I>Any character pattern.</I></P>
 <P>Construct pattern, matching single arbitrary character.</P>
 <P><I>See also: </I>[ <B><a href="#_rx_any_in">rx_any_in</a></B> | <B><a href="#_rx_any_ex">rx_any_ex</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2364 -->
+<!-- ../src/E_Pattern.cpp:2394 -->
 
 <HR />
 <a name="_rx_any_ex"></a>
@@ -2728,7 +2738,7 @@
 <P><I>Character predicate check (exclusive).</I></P>
 <P>Construct pattern, matching any character, for which application of <i>CPred</i> results in <b>false</b>.</P>
 <P><I>See also: </I>[ <B><a href="#_rx_any">rx_any</a></B> | <B><a href="#_rx_any_in">rx_any_in</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2376 -->
+<!-- ../src/E_Pattern.cpp:2406 -->
 
 <HR />
 <a name="_rx_any_in"></a>
@@ -2738,7 +2748,7 @@
 <P><I>Character predicate check (inclusive).</I></P>
 <P>Construct pattern, matching any character, for which application of <i>CPred</i> results in <b>true</b>.</P>
 <P><I>See also: </I>[ <B><a href="#_rx_any">rx_any</a></B> | <B><a href="#_rx_any_ex">rx_any_ex</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2371 -->
+<!-- ../src/E_Pattern.cpp:2401 -->
 
 <HR />
 <a name="_rx_at_end"></a>
@@ -2748,7 +2758,7 @@
 <P><I>End position anchor.</I></P>
 <P>Construct pattern, matching at offset <i>Offset</i> relative to end.</P>
 <P><I>See also: </I>[ <B><a href="#_rx_at_start">rx_at_start</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2418 -->
+<!-- ../src/E_Pattern.cpp:2448 -->
 
 <HR />
 <a name="_rx_at_start"></a>
@@ -2758,7 +2768,7 @@
 <P><I>Start position anchor.</I></P>
 <P>Construct pattern, matching at offset <i>Offset</i> relative to beginning.</P>
 <P><I>See also: </I>[ <B><a href="#_rx_at_end">rx_at_end</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2413 -->
+<!-- ../src/E_Pattern.cpp:2443 -->
 
 <HR />
 <a name="_rx_before_ex"></a>
@@ -2768,7 +2778,7 @@
 <P><I>Character predicate sequence start (exclusive).</I></P>
 <P>Construct pattern, matching start of characters sequence, for which application of <i>CPred</i> results in <b>false</b>.</P>
 <P><I>See also: </I>[ <B><a href="#_rx_before_in">rx_before_in</a></B> | <B><a href="#_rx_after_in">rx_after_in</a></B> | <B><a href="#_rx_after_ex">rx_after_ex</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2391 -->
+<!-- ../src/E_Pattern.cpp:2421 -->
 
 <HR />
 <a name="_rx_before_in"></a>
@@ -2778,7 +2788,7 @@
 <P><I>Character predicate sequence start (inclusive).</I></P>
 <P>Construct pattern, matching start of characters sequence, for which application of <i>CPred</i> results in <b>true</b>.</P>
 <P><I>See also: </I>[ <B><a href="#_rx_before_ex">rx_before_ex</a></B> | <B><a href="#_rx_after_in">rx_after_in</a></B> | <B><a href="#_rx_after_ex">rx_after_ex</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2386 -->
+<!-- ../src/E_Pattern.cpp:2416 -->
 
 <HR />
 <a name="_rx_cat"></a>
@@ -2788,7 +2798,7 @@
 <P><I>Concatenation of patterns.</I></P>
 <P>Construct pattern, matching concatenation of <i>Head</i> and <i>Tail</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_rx_alt">rx_alt</a></B> | <B><a href="#_rx_rep">rx_rep</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2463 -->
+<!-- ../src/E_Pattern.cpp:2493 -->
 
 <HR />
 <a name="_rx_char"></a>
@@ -2798,7 +2808,7 @@
 <P><I>Literal character pattern.</I></P>
 <P>Construct pattern, matching literal character with code <i>Code</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_rx_string">rx_string</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2348 -->
+<!-- ../src/E_Pattern.cpp:2378 -->
 
 <HR />
 <a name="_rx_fail"></a>
@@ -2808,7 +2818,7 @@
 <P><I>Failure pattern.</I></P>
 <P>Construct pattern, always failing to match anything.</P>
 <P></P>
-<!-- ../src/E_Pattern.cpp:2481 -->
+<!-- ../src/E_Pattern.cpp:2524 -->
 
 <HR />
 <a name="_rx_findfirst"></a>
@@ -2818,7 +2828,7 @@
 <P><I>Search forward for pattern.</I></P>
 <P>Find first pattern matching <i>Context</i> in string <i>Str</i>.<br>Returns offset range, where pattern is found (or <b>undef</b>, if no pattern found).</P>
 <P><I>See also: </I>[ <B><a href="#_rx_match">rx_match</a></B> | <B><a href="#_rx_findlast">rx_findlast</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2542 -->
+<!-- ../src/E_Pattern.cpp:2585 -->
 
 <HR />
 <a name="_rx_findlast"></a>
@@ -2828,7 +2838,7 @@
 <P><I>Search backward for pattern.</I></P>
 <P>Find last pattern matching <i>Context</i> in string <i>Str</i>.<br>Returns offset range, where pattern is found (or <b>undef</b>, if no pattern found).</P>
 <P><I>See also: </I>[ <B><a href="#_rx_match">rx_match</a></B> | <B><a href="#_rx_findfirst">rx_findfirst</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2548 -->
+<!-- ../src/E_Pattern.cpp:2591 -->
 
 <HR />
 <a name="_rx_is_after"></a>
@@ -2838,7 +2848,7 @@
 <P><I>Look-after positive assertion anchor.</I></P>
 <P>Construct pattern, matching empty string followed by <i>ContextAfter</i> (which is NOT included in match).</P>
 <P><I>See also: </I>[ <B><a href="#_rx_is_before">rx_is_before</a></B> | <B><a href="#_rx_not_before">rx_not_before</a></B> | <B><a href="#_rx_not_after">rx_not_after</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2441 -->
+<!-- ../src/E_Pattern.cpp:2471 -->
 
 <HR />
 <a name="_rx_is_before"></a>
@@ -2848,7 +2858,7 @@
 <P><I>Look-before positive assertion anchor.</I></P>
 <P>Construct pattern, matching empty string preceded by <i>ContextBefore</i> (which is NOT included in match).</P>
 <P><I>See also: </I>[ <B><a href="#_rx_is_after">rx_is_after</a></B> | <B><a href="#_rx_not_before">rx_not_before</a></B> | <B><a href="#_rx_not_after">rx_not_after</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2428 -->
+<!-- ../src/E_Pattern.cpp:2458 -->
 
 <HR />
 <a name="_rx_length"></a>
@@ -2858,7 +2868,7 @@
 <P><I>Calculate length range of pattern.</I></P>
 <P>Returns range of context lengths, which pattern <i>Context</i> may match.<br>(If context length is unlimited, Range[1] is undefined.)</P>
 <P></P>
-<!-- ../src/E_Pattern.cpp:2524 -->
+<!-- ../src/E_Pattern.cpp:2567 -->
 
 <HR />
 <a name="_rx_locate"></a>
@@ -2868,7 +2878,7 @@
 <P><I>Locate set of patterns in string.</I></P>
 <P>Find subset of occurences of <i>Context</i> in <i>Source</i>.<br>Argument <i>Range</i> defines range of occurences, <i>Direction</i> defines order (from start/from end).</P>
 <P><I>See also: </I>[ <B><a href="#_rx_split">rx_split</a></B> | <B><a href="#_rx_replace">rx_replace</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2567 -->
+<!-- ../src/E_Pattern.cpp:2610 -->
 
 <HR />
 <a name="_rx_match"></a>
@@ -2878,7 +2888,7 @@
 <P><I>Pattern matching.</I></P>
 <P>Match <i>Str</i> with pattern <i>Context</i>.<br>Return length of pattern matched (or -1, if match failed).</P>
 <P><I>See also: </I>[ <B><a href="#_rx_findfirst">rx_findfirst</a></B> | <B><a href="#_rx_findlast">rx_findlast</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2534 -->
+<!-- ../src/E_Pattern.cpp:2577 -->
 
 <HR />
 <a name="_rx_not_after"></a>
@@ -2888,7 +2898,7 @@
 <P><I>Look-after negative assertion anchor.</I></P>
 <P>Construct pattern, matching empty string NOT followed by <i>ContextAfter</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_rx_is_before">rx_is_before</a></B> | <B><a href="#_rx_is_after">rx_is_after</a></B> | <B><a href="#_rx_not_before">rx_not_before</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2446 -->
+<!-- ../src/E_Pattern.cpp:2476 -->
 
 <HR />
 <a name="_rx_not_before"></a>
@@ -2898,7 +2908,7 @@
 <P><I>Look-before negative assertion anchor.</I></P>
 <P>Construct pattern, matching empty string NOT preceded by <i>ContextBefore</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_rx_is_before">rx_is_before</a></B> | <B><a href="#_rx_is_after">rx_is_after</a></B> | <B><a href="#_rx_not_after">rx_not_after</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2433 -->
+<!-- ../src/E_Pattern.cpp:2463 -->
 
 <HR />
 <a name="_rx_null"></a>
@@ -2908,7 +2918,7 @@
 <P><I>Null pattern.</I></P>
 <P>Construct pattern, matching empty string anywhere.</P>
 <P></P>
-<!-- ../src/E_Pattern.cpp:2339 -->
+<!-- ../src/E_Pattern.cpp:2369 -->
 
 <HR />
 <a name="_rx_recall"></a>
@@ -2918,7 +2928,7 @@
 <P><I>Register recall pattern.</I></P>
 <P>Construct pattern, matching context previously stored (by rx_store) in register <i>RegNo</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_rx_store">rx_store</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2501 -->
+<!-- ../src/E_Pattern.cpp:2544 -->
 
 <HR />
 <a name="_rx_rep"></a>
@@ -2928,7 +2938,27 @@
 <P><I>Repetition of pattern.</I></P>
 <P>Construct pattern, matching <i>Body</i>, repeated minimum Range[0] and maximum Range[1] times.<br>If <i>Greedy</i> is <b>true</b>, attempts to find maximum number of repetitions (tries to find minimum otherwise).</P>
 <P><I>See also: </I>[ <B><a href="#_rx_alt">rx_alt</a></B> | <B><a href="#_rx_cat">rx_cat</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2470 -->
+<!-- ../src/E_Pattern.cpp:2500 -->
+
+<HR />
+<a name="_rx_rep_dec"></a>
+<P><font face=Arial size=+1 color=#808080><B>rx_rep_dec</B></font></P>
+<LI type=square>[ <b><a href="AWL_Categories.htm#_Constructor">Constructor</a></b> | <b><a href="AWL_Categories.htm#_Pattern">Pattern</a></b> ]</LI>
+<LI type=disc><B>rx_rep_dec </B> (<i>Range</i>: <b><a href="AWL_Types.htm#_Range">Range</a></b>, <i>Body</i>: <b><a href="AWL_Types.htm#_Pattern">Pattern</a></b>) &#8658; <b><a href="AWL_Types.htm#_Pattern">Pattern</a></b>.</LI>
+<P><I>Repetition of pattern (decremental).</I></P>
+<P>Construct pattern, matching <i>Body</i>, repeated minimum Range[0] and maximum Range[1] times (decrementally).</P>
+<P></P>
+<!-- ../src/E_Pattern.cpp:2514 -->
+
+<HR />
+<a name="_rx_rep_inc"></a>
+<P><font face=Arial size=+1 color=#808080><B>rx_rep_inc</B></font></P>
+<LI type=square>[ <b><a href="AWL_Categories.htm#_Constructor">Constructor</a></b> | <b><a href="AWL_Categories.htm#_Pattern">Pattern</a></b> ]</LI>
+<LI type=disc><B>rx_rep_inc </B> (<i>Range</i>: <b><a href="AWL_Types.htm#_Range">Range</a></b>, <i>Body</i>: <b><a href="AWL_Types.htm#_Pattern">Pattern</a></b>) &#8658; <b><a href="AWL_Types.htm#_Pattern">Pattern</a></b>.</LI>
+<P><I>Repetition of pattern (incremental).</I></P>
+<P>Construct pattern, matching <i>Body</i>, repeated minimum Range[0] and maximum Range[1] times (incrementally).</P>
+<P></P>
+<!-- ../src/E_Pattern.cpp:2509 -->
 
 <HR />
 <a name="_rx_replace"></a>
@@ -2938,7 +2968,7 @@
 <P><I>Replace set of patterns in string.</I></P>
 <P>Find subset of occurences of <i>Context</i> in <i>Source</i>, replace them with <i>Replacer</i>, and return result.<br>Argument <i>Range</i> defines range of occurences, <i>Direction</i> defines order (from start/end).</P>
 <P><I>See also: </I>[ <B><a href="#_rx_locate">rx_locate</a></B> | <B><a href="#_rx_split">rx_split</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2575 -->
+<!-- ../src/E_Pattern.cpp:2618 -->
 
 <HR />
 <a name="_rx_split"></a>
@@ -2948,7 +2978,7 @@
 <P><I>Split string by pattern.</I></P>
 <P>Split string <i>Source</i> (at places where pattern <i>Divider</i> is matched).<br>Argument <i>Range</i> defines range of occurences, <i>Direction</i> defines order (from start/from end).</P>
 <P><I>See also: </I>[ <B><a href="#_rx_locate">rx_locate</a></B> | <B><a href="#_rx_replace">rx_replace</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2559 -->
+<!-- ../src/E_Pattern.cpp:2602 -->
 
 <HR />
 <a name="_rx_store"></a>
@@ -2958,7 +2988,7 @@
 <P><I>Register store pattern.</I></P>
 <P>Construct pattern, matching <i>Body</i> (and storing successful match to register <i>RegNo</i>).</P>
 <P><I>See also: </I>[ <B><a href="#_rx_recall">rx_recall</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2496 -->
+<!-- ../src/E_Pattern.cpp:2539 -->
 
 <HR />
 <a name="_rx_store_to"></a>
@@ -2968,7 +2998,7 @@
 <P><I>Register store pattern (with storage mutable).</I></P>
 <P>Construct pattern, matching <i>Body</i> (and storing successfull match to register <i>RegNo</i>).<br>On match success, match range is stored to <i>Var</i>.</P>
 <P></P>
-<!-- ../src/E_Pattern.cpp:2509 -->
+<!-- ../src/E_Pattern.cpp:2552 -->
 
 <HR />
 <a name="_rx_string"></a>
@@ -2978,7 +3008,7 @@
 <P><I>Literal string pattern.</I></P>
 <P>Construct pattern, matching literal string <i>Text</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_rx_char">rx_char</a></B> ]</P>
-<!-- ../src/E_Pattern.cpp:2355 -->
+<!-- ../src/E_Pattern.cpp:2385 -->
 
 <HR /><a name="_83"></a>
 <P><font size=+1 color=red>= <B>S</B> =</font></P>
@@ -3267,7 +3297,7 @@
 <P><font face=Arial size=+1 color=#808080><B>s_lcase</B></font></P>
 <LI type=square>[ <b><a href="AWL_Categories.htm#_String">String</a></b> | <b><a href="AWL_Categories.htm#_Unary">Unary</a></b> ]</LI>
 <LI type=disc><B>s_lcase </B> (<i>S</i>: <b><a href="AWL_Types.htm#_String">String</a></b>) &#8658; <b><a href="AWL_Types.htm#_String">String</a></b>.</LI>
-<P><I>Lowercase string.</I></P>
+<P><I>Lower case string.</I></P>
 <P>Return string <i>S</i>, converted to lower case.</P>
 <P><I>See also: </I>[ <B><a href="#_s_ucase">s_ucase</a></B> | <B><a href="#_s_icase">s_icase</a></B> ]</P>
 <!-- ../src/E_String.cpp:2690 -->
@@ -3277,7 +3307,7 @@
 <P><font face=Arial size=+1 color=#808080><B>s_lcfirst</B></font></P>
 <LI type=square>[ <b><a href="AWL_Categories.htm#_String">String</a></b> | <b><a href="AWL_Categories.htm#_Unary">Unary</a></b> ]</LI>
 <LI type=disc><B>s_lcfirst </B> (<i>S</i>: <b><a href="AWL_Types.htm#_String">String</a></b>) &#8658; <b><a href="AWL_Types.htm#_String">String</a></b>.</LI>
-<P><I>Lowercase string first character.</I></P>
+<P><I>Lower case string first character.</I></P>
 <P>Return string <i>S</i>, with only first character converted to lower case.</P>
 <P><I>See also: </I>[ <B><a href="#_s_ucfirst">s_ucfirst</a></B> | <B><a href="#_s_icfirst">s_icfirst</a></B> ]</P>
 <!-- ../src/E_String.cpp:2709 -->
@@ -3517,7 +3547,7 @@
 <P><font face=Arial size=+1 color=#808080><B>s_ucase</B></font></P>
 <LI type=square>[ <b><a href="AWL_Categories.htm#_String">String</a></b> | <b><a href="AWL_Categories.htm#_Unary">Unary</a></b> ]</LI>
 <LI type=disc><B>s_ucase </B> (<i>S</i>: <b><a href="AWL_Types.htm#_String">String</a></b>) &#8658; <b><a href="AWL_Types.htm#_String">String</a></b>.</LI>
-<P><I>Uppercase string.</I></P>
+<P><I>Upper case string.</I></P>
 <P>Return string <i>S</i>, converted to upper case.</P>
 <P><I>See also: </I>[ <B><a href="#_s_lcase">s_lcase</a></B> | <B><a href="#_s_icase">s_icase</a></B> ]</P>
 <!-- ../src/E_String.cpp:2685 -->
@@ -3527,7 +3557,7 @@
 <P><font face=Arial size=+1 color=#808080><B>s_ucfirst</B></font></P>
 <LI type=square>[ <b><a href="AWL_Categories.htm#_String">String</a></b> | <b><a href="AWL_Categories.htm#_Unary">Unary</a></b> ]</LI>
 <LI type=disc><B>s_ucfirst </B> (<i>S</i>: <b><a href="AWL_Types.htm#_String">String</a></b>) &#8658; <b><a href="AWL_Types.htm#_String">String</a></b>.</LI>
-<P><I>Uppercase string first character.</I></P>
+<P><I>Upper case string first character.</I></P>
 <P>Return string <i>S</i>, with only first character converted to upper case.</P>
 <P><I>See also: </I>[ <B><a href="#_s_lcfirst">s_lcfirst</a></B> | <B><a href="#_s_icfirst">s_icfirst</a></B> ]</P>
 <!-- ../src/E_String.cpp:2704 -->
@@ -3540,7 +3570,7 @@
 <P><I>Retrieve current class instance.</I></P>
 <P>Evaluates <i>Class</i>, and returns its current instance.<br>(Returns <b>undef</b>, if <i>Class</i> is not class reference, or has no current instance.)</P>
 <P><I>See also: </I>[ <B><a href="#_class_of">class_of</a></B> | <B><a href="#_super_of">super_of</a></B> ]</P>
-<!-- ../src/E_Object.cpp:385 -->
+<!-- ../src/E_Object.cpp:392 -->
 
 <HR />
 <a name="_set"></a>
@@ -3660,7 +3690,7 @@
 <P><I>Retrieve superclass of class.</I></P>
 <P>Returns class, from which <i>Class</i> is derived (or <b>undef</b>, if <i>Class</i> has no ancestors).</P>
 <P><I>See also: </I>[ <B><a href="#_class_of">class_of</a></B> | <B><a href="#_self">self</a></B> ]</P>
-<!-- ../src/E_Object.cpp:393 -->
+<!-- ../src/E_Object.cpp:400 -->
 
 <HR />
 <a name="_swap"></a>
@@ -3680,7 +3710,7 @@
 <P><I>Choose action by key.</I></P>
 <P>For <i>Value</i> specified, select first (<i>Case</i>, <i>Action</i>) pair, where result of <i>Case</i> is identical to <i>Value</i>.<br>If all checks failed, select <i>Default</i> as <i>Action</i>.<br>(Returns result of evaluation of selected <i>Action</i>.)</P>
 <P></P>
-<!-- ../src/E_Hash.cpp:924 -->
+<!-- ../src/E_Hash.cpp:925 -->
 
 <HR /><a name="_84"></a>
 <P><font size=+1 color=red>= <B>T</B> =</font></P>
@@ -3712,7 +3742,7 @@
 <P><I>Throw exception.</I></P>
 <P>Throw any definite <i>Exception</i>, to be caught and processed somewhere in caller.</P>
 <P><I>See also: </I>[ <B><a href="#_try">try</a></B> | <B><a href="#_try_catch">try_catch</a></B> ]</P>
-<!-- ../src/E_Xcpt.cpp:192 -->
+<!-- ../src/E_Xcpt.cpp:198 -->
 
 <HR />
 <a name="_time"></a>
@@ -3722,7 +3752,7 @@
 <P><I>Get system time.</I></P>
 <P>Returns current system time (seconds since Epoch).</P>
 <P><I>See also: </I>[ <B><a href="#_local_time">local_time</a></B> | <B><a href="#_utc_time">utc_time</a></B> ]</P>
-<!-- ../src/E_System.cpp:718 -->
+<!-- ../src/E_System.cpp:726 -->
 
 <HR />
 <a name="_times"></a>
@@ -3752,7 +3782,7 @@
 <P><I>Exception frame wrapper.</I></P>
 <P>Evaluate <i>Body</i> in exception frame.<br>If exception was thrown, return thrown value.<br>Returns result of <i>Body</i>, if no exception occured.</P>
 <P><I>See also: </I>[ <B><a href="#_try_catch">try_catch</a></B> | <B><a href="#_throw">throw</a></B> ]</P>
-<!-- ../src/E_Xcpt.cpp:207 -->
+<!-- ../src/E_Xcpt.cpp:213 -->
 
 <HR />
 <a name="_try_catch"></a>
@@ -3762,7 +3792,7 @@
 <P><I>Exception frame wrapper.</I></P>
 <P>Evaluate <i>Body</i> in exception frame.<br>If exception was thrown, assign thrown value to <i>Var</i>, and return <b>undef</b>.<br>Returns result of <i>Body</i>, if no exception occured.</P>
 <P><I>See also: </I>[ <B><a href="#_try">try</a></B> | <B><a href="#_throw">throw</a></B> ]</P>
-<!-- ../src/E_Xcpt.cpp:214 -->
+<!-- ../src/E_Xcpt.cpp:220 -->
 
 <HR /><a name="_85"></a>
 <P><font size=+1 color=red>= <B>U</B> =</font></P>
@@ -3804,7 +3834,7 @@
 <P><I>Split time to UTC time.</I></P>
 <P>Convert <i>Time</i> in Epoch seconds (defaults to current time) to UTC time components.<br>Result is: (<i>Year</i>, <i>Month</i>, <i>Day</i>, <i>Hour</i>, <i>Min</i>, <i>Sec</i>, <i>Weekday</i>, <i>Yearday</i>, <i>isDST</i>).</P>
 <P><I>See also: </I>[ <B><a href="#_time">time</a></B> | <B><a href="#_local_time">local_time</a></B> ]</P>
-<!-- ../src/E_System.cpp:731 -->
+<!-- ../src/E_System.cpp:739 -->
 
 <HR /><a name="_86"></a>
 <P><font size=+1 color=red>= <B>V</B> =</font></P>
@@ -3838,7 +3868,7 @@
 <P><I>Class current instance wrapper.</I></P>
 <P>Evaluates and returns <i>Body</i>, with object <i>Instance</i> temporarily defined as current instance of own class (and its ancestors).</P>
 <P><I>See also: </I>[ <B><a href="#_without">without</a></B> ]</P>
-<!-- ../src/E_Object.cpp:402 -->
+<!-- ../src/E_Object.cpp:409 -->
 
 <HR />
 <a name="_with_input"></a>
@@ -3848,7 +3878,7 @@
 <P><I>Default input stream wrapper.</I></P>
 <P>Evaluates <i>Body</i>, with input stream <i>Input</i> defined as default input.</P>
 <P><I>See also: </I>[ <B><a href="#_with_output">with_output</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1863 -->
+<!-- ../src/E_Stream.cpp:1870 -->
 
 <HR />
 <a name="_with_output"></a>
@@ -3858,7 +3888,7 @@
 <P><I>Default output stream wrapper.</I></P>
 <P>Evaluates <i>Body</i>, with output stream <i>Output</i> defined as default output.</P>
 <P><I>See also: </I>[ <B><a href="#_with_input">with_input</a></B> ]</P>
-<!-- ../src/E_Stream.cpp:1868 -->
+<!-- ../src/E_Stream.cpp:1875 -->
 
 <HR />
 <a name="_without"></a>
@@ -3868,7 +3898,7 @@
 <P><I>Class deinstantiation wrapper.</I></P>
 <P>Evaluates and returns <i>Body</i>, with tempoparily undefined current instance of class <i>Class</i>.</P>
 <P><I>See also: </I>[ <B><a href="#_with">with</a></B> ]</P>
-<!-- ../src/E_Object.cpp:409 -->
+<!-- ../src/E_Object.cpp:416 -->
 
 <HR /><a name="_88"></a>
 <P><font size=+1 color=red>= <B>X</B> =</font></P>
@@ -3880,7 +3910,7 @@
 <P><I>Show scope functors/classes.</I></P>
 <P>Lists all functors/classes, defined in <i>Scope</i> (belonging to user functor or class; defaults to module global scope).<br>Returns total # of functors/classes in scope.</P>
 <P></P>
-<!-- ../src/Kernel.cpp:1724 -->
+<!-- ../src/Kernel.cpp:1732 -->
 
 <HR />
 <a name="_x_trace"></a>
@@ -3890,7 +3920,7 @@
 <P><I>Debug local/global trace mode.</I></P>
 <P>If expression <i>Expr</i> is defined: evaluates it, and outputs expression and/or result in trace mode <i>Mode</i>.<br>If expr is omitted: sets module trace mode to <i>Mode</i>.</P>
 <P></P>
-<!-- ../src/Kernel.cpp:1710 -->
+<!-- ../src/Kernel.cpp:1718 -->
 
 <HR />
 <a name="_x_vars"></a>
@@ -3900,7 +3930,7 @@
 <P><I>Show scope variables.</I></P>
 <P>Lists all variables, defined in <i>Scope</i> (belonging to user functor or class; defaults to module global scope).<br>Returns total # of variables in scope.</P>
 <P></P>
-<!-- ../src/Kernel.cpp:1718 -->
+<!-- ../src/Kernel.cpp:1726 -->
 
 <HR />
 <a name="_xor"></a>
@@ -3913,6 +3943,6 @@
 <!-- ../src/E_Num.cpp:1085 -->
 
 <HR />
-<P>Total functors: <B>386</B>.</P>
+<P>Total functors: <B>389</B>.</P>
 </BODY>
 </HTML>
